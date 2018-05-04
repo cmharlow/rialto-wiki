@@ -2,27 +2,31 @@
 
 RIALTO is primarily interested in **Works** (articles, research output, publications, etc.), **Agents** (people, departments, agencies, organizations, etc.), **Grants**, and **Projects**. Each of these is represented by a data model that defines the scope of the entity and a metadata application profile that shows what information we capture about these entities for RIALTO's usage.
 
-## Works
+## Works (via Citations)
 
-### Citations 
-Stand in for Publications of Articles, Research outputs, SDR deposits, etc. Citation for a Work is the main reference point. If feasible, links to manifestations (i.e. DOI to the Work).
+Works are publications of articles, research outputs, datasets, etc. Citation for a Work is the main reference point / datapoint. If feasible, the citation should link to manifestations of that Work (i.e. DOI).
 
-* Types: Publication, Research Output, Articles, … 
-* Sources: SDR, Web of Science, Grant or Project outputs
+* **Types**: Publication, Research Output, Articles, Dataset, … 
+* **Sources**: Web of Science, SUL-PUB (should be subset of what is in WoS)
 
 ## Agents
-Some sort of actor involved in created Works or Projects or Supporting Works, Projects via Grants or Institutional support
-Types: People, Departments, Agencies >> Funders
-Sources: Stanford LDAP (or some other campus identity management back-end that provides department info), Profiles (subset of other sources - CAP, HR, other?), CAP (Stanford Affiliates scholarly record type info), ORCID, ISNI, PubMED ID, US Grant Agency Department IDs etc.
+
+Agents are some sort of actor involved in creating works or projects, or in supporting works or projects via grants or institutional support. 
+
+* **Types**: People, Departments, Universities, Colleges, Organizations / Agencies >> Funders
+* **Sources**: Stanford LDAP, CAP Profiles API (Stanford Affiliates scholarly record type info), ORCID & ISNI.
 
 ## Grants
-Award for some Project(s) or Work(s), usually attached to one or more lead Agents (PIs), whether people or departments.
-Types: Governmental << Federal / State / Local, Private, Internal to Stanford, other?
-Sources: US Spending (API not yet complete & federal grants only), Web of Science (funding agency string / grant number in metadata), Grants.gov (needs to be explored further), Data.gov (needs to be explored further), SUL Pub or SU Profiles?, SERA (not done yet)
 
-## Projects (may be merged elsewhere later if not distinct enough from data available)
-Research projects that are awarded funding, supported by institutions/Grants, worked on by Agents, and may produce multiple Works
-Sources: SERA (not done yet), see proposed output (at least fields) in Peter’s doc
+Grants are awards for some project(s) or work(s), usually attached to one or more lead agents (PIs) whether people or departments, and awarded or funded by an organization or agency.
+
+* **Types**: Governmental << Federal / State / Local, Private, Internal to Stanford, ... 
+* **Sources**: Web of Science (funding agency string / grant number in metadata), SERA (not done yet)
+
+## Projects
+
+Projects here are research projects that are funded by grants or institutions, worked on by agents, and may produce multiple works. 
+Sources: SERA (not done yet)
 
 Domain Resource Application Profiles
 Expectation key
