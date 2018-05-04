@@ -10,15 +10,27 @@ Works are publications of articles, research outputs, datasets, etc. Citation fo
 Field | Predicate | Expected Data Type | Cardinality | Value Type | Definition
 ----- | --------- | ------------------ | ----------- | ---------- | ----------
 
+* subject heading information in publications
+* topic area of research / work
+* date of publication / release / create
+* author
+* publisher
+
+* which publications resulted from which grants
+
 ## Agents
 
 Agents are some sort of actor involved in creating works or projects, or in supporting works or projects via grants or institutional support. 
 
-* **Types**: People, Departments, Universities, Colleges, Organizations / Agencies >> Funders
+* **Types**: People, Academic institutes, Departments, Universities, Colleges, Organizations / Agencies >> Funders
 * **Sources**: Stanford LDAP, CAP Profiles API (Stanford Affiliates scholarly record type info), ORCID & ISNI.
 
 Field | Predicate | Expected Data Type | Cardinality | Value Type | Definition
 ----- | --------- | ------------------ | ----------- | ---------- | ----------
+
+* agent institutional affiliation
+* related topic areas
+* role(s) / job(s)
 
 ## Grants
 
@@ -30,6 +42,8 @@ Grants are awards for some project(s) or work(s), usually attached to one or mor
 Field | Predicate | Expected Data Type | Cardinality | Value Type | Definition
 ----- | --------- | ------------------ | ----------- | ---------- | ----------
 
+* which publications resulted from which grants
+
 ## Projects
 
 Projects here are research projects that are funded by grants or institutions, worked on by agents, and may produce multiple works. 
@@ -40,3 +54,15 @@ Field | Predicate | Expected Data Type | Cardinality | Value Type | Definition
 
 
 
+# Other Representation Needs
+
+- CSV: 
+  - One column per year, row for each academic institute, number of publications produced by faculty members associated with that institute in that topic area(s)
+- Facets:
+  - years range
+  - date range
+  - topic areas
+  - number of publications
+  - institute
+  - academic unit or department
+  - list of grants and the number of resulting connected publications
