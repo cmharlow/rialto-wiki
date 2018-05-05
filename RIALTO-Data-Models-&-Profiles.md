@@ -42,13 +42,14 @@ DOI                 | bibo:doi | DOI IRI | [0,1] | Digital Object Identifier for
 editor              | vivo:relatedBy vivo:Editorship vivo:relates | URI for foaf:Agent | [0,n] | Editor of the publication.
 identifier          | bibo:identifier | IRI | [1,1] | RIALTO identifier for the resource. May be from multiple sources.
 funded by           | vivo:hasFundingVehicle | Grant URI | [0,n] | Grant (or contract) providing the funding for the publication.
-journal             |  |  |  |  |  |  
-link                |  |  |  |  |  |  
-Profiles approved   |  |  |  |  |  |  
-publisher           |  |  |  |  |  |  
+journal             |  |  |  | 
+link                |  |  |  | 
+Profiles approved   |  |  |  | 
+publisher           |  |  |  |  
 sponsor             | vivo:informationResourceSupportedBy | Agent URI | [0,n] | Institution supporting the publication.  
-title               |  |  |  |  |  |  
-URI                 |  |  |  |  |  |  
+title               |  |  |  |  
+alternate identifiers |  |  |  | 
+sameAs              |  |  |  | 
 
 ## Topic 
 Topics are subject areas or concepts. Works, grants, or departments may be associated with a Topic.
@@ -56,14 +57,17 @@ Topics are subject areas or concepts. Works, grants, or departments may be assoc
 * **Types**: Publication, Research Output, Articles, Dataset, Student Publication, … 
 * **Sources**: Web of Science, SUL-PUB (should be subset of what is in WoS), Profiles
 
-Field | Predicate | Expected Data Type | Cardinality | Value Type | Definition
------ | --------- | ------------------ | ----------- | ---------- | ----------
-
-* MESH headings
-* label
-* alternate labels
-* subject heading information in publications
-* subject area of research / work
+Field | Predicate | Expected Data Type | Cardinality | Definition
+----- | --------- | ------------------ | ----------- | ----------
+MESH headings |  |  |  | 
+label |  |  |  | 
+alternate labels |  |  |  | 
+broader than |  |  |  | 
+narrower than |  |  |  | 
+vocabulary source |  |  |  | 
+identifier |  |  |  | 
+alternate identifiers |  |  |  | 
+sameAs |  |  |  | 
 
 ## Agents
 
