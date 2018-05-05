@@ -1,8 +1,57 @@
-RIALTO is primarily interested in **Works** (articles, research output, publications, etc.), **Agents** (people, departments, agencies, organizations, etc.), **Grants**, and **Projects**. Each of these is represented by a data model that defines the scope of the entity and a metadata application profile that shows what information we capture about these entities for RIALTO's usage.
+RIALTO is primarily interested in **Publications** (articles, research output, publications, etc.), **Agents** (people, departments, agencies, organizations, etc.), **Grants**, and **Projects**. Each of these is represented by a data model that defines the scope of the entity and a metadata application profile that shows what information we capture about these entities for RIALTO's usage.
 
-## Works (via Citations)
+## Publications (aka Documents or Citations)
 
-Works are publications of articles, research outputs, datasets, etc. Citation for a Work is the main reference point / datapoint. If feasible, the citation should link to manifestations of that Work (i.e. DOI).
+Publications are representations (published meant generally) of articles, research outputs, datasets, etc. If feasible, there should link to manifestations of that Work (i.e. DOI).
+
+* **Sources**: Web of Science, SUL-PUB (should be subset of what is in WoS), Profiles
+* **Types**: 
+  * Top level / generic: Publication or Document: http://purl.org/ontology/bibo/Document
+  * Abstract: http://vivoweb.org/ontology/core#Abstract
+  * Article: http://purl.org/ontology/bibo/Article
+  * Book: http://purl.org/ontology/bibo/Book
+  * Case study: http://vivoweb.org/ontology/core#CaseStudy
+  * Catalog: http://vivoweb.org/ontology/core#Catalog
+  * Clinical Guideline: http://purl.org/spar/fabio/ClinicalGuideline
+  * Conference Poster: http://vivoweb.org/ontology/core#ConferencePoster
+  * Dataset: http://vivoweb.org/ontology/core#Dataset
+  * Manual: http://purl.org/ontology/bibo/Manual
+  * Manuscript: http://purl.org/ontology/bibo/Manuscript
+  * Patent: http://purl.org/ontology/bibo/Patent
+  * Report: http://purl.org/ontology/bibo/Report
+  * Research Proposal: http://vivoweb.org/ontology/core#ResearchProposal
+  * Score: http://vivoweb.org/ontology/core#Score
+  * Screenplay: http://vivoweb.org/ontology/core#Screenplay
+  * Slideshow: http://purl.org/ontology/bibo/Slideshow
+  * Speech: http://vivoweb.org/ontology/core#Speech
+  * Standard: http://purl.org/ontology/bibo/Standard
+  * Thesis: http://purl.org/ontology/bibo/Thesis
+  * Translation: http://vivoweb.org/ontology/core#Translation
+  * Webpage: http://purl.org/ontology/bibo/Webpage
+  * Working Paper: http://vivoweb.org/ontology/core#WorkingPaper
+
+Field               | Predicate | Expected Data Type | Cardinality | Definition
+------------------- | --------- | ------------------ | ----------- | ----------------------
+@type               | rdf:type  | URI from list above | [1,n]      |  Type of the resource.
+abstract            | bibo:abstract | string-literal | [0,n]       |  A summary of the resource. 
+author              | vivo:relatedBy vivo:Authorship vivo:relates | URI for foaf:Agent | [0,n] | Author of the publication.
+cites               | bibo:cites | document URI | [0,n] | Relates a document to another document that is cited by the first document as reference, comment, review, quotation or for another purpose. 
+date of creation    | dct:created | DateTime string, EDTF | [1,1] | Used to describe the creation date of a bibliographic item.
+description         | vivo:description | string-literal | [0,n] | Description of the resource.
+DOI                 | bibo:doi | DOI IRI | [0,1] | Digital Object Identifier for the publication.
+editor              | vivo:relatedBy vivo:Editorship vivo:relates | URI for foaf:Agent | [0,n] | Editor of the publication.
+identifier          | bibo:identifier | IRI | [1,1] | RIALTO identifier for the resource. May be from multiple sources.
+funded by           | vivo:hasFundingVehicle | Grant URI | [0,n] | Grant (or contract) providing the funding for the publication.
+journal             |  |  |  |  |  |  
+link                |  |  |  |  |  |  
+Profiles approved   |  |  |  |  |  |  
+publisher           |  |  |  |  |  |  
+sponsor             | vivo:informationResourceSupportedBy | Agent URI | [0,n] | Institution supporting the publication.  
+title               |  |  |  |  |  |  
+URI                 |  |  |  |  |  |  
+
+## Topic 
+Topics are subject areas or concepts. Works, grants, or departments may be associated with a Topic.
 
 * **Types**: Publication, Research Output, Articles, Dataset, Student Publication, … 
 * **Sources**: Web of Science, SUL-PUB (should be subset of what is in WoS), Profiles
@@ -10,15 +59,11 @@ Works are publications of articles, research outputs, datasets, etc. Citation fo
 Field | Predicate | Expected Data Type | Cardinality | Value Type | Definition
 ----- | --------- | ------------------ | ----------- | ---------- | ----------
 
-* subject heading information in publications
-* topic area of research / work
 * MESH headings
-* date of publication / release / create
-* authors
-* publisher
-* journal
-* which publications resulted from which grants
-* if from Profiles specifically or not (if approved by researcher)
+* label
+* alternate labels
+* subject heading information in publications
+* subject area of research / work
 
 ## Agents
 
@@ -29,6 +74,7 @@ Agents are some sort of actor involved in creating works or projects, or in supp
 
 Field | Predicate | Expected Data Type | Cardinality | Value Type | Definition
 ----- | --------- | ------------------ | ----------- | ---------- | ----------
+advisor              | vivo:relatedBy vivo:Authorship vivo:relates | URI for foaf:Agent | [0,n] | Author of the publication.
 
 * agent institutional affiliation
 * agent department
