@@ -35,21 +35,21 @@ Field               | Predicate | Expected Data Type | Cardinality | Definition
 @type               | rdf:type  | URI from list above | [1,n]      |  Type of the resource.
 abstract            | bibo:abstract | string-literal | [0,n]       |  A summary of the resource. 
 author              | vivo:relatedBy vivo:Authorship vivo:relates | URI for foaf:Agent | [0,n] | Author of the publication.
+Profiles confirmed  | vivo:relatedBy vivo:Authorship dcterms:source | "Profiles" string-literal | [0,1] | If the authorship relationship has been confirmed by the Author in Profiles. Can be reused for any relationship needed (i.e. Editorship, Advising Relationship, etc.)
 cites               | bibo:cites | document URI | [0,n] | Relates a document to another document that is cited by the first document as reference, comment, review, quotation or for another purpose. 
 date of creation    | dct:created | DateTime string, EDTF | [1,1] | Used to describe the creation date of a bibliographic item.
 description         | vivo:description | string-literal | [0,n] | Description of the resource.
 DOI                 | bibo:doi | DOI IRI | [0,1] | Digital Object Identifier for the publication.
 editor              | vivo:relatedBy vivo:Editorship vivo:relates | URI for foaf:Agent | [0,n] | Editor of the publication.
-identifier          | bibo:identifier | IRI | [1,1] | RIALTO identifier for the resource. May be from multiple sources.
+identifier          | bibo:identifier | IRI | [1,n] | Identifier for the resource. May be from multiple sources.
 funded by           | vivo:hasFundingVehicle | Grant URI | [0,n] | Grant (or contract) providing the funding for the publication.
-journal             |  |  |  | 
-link                |  |  |  | 
-Profiles approved   |  |  |  | 
-publisher           |  |  |  |  
+journal issue       | dcterms:hasPart  | Document URI (Article) | [0,n] | Journal is another entity with issue number, label / title, possibly isPartOf URI for the Journal title overall.
+link                | bibo:uri | URI / IRI | [0,n] | (Preferably, permanent) URL for accessing the resource on the internet. 
+publisher           | vivo:publisher | URI for foaf:Organization | [0,n] |  Publisher of the resource.
 sponsor             | vivo:informationResourceSupportedBy | Agent URI | [0,n] | Institution supporting the publication.  
-title               |  |  |  |  
-alternate identifiers |  |  |  | 
-sameAs              |  |  |  | 
+title               | dcterms:title | string-literal | [1,1] | Title for the resource. 
+alternate title     | dcterms:alternative | string-literal | [0,n] | Alternative title(s) for the resource. 
+sameAs              | owl:sameAs | URI | [0,n] | Other resources (identified via URIs) that are the same as this resource.
 
 ## Topic 
 Topics are subject areas or concepts. Works, grants, or departments may be associated with a Topic.
