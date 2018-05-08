@@ -74,8 +74,41 @@ scope note | skos:scopeNote | string-literal | [0,1] | Note describing the scope
 
 Agents are some sort of actor involved in creating works or projects, or in supporting works or projects via grants or institutional support. 
 
-* **Types**: People, Student, Faculty, Researcher, Academic institutes, Departments, Universities, Colleges, Organizations / Agencies >> Funders
-* **Sources**: Stanford LDAP, CAP Profiles API (Stanford Affiliates scholarly record type info), ORCID & ISNI.
+* **Sources**: CAP Profiles API (Stanford Affiliates scholarly record type info), Stanford LDAP, ORCID, ISNI
+* **Types**: 
+  * Top level / generic: Agent: http://xmlns.com/foaf/0.1/Agent
+  * Person: http://xmlns.com/foaf/0.1/Person 
+    * Student: http://vivoweb.org/ontology/core#Student
+    * Faculty: http://vivoweb.org/ontology/core#FacultyMember
+    * Faculty Emeritus: http://vivoweb.org/ontology/core#EmeritusFaculty
+    * Non-Academic: http://vivoweb.org/ontology/core#NonAcademic
+    * Non-Faculty Academic: http://vivoweb.org/ontology/core#NonFacultyAcademic
+  * Organization: http://xmlns.com/foaf/0.1/Organization
+    * Association
+    * Center
+    * Clinical Organization
+    * College
+    * Company
+    * Consortium
+    * Department
+    * Division
+    * Foundation
+    * Funding Organization
+    * Government Agency
+    * Hospital
+    * Institute (Academic)
+    * Laboratory
+    * Library
+    * Museum
+    * Program
+    * Publisher
+    * Research Organization
+    * School
+    * Student Organization
+    * University 
+  * Group: http://xmlns.com/foaf/0.1/Group
+    * Committee: http://vivoweb.org/ontology/core#Committee
+    * Team: http://vivoweb.org/ontology/core#Team
 
 Field | Predicate | Expected Data Type | Cardinality | Value Type | Definition
 ----- | --------- | ------------------ | ----------- | ---------- | ----------
