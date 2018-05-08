@@ -37,37 +37,38 @@ abstract            | bibo:abstract | string-literal | [0,n]       |  A summary 
 author              | vivo:relatedBy vivo:Authorship vivo:relates | URI for foaf:Agent | [0,n] | Author of the publication.
 Profiles confirmed  | vivo:relatedBy vivo:Authorship dcterms:source | "Profiles" string-literal | [0,1] | If the authorship relationship has been confirmed by the Author in Profiles. Can be reused for any relationship needed (i.e. Editorship, Advising Relationship, etc.)
 cites               | bibo:cites | document URI | [0,n] | Relates a document to another document that is cited by the first document as reference, comment, review, quotation or for another purpose. 
-date of creation    | dct:created | DateTime string, EDTF | [1,1] | Used to describe the creation date of a bibliographic item.
+date of creation    | dct:created | DateTime string, EDTF | [1,1] | Used to describe the creation date of a resource.
 description         | vivo:description | string-literal | [0,n] | Description of the resource.
 DOI                 | bibo:doi | DOI IRI | [0,1] | Digital Object Identifier for the publication.
 editor              | vivo:relatedBy vivo:Editorship vivo:relates | URI for foaf:Agent | [0,n] | Editor of the publication.
 identifier          | bibo:identifier | IRI | [1,n] | Identifier for the resource. May be from multiple sources.
-funded by           | vivo:hasFundingVehicle | Grant URI | [0,n] | Grant (or contract) providing the funding for the publication.
+funded by           | vivo:hasFundingVehicle | Grant URI | [0,n] | Grant (or contract) providing funding for the publication.
 journal issue       | dcterms:hasPart  | Document URI (Article) | [0,n] | Journal is another entity with issue number, label / title, possibly isPartOf URI for the Journal title overall.
 link                | bibo:uri | URI / IRI | [0,n] | (Preferably, permanent) URL for accessing the resource on the internet. 
 publisher           | vivo:publisher | URI for foaf:Organization | [0,n] |  Publisher of the resource.
-sponsor             | vivo:informationResourceSupportedBy | Agent URI | [0,n] | Institution supporting the publication.  
+sameAs              | owl:sameAs | URI | [0,n] | Other resources (identified via URIs) that are the same as this resource.
+sponsor             | vivo:informationResourceSupportedBy | Agent URI | [0,n] | Institution supporting the publication. 
+subject             | dcterms:subject | Topic / Concept URI | [0,n] | Topic or concept the resource is about. 
 title               | dcterms:title | string-literal | [1,1] | Title for the resource. 
 alternate title     | dcterms:alternative | string-literal | [0,n] | Alternative title(s) for the resource. 
-sameAs              | owl:sameAs | URI | [0,n] | Other resources (identified via URIs) that are the same as this resource.
 
-## Topic 
-Topics are subject areas or concepts. Works, grants, or departments may be associated with a Topic.
+## Topics (Concepts)
+Topics are subject areas or concepts. Works, grants, or departments may be associated with a Topic. Agents may have a research area that is a Topic.
 
-* **Types**: Publication, Research Output, Articles, Dataset, Student Publication, … 
 * **Sources**: Web of Science, SUL-PUB (should be subset of what is in WoS), Profiles
+* **Types**: 
+  * Top level / generic: Topic: http://www.w3.org/2004/02/skos/core#Concept
 
 Field | Predicate | Expected Data Type | Cardinality | Definition
 ----- | --------- | ------------------ | ----------- | ----------
-MESH headings |  |  |  | 
-label |  |  |  | 
-alternate labels |  |  |  | 
-broader than |  |  |  | 
-narrower than |  |  |  | 
-vocabulary source |  |  |  | 
-identifier |  |  |  | 
-alternate identifiers |  |  |  | 
-sameAs |  |  |  | 
+label | skos:prefLabel | string-literal | [1,1] | Primary label for the Concept. 
+alternate labels | skos:altLabel | string-literal | [0,n] | Alternative labels for the Concept.
+broader than | skos:broader | Concept URI | [0,n] | Broader concepts (within a scheme).
+narrower than | skos:narrower | Concept URI | [0,n] | Narrower concepts (within a scheme).
+vocabulary source | skos:inScheme | skos:ConceptScheme URI | [0,n] | Vocabulary or scheme the concept is in (e.g. MESH Headings, LCCN, AAT, etc.)
+identifier | dcterms:identifier |  |  | 
+sameAs     | owl:sameAs | URI | [0,n] | Other Concepts (identified via URIs) that are the same as this resource.
+scope note | skos:scopeNote | string-literal | [0,1] | Note describing the scope and definition of the Concept.
 
 ## Agents
 
