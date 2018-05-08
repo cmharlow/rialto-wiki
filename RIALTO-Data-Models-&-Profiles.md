@@ -74,60 +74,66 @@ scope note | skos:scopeNote | string-literal | [0,1] | Note describing the scope
 
 Agents are some sort of actor involved in creating works or projects, or in supporting works or projects via grants or institutional support. 
 
+### Persons
+
 * **Sources**: CAP Profiles API (Stanford Affiliates scholarly record type info), Stanford LDAP, ORCID, ISNI
 * **Types**: 
   * Top level / generic: Agent: http://xmlns.com/foaf/0.1/Agent
-  * Person: http://xmlns.com/foaf/0.1/Person 
-    * Student: http://vivoweb.org/ontology/core#Student
-    * Faculty: http://vivoweb.org/ontology/core#FacultyMember
-    * Faculty Emeritus: http://vivoweb.org/ontology/core#EmeritusFaculty
-    * Non-Academic: http://vivoweb.org/ontology/core#NonAcademic
-    * Non-Faculty Academic: http://vivoweb.org/ontology/core#NonFacultyAcademic
-  * Organization: http://xmlns.com/foaf/0.1/Organization
-    * Association
-    * Center
-    * Clinical Organization
-    * College
-    * Company
-    * Consortium
-    * Department
-    * Division
-    * Foundation
-    * Funding Organization
-    * Government Agency
-    * Hospital
-    * Institute (Academic)
-    * Laboratory
-    * Library
-    * Museum
-    * Program
-    * Publisher
-    * Research Organization
-    * School
-    * Student Organization
-    * University 
-  * Group: http://xmlns.com/foaf/0.1/Group
-    * Committee: http://vivoweb.org/ontology/core#Committee
-    * Team: http://vivoweb.org/ontology/core#Team
+  * Top level / generic: Person: http://xmlns.com/foaf/0.1/Person 
+  * Student: http://vivoweb.org/ontology/core#Student
+  * Faculty: http://vivoweb.org/ontology/core#FacultyMember
+  * Faculty Emeritus: http://vivoweb.org/ontology/core#EmeritusFaculty
+  * Non-Academic: http://vivoweb.org/ontology/core#NonAcademic
+  * Non-Faculty Academic: http://vivoweb.org/ontology/core#NonFacultyAcademic
 
-Field | Predicate | Expected Data Type | Cardinality | Value Type | Definition
------ | --------- | ------------------ | ----------- | ---------- | ----------
-advisor              | vivo:relatedBy vivo:Authorship vivo:relates | URI for foaf:Agent | [0,n] | Author of the publication.
+Field   | Predicate        | Expected Data Type    | Cardinality | Definition
+------- | ---------------- | --------------------- | ----------- | ----------
+address | vcard:hasAddress | URI for vcard:Address | [0,1]       | Address for the Agent.
+advisor | vivo:relatedBy vivo:AdvisingRelationship vivo:relates; obo:RO_000053 vivo:AdvisorRole | URI for foaf:Agent | [0,n] | Advisor of the person.
+country | dcterms:spatial  | URI for country in address | [0,n]  | Normalized country the Agent resides or is based in.
+department |  | | |
+email address | | | |
+funded by (grant) | | | |
+institutional affiliation | | | |
+name | | | |
+related topic areas | | | |
+role(s) / job(s) | | | |
 
-* agent institutional affiliation
-* agent department
-* agent country
-* related topic areas
-* role(s) / job(s)
-* name
-* institution name
-* institution country
-* funded by (grant)
-* email address
+### Organizations
+  * Top level / generic: Agent: http://xmlns.com/foaf/0.1/Agent
+  * Top level / generic: Organization: http://xmlns.com/foaf/0.1/Organization
+  * Association: http://vivoweb.org/ontology/core#Association
+  * Center: http://vivoweb.org/ontology/core#Center
+  * College: http://vivoweb.org/ontology/core#College
+  * Consortium: http://vivoweb.org/ontology/core#Consortium
+  * Department: http://vivoweb.org/ontology/core#Department
+  * Division: http://vivoweb.org/ontology/core#Division
+  * Foundation: http://vivoweb.org/ontology/core#Foundation
+  * Funding Organization: http://vivoweb.org/ontology/core#FundingOrganization
+  * Government Agency: http://vivoweb.org/ontology/core#GovernmentAgency
+  * Hospital: http://vivoweb.org/ontology/core#Hospital
+  * Institute (Academic): http://vivoweb.org/ontology/core#Institute
+  * Laboratory: http://vivoweb.org/ontology/core#Laboratory
+  * Library: http://vivoweb.org/ontology/core#Library
+  * Museum: http://vivoweb.org/ontology/core#Museum
+  * Program: http://vivoweb.org/ontology/core#Program
+  * Publisher: http://vivoweb.org/ontology/core#Publisher
+  * Research Organization: http://vivoweb.org/ontology/core#ResearchOrganization
+  * School: http://vivoweb.org/ontology/core#School
+  * Student Organization: http://vivoweb.org/ontology/core#StudentOrganization
+  * University: http://vivoweb.org/ontology/core#University
+
+### Groups
+
+  * Top level / generic: Agent: http://xmlns.com/foaf/0.1/Agent
+  * Top level / generic: Group: http://xmlns.com/foaf/0.1/Group
+  * Committee: http://vivoweb.org/ontology/core#Committee
+  * Team: http://vivoweb.org/ontology/core#Team
 
 ## Grants
 
 Grants are awards for some project(s) or work(s), usually attached to one or more lead agents (PIs) whether people or departments, and awarded or funded by an organization or agency.
+
 
 * **Types**: Governmental << Federal / State / Local, Private, Internal to Stanford, ... 
 * **Sources**: Web of Science (funding agency string / grant number in metadata), SERA (not done yet)
