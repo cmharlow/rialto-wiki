@@ -88,6 +88,7 @@ Agents are some sort of actor involved in creating works or projects, or in supp
 
 Field   | Predicate        | Expected Data Type    | Cardinality | Definition
 ------- | ---------------- | --------------------- | ----------- | ----------
+about   | vivo:overview    | string-literal        | [0,n]       | About the Agent.
 address | vcard:hasAddress | URI for vcard:Address | [0,1]       | Address for the Agent.
 advisor | vivo:relatedBy vivo:AdvisingRelationship vivo:relates; obo:RO_000053 vivo:AdvisorRole | URI for foaf:Agent | [0,n] | Advisor of the person.
 country | dcterms:spatial  | URI for country in address | [0,n]  | Normalized country the Agent resides or is based in.
@@ -96,7 +97,7 @@ email address | | | |
 funded by (grant) | | | |
 institutional affiliation | | | |
 name | | | |
-related topic areas | | | |
+hasResearchArea | vivo:hasResearchArea | | |
 role(s) / job(s) | | | |
 
 ### Organizations
@@ -123,12 +124,38 @@ role(s) / job(s) | | | |
   * Student Organization: http://vivoweb.org/ontology/core#StudentOrganization
   * University: http://vivoweb.org/ontology/core#University
 
+Field   | Predicate        | Expected Data Type    | Cardinality | Definition
+------- | ---------------- | --------------------- | ----------- | ----------
+address | vcard:hasAddress | URI for vcard:Address | [0,1]       | Address for the Agent.
+advisor | vivo:relatedBy vivo:AdvisingRelationship vivo:relates; obo:RO_000053 vivo:AdvisorRole | URI for foaf:Agent | [0,n] | Advisor of the person.
+country | dcterms:spatial  | URI for country in address | [0,n]  | Normalized country the Agent resides or is based in.
+department |  | | |
+email address | | | |
+funded by (grant) | | | |
+institutional affiliation | | | |
+name | | | |
+related topic areas | | | |
+role(s) / job(s) | | | |
+
 ### Groups
 
   * Top level / generic: Agent: http://xmlns.com/foaf/0.1/Agent
   * Top level / generic: Group: http://xmlns.com/foaf/0.1/Group
   * Committee: http://vivoweb.org/ontology/core#Committee
   * Team: http://vivoweb.org/ontology/core#Team
+
+Field   | Predicate        | Expected Data Type    | Cardinality | Definition
+------- | ---------------- | --------------------- | ----------- | ----------
+address | vcard:hasAddress | URI for vcard:Address | [0,1]       | Address for the Agent.
+advisor | vivo:relatedBy vivo:AdvisingRelationship vivo:relates; obo:RO_000053 vivo:AdvisorRole | URI for foaf:Agent | [0,n] | Advisor of the person.
+country | dcterms:spatial  | URI for country in address | [0,n]  | Normalized country the Agent resides or is based in.
+department |  | | |
+email address | | | |
+funded by (grant) | | | |
+institutional affiliation | | | |
+name | | | |
+related topic areas | | | |
+role(s) / job(s) | | | |
 
 ## Grants
 
