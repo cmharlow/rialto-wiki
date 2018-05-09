@@ -138,7 +138,6 @@ related topic areas | | | |
 role(s) / job(s) | | | |
 
 ### Groups
-
   * Top level / generic: Agent: http://xmlns.com/foaf/0.1/Agent
   * Top level / generic: Group: http://xmlns.com/foaf/0.1/Group
   * Committee: http://vivoweb.org/ontology/core#Committee
@@ -161,21 +160,34 @@ role(s) / job(s) | | | |
 
 Grants are awards for some project(s) or work(s), usually attached to one or more lead agents (PIs) whether people or departments, and awarded or funded by an organization or agency.
 
-
-* **Types**: Governmental << Federal / State / Local, Private, Internal to Stanford, ... 
 * **Sources**: Web of Science (funding agency string / grant number in metadata), SERA (not done yet)
+* **Types**: 
+  * Top level / generic: 
+  * Governmental
+    * Federal
+    * State
+    * Local
+  * Private
+  * Internal to Stanford
 
-Field | Predicate | Expected Data Type | Cardinality | Value Type | Definition
------ | --------- | ------------------ | ----------- | ---------- | ----------
-
- Grant Name, Name, Grant Amount (if available), Status (awarded yes/no), Start Date
-
-* which publications resulted from which grants
+Field        | Predicate     | Expected Data Type | Cardinality | Definition
+------------ | ------------- | ------------------ | ----------- | ----------
+Grant Name   | dcterms:title | string-literal     | [1,1]       | Name or title of the grant. 
+Awardee      |               |                    | [1,n]       | 
+Grant Amount |               |                    | [0,1]       | 
+Status       |               |                    | [1,1]       | Indicates if the grant has been awarded.
+Start Date   |               |                    | [0,1]       | 
+End Date     |               |                    | [0,1]       | 
+Award Date   |               |                    | [1,1]       | 
+Related project |            |                    | [0,n]       | Projects related to or funded by the grant.
+Related work |               |                    | [0,n]       | Answer which publications resulted from which grants?
 
 ## Projects
 
 Projects here are research projects that are funded by grants or institutions, worked on by agents, and may produce multiple works. 
 Sources: SERA (not done yet)
 
-Field | Predicate | Expected Data Type | Cardinality | Value Type | Definition
------ | --------- | ------------------ | ----------- | ---------- | ----------
+Field           | Predicate     | Expected Data Type | Cardinality | Definition
+--------------- | ------------- | ------------------ | ----------- | ----------
+title           | dcterms:title | string-literal     | [1,1] | Title for the project. 
+alternate title | dcterms:alternative | string-literal | [0,n] | Alternative title(s) for the project. 
