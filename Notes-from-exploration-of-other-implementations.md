@@ -7,4 +7,20 @@ Cornell is using VIVO in their Scholars at Cornell site (https://scholars.cornel
 * VIVO for profiles pages - via modified, customized VIVO pages. All freemarker built on sparql data queries, other.
 * Vitro with SDB for data store
 * Symplectic Elements and Data Insight for harvesting. Creates a merged record from all sources presented in an article (i.e. the Uber record), do normalization via discrimination of which sources you select
+* Create a merged record from all sources presented in an article (i.e. the Uber record), do normalization via discrimination of which sources you select
+
+
+# Brown
+
+Brown is using Vitro as a back-end data store, but not for the front end.  
+
+* Just using Vitro, but still using 3 tiered build
+* Abandoned VIVO ontology, not a good fit and was slowing them down + causing data management headaches
+* Ingest is via nightly data dumps from homegrown faculty information system
+* Separate services for managing faculty publications
+* Data lives in Vitro and is indexed into Solr
+* Flask Apps communicate with Query API on Vitro -- submit SPARQL queries to VIVO API, publish results as JSON over their API
+* VIVO to Rails front end for visualizations - https://github.com/Brown-University-Library/vivo-on-rails
+* RDF has been valuable for schema neutrality + merging of data from variety of sources; No schema migrations
+Challenges: with RDF, aren’t sort of client libraries for communicating with RDF database / triplestore like a python driver for SQL. Complexity then is pushed into application code.
 
