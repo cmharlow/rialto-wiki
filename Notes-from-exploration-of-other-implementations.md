@@ -8,6 +8,11 @@ Cornell is using VIVO in their Scholars at Cornell site (https://scholars.cornel
 * Vitro with SDB for data store
 * Symplectic Elements and Data Insight for harvesting. Creates a merged record from all sources presented in an article (i.e. the Uber record), do normalization via discrimination of which sources you select
 * Create a merged record from all sources presented in an article (i.e. the Uber record), do normalization via discrimination of which sources you select
+* Data indexed into Solr for performance in queries to feed visualizations
+* Data analysis module serves up JSON to visualization using javascript libraries (D3.js is the main one; C3, a D3 extension)
+* Data distribution API provides views into that triplestore
+* Note that there is an embedded triplestore to solr indexer in VIVO, which is set up with configuration files.
+
 
 
 # Brown
