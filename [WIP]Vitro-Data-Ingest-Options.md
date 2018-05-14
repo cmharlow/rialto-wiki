@@ -11,6 +11,7 @@ https://github.com/vivo-project/Vitro/blob/4859eb7da1fabb5a3e091f5d08495e28e4017
 https://github.com/wcmc-its/vivo-import-data/blob/master/vivo-import-data/src/main/java/org/vivoweb/harvester/connectionfactory/JenaConnectionFactory.java
 
 ### Jena Spaqrql Update API (direct loading via sparql, i.e. not via http)
+Sample code:
 
 https://github.com/wcmc-its/vivo-import-data/blob/master/vivo-import-data/src/main/java/org/vivoweb/harvester/ingest/AcademicFetchFromED.java
 
