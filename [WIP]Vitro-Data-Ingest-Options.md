@@ -20,7 +20,7 @@ See: https://github.com/wcmc-its/vivo-import-data/blob/28e43203c8414e7f51446b60c
 
 https://github.com/wcmc-its/vivo-import-data/blob/master/vivo-import-data/src/main/java/org/vivoweb/harvester/connectionfactory/JenaConnectionFactory.java
 
-### Jena Spaqrql Update API (direct loading via sparql, i.e. not via http)
+_Jena Spaqrql Update API (direct loading via sparql, i.e. not via http)_
 **Sample code:**
 
 https://github.com/wcmc-its/vivo-import-data/blob/master/vivo-import-data/src/main/java/org/vivoweb/harvester/ingest/AcademicFetchFromED.java
