@@ -14,18 +14,19 @@ This would involve hacking, modifying, or wrapping the Vitro code that controls 
 
 See generally the classes in https://github.com/vivo-project/Vitro/tree/608aa1cf54648f35045eb1ec717b143269b11273/api/src/main/java/edu/cornell/mannlib/vitro/webapp/rdfservice/adapters
 
-_The following approach loads data using SDB via jdbc_
-
-See: https://github.com/wcmc-its/vivo-import-data/blob/28e43203c8414e7f51446b60cbbc9e36ca92b024/README.md#using-sdbjenaconnect-to-import-data-into-vivo
-
-https://github.com/wcmc-its/vivo-import-data/blob/master/vivo-import-data/src/main/java/org/vivoweb/harvester/connectionfactory/JenaConnectionFactory.java
-
 _Jena Spaqrql Update API (direct loading via sparql, i.e. not via http)_
+
 **Sample code:**
 
 https://github.com/wcmc-its/vivo-import-data/blob/master/vivo-import-data/src/main/java/org/vivoweb/harvester/ingest/AcademicFetchFromED.java
 
 https://github.com/wcmc-its/vivo-import-data/blob/667b21adeb4d9d67e2909449dee9be48e7df0972/vivo-import-data/src/main/java/org/vivoweb/harvester/util/repo/JenaConnect.java
+
+_The following approach loads data using SDB via jdbc_
+
+See: https://github.com/wcmc-its/vivo-import-data/blob/28e43203c8414e7f51446b60cbbc9e36ca92b024/README.md#using-sdbjenaconnect-to-import-data-into-vivo
+
+https://github.com/wcmc-its/vivo-import-data/blob/master/vivo-import-data/src/main/java/org/vivoweb/harvester/connectionfactory/JenaConnectionFactory.java
 
 ## 3. Load data as a filegraph
 Anything put in the `abox/firsttime` or `tbox/firsttime` directories will get loaded into the store the first time (hence the name) - i.e. when those models are empty or on startup. The obvious downfall here is that it would require an application restart every time we want the data loaded.
