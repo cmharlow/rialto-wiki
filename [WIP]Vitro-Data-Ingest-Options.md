@@ -3,6 +3,7 @@
 2. Load data using Vitro data loading abstractions, or Jena Connection.
 
 Sample code:
+
 https://github.com/vivo-project/Vitro/blob/4859eb7da1fabb5a3e091f5d08495e28e4017b79/api/src/main/java/edu/cornell/mannlib/vitro/webapp/controller/jena/RDFUploadController.java
 
 https://github.com/vivo-project/Vitro/blob/4859eb7da1fabb5a3e091f5d08495e28e4017b79/api/src/main/java/edu/cornell/mannlib/vitro/webapp/rdfservice/adapters/RDFServiceBulkUpdater.java
