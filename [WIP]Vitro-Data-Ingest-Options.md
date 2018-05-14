@@ -28,5 +28,11 @@ See: https://github.com/wcmc-its/vivo-import-data/blob/28e43203c8414e7f51446b60c
 
 https://github.com/wcmc-its/vivo-import-data/blob/master/vivo-import-data/src/main/java/org/vivoweb/harvester/connectionfactory/JenaConnectionFactory.java
 
+Note: turning off indexing when running a bulk update.
+
 ## 3. Load data as a filegraph
 Anything put in the `abox/firsttime` or `tbox/firsttime` directories will get loaded into the store the first time (hence the name) - i.e. when those models are empty or on startup. The obvious downfall here is that it would require an application restart every time we want the data loaded.
+
+## 5. Use Jena TDBLoader?
+
+https://jena.apache.org/documentation/tdb/commands.html
