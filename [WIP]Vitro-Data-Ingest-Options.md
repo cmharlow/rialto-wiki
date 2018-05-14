@@ -8,15 +8,15 @@ The Vitro `SparqlUpdateApi` code is accessible via a tomcat servlet that takes a
 
 ## 2. Load data using Vitro data loading abstractions, or the Jena SDB (JDBC) Connection.
 
-This would involve hacking, modifying, or wrapping the Vitro code that controls how data gets loaded into Vitro using the webapp features. The data is loaded from files instead of strings.
+This would involve hacking, modifying, or wrapping the Vitro code that controls how data gets loaded into Vitro using the underlying webapp features. The data is either loaded from files or strings.
 
 **Sample code:**
 
 See generally the classes in https://github.com/vivo-project/Vitro/tree/608aa1cf54648f35045eb1ec717b143269b11273/api/src/main/java/edu/cornell/mannlib/vitro/webapp/rdfservice/adapters
 
-_Jena Spaqrql Update API (direct loading via sparql, i.e. not via http)_
-
 **Sample code:**
+
+_Jena Spaqrql Update API (direct loading via sparql, i.e. not via http)_
 
 https://github.com/wcmc-its/vivo-import-data/blob/master/vivo-import-data/src/main/java/org/vivoweb/harvester/ingest/AcademicFetchFromED.java
 
