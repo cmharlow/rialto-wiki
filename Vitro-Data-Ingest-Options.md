@@ -1,3 +1,5 @@
+_Note these are not in any order of preference or feasibility_
+
 ## 1. Load data using the `SparqlUpdate` API
 
 The Vitro `SparqlUpdateApi` code is accessible via a tomcat servlet that takes a request with an update param. The request string is literally the `update=INSERT DATA {}` wrapper syntax for the inserted triples. The `SparqlUpdateApiController` class takes the value of update as a string and performs the update using the Jena Sparql api.
