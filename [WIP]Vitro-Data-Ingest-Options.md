@@ -17,7 +17,7 @@ https://jena.apache.org/documentation/tdb/tdb_transactions.html
 
 See generally the classes in https://github.com/vivo-project/Vitro/tree/608aa1cf54648f35045eb1ec717b143269b11273/api/src/main/java/edu/cornell/mannlib/vitro/webapp/rdfservice/adapters
 
-## 3. Jena Spaqrql Update API (ARQ: direct loading via sparql, i.e. not via http)
+## 3. Jena Spaqrql Update API (ARQ: direct loading via sparql, not via http)
 
 https://jena.apache.org/documentation/query/update.html
 https://jena.apache.org/documentation/query/cmds.html
