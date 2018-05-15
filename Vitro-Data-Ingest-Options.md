@@ -1,10 +1,12 @@
-## 1. Load data using the sparqlUpdate api
+## 1. Load data using the `SparqlUpdate` API
 
 The Vitro `SparqlUpdateApi` code is accessible via a tomcat servlet that takes a request with an update param. The request string is literally the `update=INSERT DATA {}` wrapper syntax for the inserted triples. The `SparqlUpdateApiController` class takes the value of update as a string and performs the update using the Jena Sparql api.
 
 **Sample code:**
 
-`vitro/api/src/main/java/edu/cornel /mannlib/vitro/webapp/controller/api/SparqlUpdateApiController.java`
+```
+vitro/api/src/main/java/edu/cornel /mannlib/vitro/webapp/controller/api/SparqlUpdateApiController.java
+```
 
 ## 2. Load data using Vitro data loading abstractions (TDB Java API).
 
@@ -17,7 +19,7 @@ https://jena.apache.org/documentation/tdb/tdb_transactions.html
 
 https://github.com/vivo-project/Vitro/blob/608aa1cf54648f35045eb1ec717b143269b11273/api/src/main/java/edu/cornell/mannlib/vitro/webapp/rdfservice/adapters/RDFServiceBulkUpdater.java
 
-## 3. Jena Spaqrql Update API (ARQ: direct loading via sparql not http)
+## 3. Jena SPARQL Update API (ARQ: direct loading via SPARQL not http)
 
 https://jena.apache.org/documentation/query/update.html
 https://jena.apache.org/documentation/query/cmds.html
