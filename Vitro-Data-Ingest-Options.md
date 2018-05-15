@@ -1,4 +1,4 @@
-_Note these are not in any order of preference or feasibility_
+_Note these are not in any order of preference_
 
 ## 1. Load data using the `SparqlUpdate` API
 
