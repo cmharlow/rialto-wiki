@@ -64,3 +64,11 @@ drwxr-x---  31 jgreben  admin  992 May  7 22:28 tdbModels
 Fuseki is a SPARQL server. It provides REST-style SPARQL HTTP Update, SPARQL Query, and SPARQL Update using the SPARQL protocol over HTTP. This would be similar to loading data via the Vitro sparql api without using Vitro...
 
 https://jena.apache.org/documentation/serving_data/
+
+## N.B. we should probably globally stop or pause the indexer when bulkloading. This appears in the `/usr/share/tomcat/logs/vitro.all.log` as records are being loaded one at a time:
+```
+2018-05-15 16:37:21,950 INFO  [IndexHistory] PAUSE, 5/15/18 4:24 PM, []
+2018-05-15 16:37:21,964 INFO  [IndexHistory] UNPAUSE, 5/15/18 4:24 PM, []
+2018-05-15 16:37:22,053 INFO  [IndexHistory] PAUSE, 5/15/18 4:24 PM, []
+2018-05-15 16:37:22,067 INFO  [IndexHistory] UNPAUSE, 5/15/18 4:24 PM, []
+```
