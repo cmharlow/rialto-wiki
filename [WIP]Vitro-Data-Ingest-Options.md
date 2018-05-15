@@ -8,7 +8,7 @@ The Vitro `SparqlUpdateApi` code is accessible via a tomcat servlet that takes a
 
 ## 2. Load data using Vitro data loading abstractions (TDB Java API).
 
-This would involve modifying or extending the Vitro code that controls how data gets loaded into Vitro via the webapp, or using them as guides. The data is either loaded from dataset files.
+This would involve modifying or extending the Vitro code that controls how data gets loaded into Vitro via the webapp, or using them as guides. The data is loaded from dataset files.
 
 https://jena.apache.org/documentation/tdb/java_api.html
 https://jena.apache.org/documentation/tdb/tdb_transactions.html
