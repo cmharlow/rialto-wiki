@@ -56,3 +56,5 @@ The directory of the TDB database is one of these(?)
 drwxr-x---  31 jgreben  admin  992 May  8 15:51 tdbContentModels
 drwxr-x---  31 jgreben  admin  992 May  7 22:28 tdbModels
 ```
+
+## 7. Fuseki?
