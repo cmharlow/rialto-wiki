@@ -42,7 +42,7 @@ https://github.com/wcmc-its/vivo-import-data/blob/master/vivo-import-data/src/ma
 
 Anything put in the `abox/firsttime` or `tbox/firsttime` directories will get loaded into the store the first time (hence the name) - i.e. when those models are empty or on startup. The obvious downfall here is that it would require an application restart every time we want the data loaded.
 
-## 6. Use Jena tdbLoader
+## 6. Use Jena Tdbloader
 
 Use Jena's command line tool to load files directly and efficiently into a TDB-back model. Tdbloader2 can only be used to create a database.
 
