@@ -4,11 +4,11 @@ The Vitro `SparqlUpdateApi` code is accessible via a tomcat servlet that takes a
 
 **Sample code:**
 
-`vitro/api/src/main/java/edu/cornell/mannlib/vitro/webapp/controller/api/SparqlUpdateApiController.java`
+`vitro/api/src/main/java/edu/cornel /mannlib/vitro/webapp/controller/api/SparqlUpdateApiController.java`
 
-## 2. Load data using Vitro data loading abstractions/TDB Java API.
+## 2. Load data using Vitro data loading abstractions (TDB Java API).
 
-This would involve modifying or wrapping the Vitro code that controls how data gets loaded into Vitro via the webapp, perhaps extending the underlying webapp classes or using them as guides. The data is either loaded from files or strings.
+This would involve modifying or extending the Vitro code that controls how data gets loaded into Vitro via the webapp, or using them as guides. The data is either loaded from dataset files.
 
 https://jena.apache.org/documentation/tdb/java_api.html
 https://jena.apache.org/documentation/tdb/tdb_transactions.html
