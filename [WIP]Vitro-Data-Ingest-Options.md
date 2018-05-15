@@ -17,16 +17,18 @@ https://jena.apache.org/documentation/tdb/tdb_transactions.html
 
 See generally the classes in https://github.com/vivo-project/Vitro/tree/608aa1cf54648f35045eb1ec717b143269b11273/api/src/main/java/edu/cornell/mannlib/vitro/webapp/rdfservice/adapters
 
-## 3. Jena Spaqrql Update API (ARQ: direct loading via sparql, not via http)
+Note: Code shows the pausing of indexing when running a bulk update.
+
+## 3. Jena Spaqrql Update API (ARQ: direct loading via sparql not http)
 
 https://jena.apache.org/documentation/query/update.html
 https://jena.apache.org/documentation/query/cmds.html
 
-https://github.com/wcmc-its/vivo-import-data/blob/master/vivo-import-data/src/main/java/org/vivoweb/harvester/ingest/AcademicFetchFromED.java
-
 **Sample code:**
 
 https://github.com/wcmc-its/vivo-import-data/blob/667b21adeb4d9d67e2909449dee9be48e7df0972/vivo-import-data/src/main/java/org/vivoweb/harvester/util/repo/JenaConnect.java
+
+https://github.com/wcmc-its/vivo-import-data/blob/master/vivo-import-data/src/main/java/org/vivoweb/harvester/ingest/AcademicFetchFromED.java
 
 ## 4. Jena SDB (JDBC) Connection.
 
@@ -35,8 +37,6 @@ See: https://github.com/wcmc-its/vivo-import-data/blob/28e43203c8414e7f51446b60c
 **Sample code:**
 
 https://github.com/wcmc-its/vivo-import-data/blob/master/vivo-import-data/src/main/java/org/vivoweb/harvester/connectionfactory/JenaConnectionFactory.java
-
-Note: turning off indexing when running a bulk update.
 
 ## 5. Load data as a filegraph
 Anything put in the `abox/firsttime` or `tbox/firsttime` directories will get loaded into the store the first time (hence the name) - i.e. when those models are empty or on startup. The obvious downfall here is that it would require an application restart every time we want the data loaded.
