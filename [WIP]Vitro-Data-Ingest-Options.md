@@ -6,9 +6,13 @@ The Vitro `SparqlUpdateApi` code is accessible via a tomcat servlet that takes a
 
 `Vitro/api/src/main/java/edu/cornell/mannlib/vitro/webapp/controller/api/SparqlUpdateApiController.java`
 
-## 2. Load data using Vitro data loading abstractions, or the Jena SDB (JDBC) Connection.
+## 2. Load data using Vitro data loading abstractions.
 
-This would involve hacking, modifying, or wrapping the Vitro code that controls how data gets loaded into Vitro using the underlying webapp features. The data is either loaded from files or strings.
+This would involve modifying or wrapping the Vitro code that controls how data gets loaded into Vitro via the webapp, perhaps extending the underlying webapp classes or using them as guides. The data is either loaded from files or strings.
+
+Jena things to consider:
+
+https://jena.apache.org/documentation/tdb/java_api.html
 
 **Sample code:**
 
@@ -16,11 +20,16 @@ See generally the classes in https://github.com/vivo-project/Vitro/tree/608aa1cf
 
 **Sample code:**
 
-_Jena Spaqrql Update API (direct loading via sparql, i.e. not via http)_
+_Jena Spaqrql Update API (ARQ: direct loading via sparql, i.e. not via http)_
+
+https://jena.apache.org/documentation/query/update.html
+https://jena.apache.org/documentation/query/cmds.html
 
 https://github.com/wcmc-its/vivo-import-data/blob/master/vivo-import-data/src/main/java/org/vivoweb/harvester/ingest/AcademicFetchFromED.java
 
 https://github.com/wcmc-its/vivo-import-data/blob/667b21adeb4d9d67e2909449dee9be48e7df0972/vivo-import-data/src/main/java/org/vivoweb/harvester/util/repo/JenaConnect.java
+
+## 3. Load data using the Jena SDB (JDBC) Connection.
 
 _The following approach loads data using SDB via jdbc_
 
@@ -30,7 +39,7 @@ https://github.com/wcmc-its/vivo-import-data/blob/master/vivo-import-data/src/ma
 
 Note: turning off indexing when running a bulk update.
 
-## 3. Load data as a filegraph
+## 4. Load data as a filegraph
 Anything put in the `abox/firsttime` or `tbox/firsttime` directories will get loaded into the store the first time (hence the name) - i.e. when those models are empty or on startup. The obvious downfall here is that it would require an application restart every time we want the data loaded.
 
 ## 5. Use Jena TDBLoader?
