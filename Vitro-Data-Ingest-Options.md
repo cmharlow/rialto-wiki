@@ -68,8 +68,10 @@ https://jena.apache.org/documentation/serving_data/
 ## Other concerns
  - Globally stop or pause the indexer when bulkloading. This appears in the `/usr/share/tomcat/logs/vitro.all.log` as records are being loaded one at a time:
 ```
+...
 2018-05-15 16:37:21,950 INFO  [IndexHistory] PAUSE, 5/15/18 4:24 PM, []
 2018-05-15 16:37:21,964 INFO  [IndexHistory] UNPAUSE, 5/15/18 4:24 PM, []
 2018-05-15 16:37:22,053 INFO  [IndexHistory] PAUSE, 5/15/18 4:24 PM, []
 2018-05-15 16:37:22,067 INFO  [IndexHistory] UNPAUSE, 5/15/18 4:24 PM, []
+...
 ```
