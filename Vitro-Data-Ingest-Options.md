@@ -66,7 +66,7 @@ Fuseki is a SPARQL server. It provides REST-style SPARQL HTTP Update, SPARQL Que
 https://jena.apache.org/documentation/serving_data/
 
 ## Other concerns
-N.B. we should probably globally stop or pause the indexer when bulkloading. This appears in the `/usr/share/tomcat/logs/vitro.all.log` as records are being loaded one at a time:
+ - Globally stop or pause the indexer when bulkloading. This appears in the `/usr/share/tomcat/logs/vitro.all.log` as records are being loaded one at a time:
 ```
 2018-05-15 16:37:21,950 INFO  [IndexHistory] PAUSE, 5/15/18 4:24 PM, []
 2018-05-15 16:37:21,964 INFO  [IndexHistory] UNPAUSE, 5/15/18 4:24 PM, []
