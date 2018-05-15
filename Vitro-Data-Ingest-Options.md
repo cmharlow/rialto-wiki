@@ -59,4 +59,8 @@ drwxr-x---  31 jgreben  admin  992 May  8 15:51 tdbContentModels
 drwxr-x---  31 jgreben  admin  992 May  7 22:28 tdbModels
 ```
 
-## 7. Fuseki?
+## 7. Fuseki
+
+Fuseki is a SPARQL server. It provides REST-style SPARQL HTTP Update, SPARQL Query, and SPARQL Update using the SPARQL protocol over HTTP. This would be similar to loading data via the Vitro sparql api without using Vitro...
+
+https://jena.apache.org/documentation/serving_data/
