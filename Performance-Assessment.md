@@ -4,11 +4,11 @@ As part of assessing Vitro, we need to:
 
 1. test the scalability of Vitro (and, by extension, VIVO) for RIALTO type data and RIALTO phase 1 amounts of data. 
 2. ease [and cost time-wise] to work, develop, maintain Vitro
-  * Take any info from what we’ve learned in the scaling questions
-  * Highlight any open questions about Vitro [VIVO] usage
+    * Take any info from what we’ve learned in the scaling questions
+    * Highlight any open questions about Vitro [VIVO] usage
 3. If Vitro scales adequately, Vitro vs VIVO
-  * Driven by data modeling
-  * Driven by the ease of usage / cost of usage
+    * Driven by data modeling
+    * Driven by the ease of usage / cost of usage
 
 ## Vitro Performance Assessment Matrix
 
