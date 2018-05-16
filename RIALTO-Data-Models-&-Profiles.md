@@ -66,7 +66,7 @@ alternate labels | skos:altLabel | string-literal | [0,n] | Alternative labels f
 broader than | skos:broader | Concept URI | [0,n] | Broader concepts (within a scheme).
 narrower than | skos:narrower | Concept URI | [0,n] | Narrower concepts (within a scheme).
 vocabulary source | skos:inScheme | skos:ConceptScheme URI | [0,n] | Vocabulary or scheme the concept is in (e.g. MESH Headings, LCCN, AAT, etc.)
-identifier | dcterms:identifier |  |  | 
+identifier | dcterms:identifier | IRI | [1,n] | Identifier for the resource. May be from multiple sources.
 sameAs     | owl:sameAs | URI | [0,n] | Other Concepts (identified via URIs) that are the same as this resource.
 scope note | skos:scopeNote | string-literal | [0,1] | Note describing the scope and definition of the Concept.
 
