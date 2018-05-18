@@ -18,13 +18,13 @@ Tests for assessing performance of Vitro (or other identified future options) as
 * index == indexing (within Vitro, default mappings to Solr)
 * :star: == primary foci
 
-Vitro Ingest                | no inf & no index    | inf & no index       | no inf & index :star:  | inf & index :star:  | system stats during run |
---------------------------- | -------------------- | -------------------- | ---------------------- | ------------------- | ----------------------- |
-1 SPARQL API (Vitro)        | [Blocked](https://github.com/sul-dlss/rialto/issues/53) | [Blocked](https://github.com/sul-dlss/rialto/issues/54) | [In progress](https://github.com/sul-dlss/rialto/issues/50) | [Ready](https://github.com/sul-dlss/rialto/issues/51) | https://sulstats.stanford.edu/dashboard/db/servers?from=1526619600000&to=1526655600000&var-department=dlss&var-project=rialto&var-server=rialto-vitro-dev&theme=light |
-2 Jena TDBLoader (cmd line) | [Blocked](https://github.com/sul-dlss/rialto/issues/66) | [Blocked](https://github.com/sul-dlss/rialto/issues/67) | [Blocked](https://github.com/sul-dlss/rialto/issues/55)   | [Blocked](https://github.com/sul-dlss/rialto/issues/56) | TBD |
-3 Jena SPARQL Update (ARQ)  | [Blocked](https://github.com/sul-dlss/rialto/issues/61) | Blocked              | [Ready](https://github.com/sul-dlss/rialto/issues/59)     | [Ready](https://github.com/sul-dlss/rialto/issues/60) | TBD |
-4 TDB Java API (Vitro)      | Blocked              | Blocked              | [Ready](https://github.com/sul-dlss/rialto/issues/63)     | [Ready](https://github.com/sul-dlss/rialto/issues/62) | TBD |
-5 [stretch] Fuseki SPARQL Update | n/a | n/a | n/a | n/a | n/a |
+Vitro Ingest                | no inf & no index    | inf & no index       | no inf & index :star:  | inf & index :star:
+--------------------------- | -------------------- | -------------------- | ---------------------- | --------
+1 SPARQL API (Vitro)        | [Blocked](https://github.com/sul-dlss/rialto/issues/53) | [Blocked](https://github.com/sul-dlss/rialto/issues/54) | [In progress](https://github.com/sul-dlss/rialto/issues/50) | [Ready](https://github.com/sul-dlss/rialto/issues/51)
+2 Jena TDBLoader (cmd line) | [Blocked](https://github.com/sul-dlss/rialto/issues/66) | [Blocked](https://github.com/sul-dlss/rialto/issues/67) | [Blocked](https://github.com/sul-dlss/rialto/issues/55)   | [Blocked](https://github.com/sul-dlss/rialto/issues/56)
+3 Jena SPARQL Update (ARQ)  | [Blocked](https://github.com/sul-dlss/rialto/issues/61) | Blocked              | [Ready](https://github.com/sul-dlss/rialto/issues/59)     | [Ready](https://github.com/sul-dlss/rialto/issues/60)
+4 TDB Java API (Vitro)      | Blocked              | Blocked              | [Ready](https://github.com/sul-dlss/rialto/issues/63)     | [Ready](https://github.com/sul-dlss/rialto/issues/62)
+5 [stretch] Fuseki SPARQL Update | n/a | n/a | n/a | n/a
 
 ## Metrics gathered for each case:
 - Sample Data Load Times
