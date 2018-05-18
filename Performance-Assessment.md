@@ -20,10 +20,10 @@ Tests for assessing performance of Vitro (or other identified future options) as
 
 Vitro Ingest                | no inf & no index    | inf & no index       | no inf & index :star:  | inf & index :star:
 --------------------------- | -------------------- | -------------------- | ---------------------- | --------
-1 SPARQL API (Vitro)        | [Blocked](https://github.com/sul-dlss/rialto/issues/53) [Metrics](TBD) | [Blocked](https://github.com/sul-dlss/rialto/issues/54) [Metrics TBD]() | [In progress](https://github.com/sul-dlss/rialto/issues/50) [Metrics](https://sulstats.stanford.edu/dashboard/db/servers?from=1526619600000&to=1526655600000&var-department=dlss&var-project=rialto&var-server=rialto-vitro-dev&theme=light) | [Ready](https://github.com/sul-dlss/rialto/issues/51) [Metrics](TBD)
-2 Jena TDBLoader (cmd line) | [Blocked](https://github.com/sul-dlss/rialto/issues/66) | [Blocked](https://github.com/sul-dlss/rialto/issues/67) | [Blocked](https://github.com/sul-dlss/rialto/issues/55)   | [Blocked](https://github.com/sul-dlss/rialto/issues/56)
-3 Jena SPARQL Update (ARQ)  | [Blocked](https://github.com/sul-dlss/rialto/issues/61) | Blocked              | [Ready](https://github.com/sul-dlss/rialto/issues/59)     | [Ready](https://github.com/sul-dlss/rialto/issues/60)
-4 TDB Java API (Vitro)      | Blocked              | Blocked              | [Ready](https://github.com/sul-dlss/rialto/issues/63)     | [Ready](https://github.com/sul-dlss/rialto/issues/62)
+1 SPARQL API (Vitro)        | [Blocked](https://github.com/sul-dlss/rialto/issues/53) [Metrics TBD]() | [Blocked](https://github.com/sul-dlss/rialto/issues/54) [Metrics TBD]() | [In progress](https://github.com/sul-dlss/rialto/issues/50) [Metrics](https://sulstats.stanford.edu/dashboard/db/servers?from=1526619600000&to=1526655600000&var-department=dlss&var-project=rialto&var-server=rialto-vitro-dev&theme=light) | [Ready](https://github.com/sul-dlss/rialto/issues/51) [Metrics TBD]() 
+2 Jena TDBLoader (cmd line) | [Blocked](https://github.com/sul-dlss/rialto/issues/66) [Metrics TBD]() | [Blocked](https://github.com/sul-dlss/rialto/issues/67) [Metrics TBD]() | [Blocked](https://github.com/sul-dlss/rialto/issues/55)   [Metrics TBD]() | [Blocked](https://github.com/sul-dlss/rialto/issues/56) [Metrics TBD]() 
+3 Jena SPARQL Update (ARQ)  | [Blocked](https://github.com/sul-dlss/rialto/issues/61) [Metrics TBD]() | Blocked [Metrics TBD]()              | [Ready](https://github.com/sul-dlss/rialto/issues/59)  [Metrics TBD]()    | [Ready](https://github.com/sul-dlss/rialto/issues/60) [Metrics TBD]() 
+4 TDB Java API (Vitro)      | Blocked [Metrics TBD]()              | Blocked [Metrics TBD]()              | [Ready](https://github.com/sul-dlss/rialto/issues/63) [Metrics TBD]()     | [Ready](https://github.com/sul-dlss/rialto/issues/62) [Metrics TBD]() 
 5 [stretch] Fuseki SPARQL Update | n/a | n/a | n/a | n/a
 
 ## Metrics gathered for each case:
