@@ -1,3 +1,5 @@
+Note that these `curl` commands must be run on the rialto-vitro-dev host because port 8080 is not exposed.
+
 # View Solr service-level statistics
 
 `$ curl 'http://rialto-vitro-dev.stanford.edu:8080/vitrosolr/admin/cores?wt=json'`
