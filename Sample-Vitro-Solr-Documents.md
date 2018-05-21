@@ -1,4 +1,4 @@
-This page shows what Vitro Solr documents, corresponding to entities loaded into Vitro, look like.
+This page shows what Vitro Solr documents, corresponding to entities loaded into Vitro, look like. (See https://github.com/sul-dlss/rialto/wiki/Working-with-Vitro-Solr for more information on how to interact with Vitro Solr.)
 
 ```json
 {
