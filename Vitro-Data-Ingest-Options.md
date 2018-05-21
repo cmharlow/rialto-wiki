@@ -105,3 +105,18 @@ From Jim Blake at Cornell:
 > For standard VIVO installation, Jena SDB is still the default.
 >
 > I don’t know of anyone who is using Vitro or VIVO in production with a large triple-store based on Jena TDB – the community will not be able to provide input with regard to performance or reliability.
+
+### Jim Blake's Opinions on the Above
+
+#### Going “behind Vitro’s back”
+If you use methods 1., 2., or 5., you are working with Vitro. This means that your changes will be noted by listeners that do (a) simple inferencing, and (b) search index update.
+
+If you use methods 3., 4., 6., or 7., you are working around Vitro. This means that you must insure correct inferencing and index updating on your own. Some VIVO sites operate this way. Most do not.
+
+#### Swapping data stores
+For high availability, one can imagine building an updated triple-store and an updated search index, and then swapping them into a live Vitro instance. This is easy to do with the search index, since every query is a stateless HTTP connection. For Jena TDB, you would need to add code that would close all open connections, flushing the memory buffers, and then open new connections. Vitro currently has no such code.
+
+#### Pausing the indexer
+This should not be a problem. There are internal API calls that wil pause and unpause the indexer.
+
+Is the same true for the reasoner? (inferencing)
