@@ -66,6 +66,8 @@ Fuseki is a SPARQL server. It provides REST-style SPARQL HTTP Update, SPARQL Que
 https://jena.apache.org/documentation/serving_data/
 
 ## Other concerns
+
+### Global Stop of Indexer
  - Globally stop or pause the indexer when bulkloading. This appears in the `/usr/share/tomcat/logs/vitro.all.log` as records are being loaded one at a time:
 ```
 ...
@@ -75,3 +77,10 @@ https://jena.apache.org/documentation/serving_data/
 2018-05-15 16:37:22,067 INFO  [IndexHistory] UNPAUSE, 5/15/18 4:24 PM, []
 ...
 ```
+
+### Notes on Accessing Jena Directly
+
+> Re: accessing Jena directly:
+> The Vitro java code ^^ is accessible via a tomcat servlet that takes a request with an update param. The request string is literally the update=INSERT DATA {} wrapper syntax for the inserted triples. The SparqlUpdateApiController.java class takes the value of update as a string and sends that to a Jena library class to perform the update.
+> Basically I think that hacking the java code to load data will only buy us the avoidance of passing a potentially large string over http to the tomcat servlet and it's associated class. The largeness of the string is not really a major issue because tomcat can be configured to handle large post requests with the maxPostSize connector attribute and additional tomcat tuning.
+> Otherwise, we could probably write a java wrapper class to call the SparqlUpdateApiController with the same update string as an argument, but I'm not so sure that seeking to avoiding the servlet layer will give us much of a serious performance boost. It would probably be better to just tune tomcat to be performant in case we run into issues.
