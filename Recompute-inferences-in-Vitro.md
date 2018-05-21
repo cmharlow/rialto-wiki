@@ -1,0 +1,1 @@
+To recompute all inferences (for reasoning), click the "Recompute Inferences" link in the admin UI or hit it via https://rialto-vitro-dev.stanford.edu/vitro/RecomputeInferences, but note that you can't just curl that URL because 1) you will be challenged by Shibboleth first, and then 2) you need to be logged in to Vitro.
