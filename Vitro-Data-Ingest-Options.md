@@ -81,6 +81,27 @@ https://jena.apache.org/documentation/serving_data/
 ### Notes on Accessing Jena Directly
 
 > Re: accessing Jena directly:
+>
 > The Vitro java code ^^ is accessible via a tomcat servlet that takes a request with an update param. The request string is literally the update=INSERT DATA {} wrapper syntax for the inserted triples. The SparqlUpdateApiController.java class takes the value of update as a string and sends that to a Jena library class to perform the update.
+>
 > Basically I think that hacking the java code to load data will only buy us the avoidance of passing a potentially large string over http to the tomcat servlet and it's associated class. The largeness of the string is not really a major issue because tomcat can be configured to handle large post requests with the maxPostSize connector attribute and additional tomcat tuning.
+>
 > Otherwise, we could probably write a java wrapper class to call the SparqlUpdateApiController with the same update string as an argument, but I'm not so sure that seeking to avoiding the servlet layer will give us much of a serious performance boost. It would probably be better to just tune tomcat to be performant in case we run into issues.
+
+### Index / Derivative Datastore
+
+From Huda at Cornell:
+
+> We should also keep in mind that at Cornell, when they do an update they do have to stop things for some hours, and there's also search index rebuilding time to take into account.
+
+### TDB vs SDB
+
+From Jim Blake at Cornell:
+
+> Configuring Vitro to use Jena TDB is easy (applicationSetup.n3)
+>
+> There are good reasons to use Jena TDB instead of Jena SDB. TDB might well be the best choice. Don’t know.
+>
+> For standard VIVO installation, Jena SDB is still the default.
+>
+> I don’t know of anyone who is using Vitro or VIVO in production with a large triple-store based on Jena TDB – the community will not be able to provide input with regard to performance or reliability.
