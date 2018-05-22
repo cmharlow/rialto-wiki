@@ -1,0 +1,1 @@
+This document describes how we load data into Vitro using the Jena tdbloader(2) tool.
