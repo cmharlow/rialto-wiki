@@ -1,0 +1,1 @@
+This document describes how we load data into Vitro using its SPARQL Update API.
