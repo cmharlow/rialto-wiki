@@ -7,3 +7,5 @@ This document describes how we load data into Vitro using its SPARQL Update API.
 5. Start Tomcat again with `sudo service tomcat start`.
 6. The original test triples are stored within `/opt/app/vitro/data/rialto-sample-data/vivo/agents/`. Wrap them in SPARQL insert statements using `/opt/app/vitro/data/rialto-sample-data/vivo/wrapit.sh`. Edit the script first, creating a new, named graph for your test load.
 7. To load our test triples into TDB, run the script `/opt/app/vitro/data/rialto-sample-data/vivo/sparql_upd.sh`, e.g. with `nohup ./sparql_upd.sh WRAPPED_DIR > output.log 2>&1 &`
+
+General information about the Vitro sparqlUpdateApi: https://wiki.duraspace.org/display/VIVODOC19x/SPARQL+Update+API
