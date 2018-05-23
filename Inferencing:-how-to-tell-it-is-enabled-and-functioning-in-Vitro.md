@@ -13,10 +13,14 @@ This will show the number of triples created by the inferencer.
 
 See https://wiki.duraspace.org/display/VIVODOC19x/Graph+Reference
 
-2. Check the vitro logs 
+2. Check the vitro logs
+
   a) `ksu` as root 
+
   b) `cd /usr/share/tomcat/logs`
-  c `grep "inference" vitro.all.log`
+
+  c) `grep "inference" vitro.all.log`
+
 
 e.g.
 ```
