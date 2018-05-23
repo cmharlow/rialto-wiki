@@ -1,4 +1,6 @@
-1. Use the Vivo sparql interface at https://rialto-vitro-dev.stanford.edu/vitro/admin/sparqlquery and enter the query:
+## Use the Vivo sparql interface 
+
+Visit https://rialto-vitro-dev.stanford.edu/vitro/admin/sparqlquery and enter the query:
 
 ```
 SELECT count(*)
@@ -13,7 +15,9 @@ This will show the number of triples created by the inferencer.
 
 See https://wiki.duraspace.org/display/VIVODOC19x/Graph+Reference
 
-2. Check the vitro logs
+***
+
+## Check the vitro logs
 
   a) `ksu` as root 
 
