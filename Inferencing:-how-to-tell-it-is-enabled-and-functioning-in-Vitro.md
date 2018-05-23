@@ -13,7 +13,12 @@ This will show the number of triples created by the inferencer.
 
 See https://wiki.duraspace.org/display/VIVODOC19x/Graph+Reference
 
-2. Check the vitro logs (`ksu` as root and `cd /usr/share/tomcat/logs`):
+2. Check the vitro logs 
+  a) `ksu` as root 
+  b) `cd /usr/share/tomcat/logs`
+  c `grep "inference" vitro.all.log`
+
+e.g.
 ```
 [root@rialto-vitro-dev logs]# grep "inference" vitro.all.log*
 vitro.all.log.7:2018-05-11 08:43:33,086 INFO  [SimpleReasonerSetup] starting ABox inference recompute in a separate thread.
