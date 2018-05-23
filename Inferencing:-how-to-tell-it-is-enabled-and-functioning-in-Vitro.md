@@ -15,7 +15,7 @@ See https://wiki.duraspace.org/display/VIVODOC19x/Graph+Reference
 
 2. Check the vitro logs (`ksu` as root and `cd /usr/share/tomcat/logs`):
 ```
-[root@rialto-vitro-dev logs]# grep -i inference vitro.all.log*
+[root@rialto-vitro-dev logs]# grep "inference" vitro.all.log*
 vitro.all.log.7:2018-05-11 08:43:33,086 INFO  [SimpleReasonerSetup] starting ABox inference recompute in a separate thread.
 vitro.all.log.7:2018-05-11 08:43:33,087 INFO  [ABoxRecomputer] Recomputing ABox inferences.
 vitro.all.log.7:2018-05-11 08:43:33,144 INFO  [ABoxRecomputer] Recomputing inferences for 14 individuals
