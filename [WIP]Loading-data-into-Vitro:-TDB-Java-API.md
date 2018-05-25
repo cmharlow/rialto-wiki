@@ -14,4 +14,4 @@ This class initializes the Jena Dataset, kicks off the update, and notifies the 
 
 # How we can load data using the Jena API or Vitro's existing classes
 ## Writing a Vitro-external Class 
-This will be very similar to using the [tdbloader](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-tdbloader).
+This will be very similar in result to using the [tdbloader](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-tdbloader). The tdbloader is a command-line utility that encapsulates a Jena ReadWrite transaction with TDB.
