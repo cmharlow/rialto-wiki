@@ -13,4 +13,4 @@ This class initializes the Jena Dataset, kicks off the update, and notifies the 
 `api/src/main/java/edu/cornell/mannlib/vitro/webapp/rdfservice/impl/jena/tdb/RDFServiceTDB.java`
 
 # How we can load data using the Jena API or Vitro's existing classes
-Writing a Vitro-external java class will be very similar (if not synonymous) with using the [tdbloader](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-tdbloader) 
+Writing a Vitro-external java class will be very similar (if not synonymous) with using the [tdbloader](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-tdbloader).
