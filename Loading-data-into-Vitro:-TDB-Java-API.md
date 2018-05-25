@@ -1,1 +1,0 @@
-This document describes how we load data into Vitro using the TDB Java API.
