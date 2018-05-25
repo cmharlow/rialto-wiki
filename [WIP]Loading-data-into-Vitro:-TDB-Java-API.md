@@ -10,4 +10,7 @@ This class creates the Jena Model, locks it, and applies the dataset changes to 
 `api/src/main/java/edu/cornell/mannlib/vitro/webapp/rdfservice/impl/jena/RDFServiceJena.java`
 
 This class initializes the Jena Dataset, kicks off the update, and notifies the listeners of changes
-`api/src/main/java/edu/cornell/mannlib/vitro/webapp/rdfservice/impl/jena/tdb/RDFServiceTDB.java` 
+`api/src/main/java/edu/cornell/mannlib/vitro/webapp/rdfservice/impl/jena/tdb/RDFServiceTDB.java`
+
+# How we can load data using the Jena API or Vitro's existing classes
+Writing a Vitro-external java class will be very similar (if not synonymous) with using the tdbloader 
