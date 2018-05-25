@@ -10,7 +10,7 @@ It is a multi-phase project with this first phase focused on data aggregation, n
 
 Technically, this is a data aggregation system leveraging a data ETL pipeline, a canonical datastore system based on a triplestore with VIVO-ISF RDF, and a simple web application serving up basic search and view functionalities of that data.
 
-## What is now RIALTO?
+## What is not RIALTO?
 * At least in the short-term, a SDR researcher / depositor analytics dashboard. 
 * An SDR Authorities management space. This will be a different system influenced by this work.
 * At least in the short to mid-term, a faculty research profiles web application.
