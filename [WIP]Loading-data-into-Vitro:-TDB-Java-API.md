@@ -9,5 +9,5 @@ This class parameterizes the TDB directory on the server:
 This class creates the Jena Model, locks it, and applies the dataset changes to it and does other model operations:
 `api/src/main/java/edu/cornell/mannlib/vitro/webapp/rdfservice/impl/jena/RDFServiceJena.java`
 
-This class...
+This class initializes the Jena Dataset, kicks off the update, and notifies the listeners of changes
 `api/src/main/java/edu/cornell/mannlib/vitro/webapp/rdfservice/impl/jena/tdb/RDFServiceTDB.java` 
