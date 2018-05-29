@@ -9,6 +9,7 @@ This document describes how we load data into Vitro using the Jena tdbloader too
 1. Ensure your user account has write access to all files in `/path/to/vitro/tdbContentModels/`
 1. Run tdbloader:  
     `tdbloader --loc /path/to/vitro/tdbContentModels /path/to/vivo/agents/*.nq`
+1. Restart Tomcat (apparently this is needed because `tdbloader` is writing to TDB underneath Vitro?)
 1. Via the Vitro UI, recompute inferences.
 1. Via the Vitro UI, rebuild the search index.
 
