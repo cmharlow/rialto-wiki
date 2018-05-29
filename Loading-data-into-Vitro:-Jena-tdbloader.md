@@ -6,6 +6,7 @@ This document describes how we load data into Vitro using the Jena tdbloader too
 1. [Set up your shell](https://jena.apache.org/documentation/tdb/commands.html#script-set-up-bash-scripts)
 1. Transform sample data to N-Quads, to ensure imported data is in Vitro's "ABox" named graph  
     `for f in *.nt; do sed -e 's/\.$/<http:\/\/vitro.mannlib.cornell.edu\/default\/vitro-kb-2> ./g' $f > $f.nq; done`
+1. Ensure your user account has write access to all files in `/path/to/vitro/tdbContentModels/`
 1. Run tdbloader:  
     `tdbloader --loc /path/to/vitro/tdbContentModels /path/to/vivo/agents/*.nq`
 1. Via the Vitro UI, recompute inferences.
