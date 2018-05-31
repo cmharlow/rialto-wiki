@@ -8,3 +8,34 @@ SELECT DISTINCT ?ind WHERE {
   FILTER (?g != <http://vitro.mannlib.cornell.edu/default/vitro-kb-applicationMetadata> && !regex(str(?g), "tbox"))
  } }
 ```
+
+Here's what the Solr documents will look like:
+
+```json
+    {
+        "DocId": "vitroIndividual:http://scholars.cornell.edu/individual/aao4",
+        "THUMBNAIL_URL": "",
+        "indexedTime": 1527620118647,
+        "ALLTEXT": [
+          "1000225 aao4"
+        ],
+        "mostSpecificTypeURIs": [
+          "http://www.w3.org/2002/07/owl#Thing",
+          "http://purl.obolibrary.org/obo/BFO_0000002",
+          "http://purl.obolibrary.org/obo/BFO_0000001",
+          "http://xmlns.com/foaf/0.1/Agent",
+          "http://xmlns.com/foaf/0.1/Person",
+          "http://purl.obolibrary.org/obo/BFO_0000004"
+        ],
+        "THUMBNAIL": "0",
+        "URI": "http://scholars.cornell.edu/individual/aao4",
+        "nameRaw": [
+          "Ovaska, Arthur Alan",
+          "[Ovaska, Arthur Alan]"
+        ],
+        "etag": "87cb70a8abcd0d86",
+        "_version_": 1601825793621622800,
+        "timestamp": "2018-05-29T18:55:18.719Z",
+        "score": 1
+      }
+```
