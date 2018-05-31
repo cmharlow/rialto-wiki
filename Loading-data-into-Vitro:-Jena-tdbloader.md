@@ -17,3 +17,13 @@ This document describes how we load data into Vitro using the Jena tdbloader too
 # Troubleshooting
 
 If running the loader step above throws an `Argument list too long` error, you may need to bump up that limit. On Linux, you can do this using `ulimit -s 65536`.
+
+# Findings
+
+Once we learned that the trick to getting Vitro to "see" `tdbloader`-loaded data was to add it to the ABox named graph (`http://vitro.mannlib.cornell.edu/default/vitro-kb-2`), we ran the loader against the full dataset and it performed admirably:
+
+> 15:02:03 INFO  loader               :: ** Completed: 4,522,586 quads loaded in 68.34 seconds [Rate: 66,176.77 per second]
+
+After that, we attempted to manually kick off inferencing, but Vitro could no longer write to TDB due to a `BlockAccessBase: Bounds exception`. Restarting Tomcat restores Vitro's connection to its TDB database, and also triggers a recomputation of inferences. Running this operation against the full dataset took approximately five minutes with 1,776,753 URIs added to Vitro's inference graph. Inferencing also triggers rebuilding the Solr index, and that too took about five minutes, adding 126,088 documents to the index.
+
+Ultimately, the team dismissed `tdbloader` as an ingest/load mechanism. `tdbloader` doesn't use Jena transactions to write data, and we believed this was the cause of having to restart the Vitro server to get it back in a working state. The documentation of TDB is clear on this point: TDB wasn't designed for concurrency outside of Jena transactions, and `tdbloader` does not support transactions. The team is not going to use `tdbloader` partly because needing to restart the server is an undesirable hack, but mostly because there is a risk that writing data using `tdbloader` while Vitro is also writing to TDB (e.g., recomputing inferences) will cause data corruption, necessitating a wipe and full reload. We have seen this happen, in fact, in our limited experiments with `tdbloader`.
