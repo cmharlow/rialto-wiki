@@ -33,7 +33,7 @@ Vitro Ingest                | no inf & no index    | inf & no index       | no i
   - Time per request (if multiple requests, i.e., HTTP)
   - Scaling graph based on the above
 - Sample Data Index Times (if indexing)
-- Ops Metrics:
+- Ops Metrics: (taken from https://sulstats.stanford.edu/dashboard/db/servers)
   - CPU usage
   - memory usage
   - overall load
