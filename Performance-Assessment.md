@@ -12,7 +12,7 @@ As part of assessing Vitro, we need to:
 
 ## Vitro Performance Assessment Matrix
 
-Tests for assessing performance of Vitro (or other identified future options) as the canonical RIALTO data store. Options listed in priority order, starred tests being the preferences for testing. (Standard loading of 4,596,065 triples from 73,479 n-triples files.)
+Tests for assessing performance of Vitro (or other identified future options) as the canonical RIALTO data store. Options listed in priority order, starred tests being the preferences for testing. Standard loading of 4,596,065 triples from 73,479 n-triples files.
 
 * inf == inferencing (within Vitro)
 * index == indexing (within Vitro, default mappings to Solr)
