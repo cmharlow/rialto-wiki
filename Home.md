@@ -19,3 +19,4 @@ Technically, this is a data aggregation system leveraging a data ETL pipeline, a
 * [RIALTO PO's Google drive](https://drive.google.com/drive/u/1/folders/0B_7WttFlpI99b1I4YmtxVHdIaEU)
 * [Kick-off meeting promises list](https://consul.stanford.edu/display/RIALTO/RIALTO+Kick+Off+Meeting+-+Spring+2017)
 * [RIALTO Consul Space](https://consul.stanford.edu/display/RIALTO/RIALTO+Home)
+* [RIALTO and VIVO](https://docs.google.com/presentation/d/1Frg8mGaxa6Sv56IgCGaT5Z505P8K5x9J6LRJibPrDKo/edit#slide=id.p1) - presentation from VIVO Conference 2018 
