@@ -2,7 +2,7 @@
 
 Visit https://rialto-vitro-dev.stanford.edu/vitro/admin/sparqlquery and enter the query:
 
-```
+```sparql
 SELECT count(*)
 WHERE {
   GRAPH <http://vitro.mannlib.cornell.edu/default/vitro-kb-inf> { ?s ?p ?o }
