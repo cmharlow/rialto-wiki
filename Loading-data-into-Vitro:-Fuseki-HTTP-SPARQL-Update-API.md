@@ -10,4 +10,8 @@ By the time we ran the Fuseki load scenario, the RIALTO team determined that inf
 
 # Findings
 
-TBD. See #83.
+```
+real    47m23.597s
+user    2m27.236s
+sys    3m29.929s
+```
