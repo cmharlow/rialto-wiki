@@ -12,11 +12,14 @@ By the time we ran the Fuseki load scenario, the RIALTO team determined that inf
 
 ## Runtime
 
+For the load into Fuseki:
 ```
 real    47m23.597s
 user    2m27.236s
 sys     3m29.929s
 ```
+
+For indexing into Vitro's Solr: TBD
 
 ## System Load
 
