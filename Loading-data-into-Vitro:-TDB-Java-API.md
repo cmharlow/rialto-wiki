@@ -27,3 +27,8 @@ This class creates the Jena Model, locks it, and applies the dataset changes to 
 This class initializes the Jena Dataset, kicks off the update, and notifies the listeners of changes
 `api/src/main/java/edu/cornell/mannlib/vitro/webapp/rdfservice/impl/jena/tdb/RDFServiceTDB.java`
 
+# Findings
+
+After running the load, Vitro could no longer write to TDB due to a `BlockAccessBase: Bounds exception` (same as the `tdbloader` load). Restarting Tomcat restores Vitro's connection to its TDB database.
+
+The team dismissed TDB Jena API as an ingest/load mechanism. The documentation of TDB is clear that it wasn't designed for multi-JVM usage. The team is not going to use TDB Jena API partly because needing to restart the server is an undesirable hack, but mostly because there is a risk that writing data this way while Vitro is also writing to TDB will cause data corruption, necessitating a wipe and full reload. 
