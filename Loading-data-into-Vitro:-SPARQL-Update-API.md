@@ -9,3 +9,9 @@ This document describes how we load data into Vitro using its SPARQL Update API.
 7. To load our test triples into TDB, run the script `/opt/app/vitro/data/rialto-sample-data/vivo/sparql_upd.sh`, e.g. with `nohup ./sparql_upd.sh WRAPPED_DIR > output.log 2>&1 &` where `WRAPPED_DIR` is the output directory specified in the `wrapit.sh` script.
 
 General information about the Vitro `sparqlUpdateApi`: https://wiki.duraspace.org/display/VIVODOC19x/SPARQL+Update+API
+
+# Findings
+
+With inferencing, the load took more than nine days and was becoming exponentially slower, so the team killed the load and considered this option untenable.
+
+Without inferencing, the load took about six hours: https://sulstats.stanford.edu/dashboard/db/servers?from=1527133800000&to=1527153600000&var-department=dlss&var-project=rialto&var-server=rialto-vitro-dev&theme=light
