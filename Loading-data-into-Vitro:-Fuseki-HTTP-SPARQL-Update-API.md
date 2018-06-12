@@ -22,3 +22,4 @@ sys    3m29.929s
 
 https://sulstats.stanford.edu/dashboard/db/servers?from=1528837925028&to=1528841525028&var-department=dlss&var-project=rialto&var-server=rialto-vitro-dev&theme=light
 
+![](https://user-images.githubusercontent.com/131982/41320098-3f6139d4-6e53-11e8-8a98-64b28b61f574.png)
