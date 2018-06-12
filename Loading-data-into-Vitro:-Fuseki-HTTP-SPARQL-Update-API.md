@@ -10,8 +10,15 @@ By the time we ran the Fuseki load scenario, the RIALTO team determined that inf
 
 # Findings
 
+## Runtime
+
 ```
 real    47m23.597s
 user    2m27.236s
 sys    3m29.929s
 ```
+
+## System Load
+
+https://sulstats.stanford.edu/dashboard/db/servers?from=1528837925028&to=1528841525028&var-department=dlss&var-project=rialto&var-server=rialto-vitro-dev&theme=light
+
