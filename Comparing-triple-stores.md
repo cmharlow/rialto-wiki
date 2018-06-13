@@ -7,6 +7,6 @@ Blazegraph is a standalone triple store with several external (network) APIs tha
 # Notes
 
 <b name="f1">1.</b> The other three are: 
-1. SDB, another Apache triplestore that most of the VIVO community uses despite it being well past end of life; 
-2. SPARQL endpoint, which we used in [another test](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Fuseki-HTTP-SPARQL-Update-API); and
-3. Virtuoso, which we did not test. [↩](#a1)
+* SDB, another Apache triplestore that most of the VIVO community uses despite it being well past end of life; 
+* SPARQL endpoint, which we used in [another test](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Fuseki-HTTP-SPARQL-Update-API); and
+* Virtuoso, which we did not test. [↩](#a1)
