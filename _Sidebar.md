@@ -7,7 +7,7 @@
 ### VIVO Assessment
 - [Jena/TDB vs Blazegraph](/sul-dlss/rialto/wiki/Comparing-triplestores)
 - [Vitro Ingest Options](/sul-dlss/rialto/wiki/Vitro-Data-Ingest-Options)
-- [VIVO/Vitro Assessment](/sul-dlss/rialto/wiki/Performance-Assessment)
+- [VIVO/Vitro Assessment](/sul-dlss/rialto/wiki/Assessment)
 - [VIVO Community Convo Notes](/sul-dlss/rialto/wiki/Notes-from-exploration-of-other-implementations)
 
 ### Dev Docs
