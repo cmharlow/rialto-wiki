@@ -4,4 +4,6 @@ Fuseki is a SPARQL server that could be backed by TDB.  This would be one way to
 
 Blazegraph is a standalone triple store with several external (network) APIs that support multiple consumers at once. It is know for being among the fastest triple stores with an available GPU accelerator. It can support big-data scale data sets. Blazegraph was acqui-hired by Amazon in 2016 and the developers of Blazegraph went on to produce Apache Neptune.  Blazegraph is still available for download but development on it has been at a virtual standstill. The Wikimedia foundation selected Blazegraph for their wikidata query service (WDQS).
 
+# Notes
+
 <b name="f1">1.</b> The other three are: SDB, another Apache triplestore that most of the VIVO community uses despite it being well past end of life; SPARQL endpoint, which we used in [another test](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Fuseki-HTTP-SPARQL-Update-API); and Virtuoso, which we did not test. [↩](#a1)
