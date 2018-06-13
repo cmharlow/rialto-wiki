@@ -10,9 +10,9 @@ By the time we ran the Fuseki load scenario, the RIALTO team determined that inf
 
 # Running Fuseki
 
-Note: Fuseki must (at this time) be run in a console session as tomcat does not allow the order of applications startups to be set and when fuseki starts before vitro it fails to start.
+For expediency's sake, we run Fuseki in a console session as tomcat does not allow the startup order of applications to be set and Vitro depends on Fuseki being present when it spins up.
 
-1. login to the vitro development server
+1. Login to the vitro development server
 2. Move into the fuseki folder: `cd /opt/app/vitro/shared/apache-jena-fuseki-3.7.0`
 3. Run the server with the `vitro` data set `./fuseki-server --loc=data --update /vitro`
 
