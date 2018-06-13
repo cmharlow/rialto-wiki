@@ -8,6 +8,14 @@ This document describes how to load data into Vitro via HTTP SPARQL Update API w
 
 By the time we ran the Fuseki load scenario, the RIALTO team determined that inferencing within the datastore was *not* necessary, so we turned it off for this test.
 
+# Running Fuseki
+
+Note: Fuseki must (at this time) be run in a console session as tomcat does not allow the order of applications startups to be set and when fuseki starts before vitro it fails to start.
+
+1. login to the vitro development server
+2. Move into the fuseki folder: `cd /opt/app/vitro/shared/apache-jena-fuseki-3.7.0`
+3. Run the server with the `vitro` data set `./fuseki-server --loc=data --update /vitro`
+
 # Findings
 
 ## Runtime
