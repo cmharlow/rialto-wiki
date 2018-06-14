@@ -28,4 +28,4 @@ Indexing the Fuseki data into Vitro's Solr index took 41 minutes to complete.
 
 https://sulstats.stanford.edu/dashboard/db/servers?from=1528994501301&to=1528999623587&var-department=dlss&var-project=rialto&var-server=rialto-vitro-dev&theme=light
 
-![](https://user-images.githubusercontent.com/131982/41320098-3f6139d4-6e53-11e8-8a98-64b28b61f574.png)
+![](https://user-images.githubusercontent.com/131982/41430777-d6d89956-6fc5-11e8-8dc0-dec4c799df08.png)
