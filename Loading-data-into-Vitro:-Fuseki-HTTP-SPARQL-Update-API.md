@@ -20,14 +20,9 @@ For expediency's sake, we run Fuseki in a console session as tomcat does not all
 
 ## Runtime
 
-For the load into Fuseki:
-```
-real    47m23.597s
-user    2m27.236s
-sys     3m29.929s
-```
+Loading the sample dataset into Fuseki took 35 minutes to complete. 
 
-For indexing into Vitro's Solr: TBD
+Indexing the Fuseki data into Vitro's Solr index took **TBD** minutes to complete.
 
 ## System Load
 
