@@ -2,7 +2,7 @@ This document describes how to load data into Vitro via HTTP SPARQL Update API w
 
 1. Ensure Fuseki is installed and running.
 2. See [this Wiki page](https://github.com/sul-dlss/rialto/wiki/Disable-enable-inferencing-at-startup) for information on how to turn inferencing on and off.
-3. The original test triples are stored within `/opt/app/vitro/data/rialto-sample-data/vivo/agents/`. Run `nohup time fuseki_load.bash` to wrap these triples in SPARQL insert statements and load them into Vitro via Fuseki's HTTP SPARQL Update API.
+3. The original test triples are stored within `/opt/app/vitro/data/rialto-sample-data/vivo/agents/`. `cd` to that directory and run `nohup time fuseki_load.bash *.sparql` to wrap these triples in SPARQL insert statements and load them into Vitro via Fuseki's HTTP SPARQL Update API.
 
 # Note
 
