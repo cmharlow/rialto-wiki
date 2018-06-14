@@ -9,6 +9,7 @@
 - [Vitro Ingest Options](/sul-dlss/rialto/wiki/Vitro-Data-Ingest-Options)
 - [VIVO/Vitro Assessment](/sul-dlss/rialto/wiki/Assessment)
 - [VIVO Community Convo Notes](/sul-dlss/rialto/wiki/Notes-from-exploration-of-other-implementations)
+- [Vitro vs Stand-Alone Datastore](/sul-dlss/rialto/wiki/Vitro-vs.-Stand-Alone-Datastore)
 
 ### Dev Docs
 
