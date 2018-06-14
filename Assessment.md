@@ -20,31 +20,11 @@ Tests for assessing performance of Vitro (or other identified future options) as
 
 Vitro Ingest                | no inf & no index    | inf & no index       | no inf & index :star:  | inf & index :star:
 --------------------------- | -------------------- | -------------------- | ---------------------- | --------
-1 [SPARQL Update API](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-SPARQL-Update-API) (Vitro)
-| Unable to run w/Vitro
-| Unable to run w/Vitro |
-[Docs](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-SPARQL-Update-API), [Metrics](https://sulstats.stanford.edu/dashboard/db/servers?from=1527133800000&to=1527153600000&var-department=dlss&var-project=rialto&var-server=rialto-vitro-dev&theme=light)
-| [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-SPARQL-Update-API#findings)
-2 [Jena tdbloader](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-tdbloader) (cmd line)
-| [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-tdbloader#findings)
-| [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-tdbloader#findings)
-| [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-tdbloader#findings)
-| [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-tdbloader#findings)
-3 [TDB Java API](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-TDB-Java-API) (Vitro)      
-| [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-TDB-Java-API#findings)
-| [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-TDB-Java-API#findings)
-| [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-TDB-Java-API#findings)
-| [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-TDB-Java-API#findings)
-4 [Jena SPARQL Update (ARQ)](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-SPARQL-Update-(ARQ))  
-| [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-SPARQL-Update-(ARQ)#findings)
-| [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-SPARQL-Update-(ARQ)#findings)
-| [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-SPARQL-Update-(ARQ)#findings)
-| [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-SPARQL-Update-(ARQ)#findings)  
-5 [Fuseki SPARQL Update API](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Fuseki-HTTP-SPARQL-Update-API#findings)
-| n/a
-| [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Fuseki-HTTP-SPARQL-Update-API#note)
-| [In Progress](https://github.com/sul-dlss/rialto/issues/83)
-| [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Fuseki-HTTP-SPARQL-Update-API#note)
+1 [SPARQL Update API](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-SPARQL-Update-API) (Vitro) | Unable to run w/Vitro | Unable to run w/Vitro | [Docs](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-SPARQL-Update-API), [Metrics](https://sulstats.stanford.edu/dashboard/db/servers?from=1527133800000&to=1527153600000&var-department=dlss&var-project=rialto&var-server=rialto-vitro-dev&theme=light) | [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-SPARQL-Update-API#findings)
+2 [Jena tdbloader](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-tdbloader) (cmd line) | [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-tdbloader#findings) | [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-tdbloader#findings) | [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-tdbloader#findings) | [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-tdbloader#findings)
+3 [TDB Java API](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-TDB-Java-API) (Vitro) | [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-TDB-Java-API#findings) | [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-TDB-Java-API#findings) | [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-TDB-Java-API#findings) | [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-TDB-Java-API#findings)
+4 [Jena SPARQL Update (ARQ)](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-SPARQL-Update-(ARQ))   | [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-SPARQL-Update-(ARQ)#findings) | [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-SPARQL-Update-(ARQ)#findings) | [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-SPARQL-Update-(ARQ)#findings) | [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-SPARQL-Update-(ARQ)#findings)  
+5 [Fuseki SPARQL Update API](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Fuseki-HTTP-SPARQL-Update-API#findings) | n/a | [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Fuseki-HTTP-SPARQL-Update-API#note) | [In Progress](https://github.com/sul-dlss/rialto/issues/83) | [Dismissed](https://github.com/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Fuseki-HTTP-SPARQL-Update-API#note)
 
 ## Metrics gathered for each case:
 - Sample Data Load Times
