@@ -26,3 +26,4 @@
 - [Ingest via Jena tdbloader](/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-Jena-tdbloader)
 - [Ingest via Vitro SPARQL-over-HTTP](/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-SPARQL-Update-API)
 - [Ingest via TDB Java API](/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-TDB-Java-API)
+- [Vitro Logging](/sul-dlss/rialto/wiki/Vitro-Logging)
