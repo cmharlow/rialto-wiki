@@ -1,6 +1,4 @@
-# Other Representation Needs
-
-- CSV: 
+# CSV: 
   - One column per year, row for each academic institute, number of publications produced by faculty members associated with that institute in that topic area(s)
   - grant per row, followed by publications underneath it (one per row)
   - per department, department name, department org, institution department's authors has collaborated with, number of collaborations, collaborator org, collaborator name, collaborator country
@@ -8,6 +6,8 @@
   - Author Name, Total Publication Count, Total Profiles-derived Publication Count, Total number of times cited across all publications
   - for department & timeframe, report showing journals in one table, and publishers in another, along with counts of publications for each by authors
   - one column per month, row for each department, number of publications produced by faculty members associated with that department, topic area(s)
+
+# Blacklight / Search interface
 - Facets:
   - result entities types
   - years range
@@ -24,6 +24,7 @@
   - publications
   - projects
   - faculty
-- viz:
+
+# Visualizations
   - given agent, heat map of the world with color coding on countries to indicate frequency of collaboration.
   - network visualization, showing institutions as nodes, with lines connecting the institutions represented by all co-authors of projects or works. The size of the nodes is determined by the number of authors at that institution. 
