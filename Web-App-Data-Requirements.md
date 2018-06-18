@@ -1,3 +1,5 @@
+Drawn from use cases written up in (private) Jira repository: https://jirasul.stanford.edu/jira/secure/RapidBoard.jspa?rapidView=921&projectKey=RIALTO&view=planning
+
 # CSV: 
   - One column per year, row for each academic institute, number of publications produced by faculty members associated with that institute in that topic area(s)
   - grant per row, followed by publications underneath it (one per row)
