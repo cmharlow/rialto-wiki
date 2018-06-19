@@ -24,3 +24,12 @@ bash-3.2$ awslocal sns list-topics
     ]
 }
 ```
+
+### Subscribe a lambda to a topic
+
+```
+awslocal sns subscribe \
+  --topic-arn arn:aws:sns:us-east-1:123456789012:test-topic \
+  --protocol lambda \
+  --notification-endpoint arn:aws:lambda:localstack:000000000000:function:f1
+```
