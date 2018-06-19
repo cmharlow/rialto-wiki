@@ -29,3 +29,4 @@
 - [Ingest via TDB Java API](/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-TDB-Java-API)
 - [Vitro Logging](/sul-dlss/rialto/wiki/Vitro-Logging)
 - [Detecting TDB Changes](/sul-dlss/rialto/wiki/Detecting-TDB-Changes)
+- [Working with Localstack](/sul-dlss/rialto/wiki/%5BWIP%5D-Working-with-localstack)
