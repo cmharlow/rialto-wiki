@@ -7,6 +7,7 @@
 * SNS Message Queue
 * ES domain
 * Lambda Function (to read message queue)
+* The code and README in [https://github.com/sul-dlss/rialto/pull/103]
 
 ## SNS
 ### Create a topic
