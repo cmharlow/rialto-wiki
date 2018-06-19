@@ -7,7 +7,7 @@
 * SNS Message Queue
 * ES domain
 * Lambda Function (to read message queue)
-* The code and README in [https://github.com/sul-dlss/rialto/pull/103]
+* The code and README in [https://github.com/sul-dlss/rialto/pull/103](https://github.com/sul-dlss/rialto/pull/103)
 
 ## SNS
 ### Create a topic
@@ -54,7 +54,7 @@ awslocal sns subscribe \
   --notification-endpoint arn:aws:lambda:localstack:000000000000:function:f1
 ```
 
-### Publish a message to the SNS queue
+### Publish a message to the SNS topic
 ```
 awslocal sns publish --topic-arn arn:aws:sns:us-east-1:123456789012:test-topic --message 'Test Message!'
 ```
