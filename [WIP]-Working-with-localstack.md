@@ -5,7 +5,8 @@
 ## SNS
 ### Create a topic
 
-`bash-3.2$ awslocal sns list-topics
+`
+bash-3.2$ awslocal sns list-topics
 {
     "Topics": []
 }
@@ -21,4 +22,5 @@ bash-3.2$ awslocal sns list-topics
             "TopicArn": "arn:aws:sns:us-east-1:123456789012:test-topic"
         }
     ]
-}`
+}
+`
