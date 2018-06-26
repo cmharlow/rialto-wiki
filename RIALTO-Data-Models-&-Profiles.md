@@ -4,7 +4,7 @@ RIALTO is primarily interested in **Publications** (articles, research output, p
 
 Publications are representations (published meant generally) of articles, research outputs, datasets, etc. If feasible, there should link to manifestations of that Work (i.e. DOI).
 
-* **Sources**: Web of Science, SUL-PUB (should be subset of what is in WoS), Profiles
+* **Sources**: Web of Science, Profiles
 * **Types**: 
   * Top level / generic: Publication or Document: http://purl.org/ontology/bibo/Document
   * Abstract: http://vivoweb.org/ontology/core#Abstract
@@ -55,7 +55,7 @@ alternate title     | dcterms:alternative | string-literal | [0,n] | Alternative
 ## Topics (Concepts)
 Topics are subject areas or concepts. Works, grants, or departments may be associated with a Topic. Agents may have a research area that is a Topic.
 
-* **Sources**: Web of Science, SUL-PUB (should be subset of what is in WoS), Profiles
+* **Sources**: Web of Science, Profiles
 * **Types**: 
   * Top level / generic: Topic: http://www.w3.org/2004/02/skos/core#Concept
 
