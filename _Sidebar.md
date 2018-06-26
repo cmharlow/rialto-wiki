@@ -1,5 +1,6 @@
 ### About RIALTO
 - [RIALTO Wiki Homepage](/sul-dlss/rialto/wiki)
+- [RIALTO Architecture](/sul-dlss/rialto/wiki/RIALTO-Architecture)
 - [RIALTO Data Models](/sul-dlss/rialto/wiki/RIALTO-Data-Models-&amp;-Profiles)
 - [RIALTO Demo 1](/sul-dlss/rialto/wiki/RIALTO-Demo-1:-Notes)
 
