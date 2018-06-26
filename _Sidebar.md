@@ -1,8 +1,15 @@
 ### About RIALTO
 - [RIALTO Wiki Homepage](/sul-dlss/rialto/wiki)
 - [RIALTO Data Models](/sul-dlss/rialto/wiki/RIALTO-Data-Models-&amp;-Profiles)
-- [Web App Data Requirements](/sul-dlss/rialto/wiki/Web-App-Data-Requirements)
 - [RIALTO Demo 1](/sul-dlss/rialto/wiki/RIALTO-Demo-1:-Notes)
+
+### RIALTO Core
+
+### RIALTO Web App
+- [Web App Data Requirements](/sul-dlss/rialto/wiki/Web-App-Data-Requirements)
+
+### RIALTO Combine
+- [Combine data sources](/sul-dlss/rialto/wiki/RIALTO-Combine-Data-Sources)
 
 ### VIVO Assessment
 - [Jena/TDB vs Blazegraph](/sul-dlss/rialto/wiki/Comparing-triplestores)
