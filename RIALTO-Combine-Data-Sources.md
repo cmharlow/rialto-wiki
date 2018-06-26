@@ -3,7 +3,7 @@ Possible data sources for RIALTO Combine. ⭐️means in scope for RIALTO Phase 
 
 Source | URL | Data Example (link) | Notes
 ------ | --- | ------------------- | -----
-⭐️CAP = Profiles API | GUI: https://profiles.stanford.edu/ ; CAP API: https://cap.stanford.edu/cap-api/console Or https://api.stanford.edu | https://gist.github.com/peetucket/07746abaa2b8d9bce7b38499cbeab9bb (for author) | SUL Pub only calls a subset of CAP, we need the full CAP API
+⭐️CAP = Profiles API | GUI: https://profiles.stanford.edu/ ; CAP API: https://cap.stanford.edu/cap-api/console Or https://api.stanford.edu | [Author sample](https://gist.github.com/peetucket/07746abaa2b8d9bce7b38499cbeab9bb) | SUL Pub only calls a subset of CAP, we need the full CAP API
 ⭐️Web of Science |  |  | 
 ⭐️Dimensions |  |  | 
 ⭐️SERA |  |  | Not done yet.
