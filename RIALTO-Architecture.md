@@ -12,4 +12,10 @@ TBD
 ## RIALTO Web App
 TBD
 
-# Current Dataflow Diagrams
+# Current Dataflows
+
+## RIALTO Core
+
+* POST JSON-LD (create statements) => Triplestore via SPARQL UPDATE => Message (Subject URIs for each triple) => SPARQL for each Entity graph transformed to JSON (gets new with all data) => Entities in JSON to Index
+* POST SPARQL UPDATE INSERT/DELETE (CRUD statements) => Triplestore via SPARQL UPDATE INSERT/DELETE => Message (Subject URIs for each triple) => SPARQL for each Entity graph transformed to JSON (gets updated & new, drops deleted) => Entities in JSON to Index
+* DELETE JSON-LD (delete **entities**) => Triplestore via SPARQL UPDATE DELETE {`<entity URI> ?p ?o>`} => Message (Subject URIs for entities to delete) => Delete Entities JSON to Index
