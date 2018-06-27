@@ -4,7 +4,7 @@
 
 # Current Working Architecture
 ## RIALTO Core
-![Work in Progress Architectural Diagram for RIALTO Core](/sul-dlss/rialto/wiki/Current_RIALTO_Architecture.png)
+[![Work in Progress Architectural Diagram for RIALTO Core](/sul-dlss/rialto/wiki/Current_RIALTO_Architecture.png)](https://drive.google.com/file/d/14aOYXrn6iN1FzL21_BBQJmf90RuqGO4L/view?usp=sharing)
 
 ## RIALTO Combine
 TBD
