@@ -1,6 +1,6 @@
 # Proposed Conceptual Architecture
 
-[![Early Architecture Diagram for RIALTO](https://docs.google.com/drawings/d/e/2PACX-1vSQ02m-7tdxzE7UYSbWPsl8DmeWboT952DhosgTLjNCAIUb1f95q71XpijdMQiD60MaWCGBsURLkSmP/pub?w=1440&h=1080)](https://docs.google.com/drawings/d/1A_X8krKQcbuonwtzuwMuk1rkEtzLrx-kcSQiuKEoPns/edit)
+[![Early Architecture Diagram for RIALTO](https://docs.google.com/drawings/d/e/2PACX-1vSQ02m-7tdxzE7UYSbWPsl8DmeWboT952DhosgTLjNCAIUb1f95q71XpijdMQiD60MaWCGBsURLkSmP/pub?w=1440&h=1080)](https://drive.google.com/file/d/14aOYXrn6iN1FzL21_BBQJmf90RuqGO4L/view?usp=sharing)
 
 # Current Working Architecture
 ## RIALTO Core
