@@ -61,7 +61,7 @@ Topics are subject areas or concepts. Works, grants, or departments may be assoc
 
 Field | Predicate | Expected Data Type | Cardinality | Definition
 ----- | --------- | ------------------ | ----------- | ----------
-label | skos:prefLabel | string-literal | [1,1] | Primary label for the Concept. 
+label | skos:prefLabel, rdfs:label | string-literal | [1,1] | Primary label for the Concept. 
 alternate labels | skos:altLabel | string-literal | [0,n] | Alternative labels for the Concept.
 broader than | skos:broader | Concept URI | [0,n] | Broader concepts (within a scheme).
 narrower than | skos:narrower | Concept URI | [0,n] | Narrower concepts (within a scheme).
@@ -92,13 +92,13 @@ about   | vivo:overview    | string-literal        | [0,n]       | About the Age
 address | vcard:hasAddress | URI for vcard:Address | [0,1]       | Address for the Agent.
 advisor | vivo:relatedBy vivo:AdvisingRelationship vivo:relates; obo:RO_000053 vivo:AdvisorRole | URI for foaf:Agent | [0,n] | Advisor of the person.
 country | dcterms:spatial  | URI for country in address | [0,n]  | Normalized country the Agent resides or is based in.
-department |  | | |
-email address | | | |
-funded by (grant) | | | |
-institutional affiliation | | | |
-name | | | |
-hasResearchArea | vivo:hasResearchArea | | |
-role(s) / job(s) | | | |
+department | vivo:relatedBy vivo:Position vivo:relates foaf:Organization | URI for foaf:Organization | [0,n] | Organization, at department level, that the person works (or has worked) for.
+email address | vcard:hasEmail | string literal | [0,n] | Email address for the individual.
+funded by (grant) | vivo:relatedBy vivo:Grant | URI for vivo:Grant | [0,n] | Grant having funded or currently funding the person in their work.
+institutional affiliation | vivo:relatedBy vivo:Position vivo:relates foaf:Organization bfo:0000050 foaf:Organization | URI for foaf:Organization | [0,n] | Organization, at institution level, that the person works (or has worked) for.
+name | vcard:hasName | URI for vcard:Name | [1,1] | Name (broken into data property components) for the person.
+hasResearchArea | vivo:hasResearchArea | URI for skos:Concept | [0,n] | Topical area the person does research on or in.
+role(s) / job(s) | vivo:relatedBy vivo:Position | URI for vivo:Position | [0,n] | Position or job the person currently holds or previously held.
 
 ### Organizations
   * Top level / generic: Agent: http://xmlns.com/foaf/0.1/Agent
