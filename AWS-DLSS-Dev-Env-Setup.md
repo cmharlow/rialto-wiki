@@ -31,7 +31,8 @@ NB: Install the AWS command line tool (awscli) if you haven't already before pro
 8. Once done, if you run this: `aws sts get-caller-identity --profile your-user-profile-name`
 you should get something like this (except with real UserId & Account entries):
 
-```{
+```
+{
     "UserId": "fsajfkela;ks",
     "Account": "fjkdl;afjsakl;",
     "Arn": "arn:aws:iam::390882271260:user/your-sul-dlss-users-username"
