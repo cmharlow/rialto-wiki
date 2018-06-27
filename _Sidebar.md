@@ -21,6 +21,9 @@
 
 ### Dev Docs
 
+**AWS**
+- [Setting up AWSCLI for DLSS Dev Env](/sul-dlss/rialto/wiki/AWS-DLSS-Dev-Env-Setup)
+
 **VIVO/Vitro**
 - [Provisioning a VM](/sul-dlss/rialto/wiki/Provisioning-and-setting-up-a-new-Vitro-VM-using-Capistrano)
 - [Deployment Process](/sul-dlss/rialto/wiki/Vitro-Dev-Test-Server-Deployment-Process)
