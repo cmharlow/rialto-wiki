@@ -12,6 +12,11 @@
 ### RIALTO Combine
 - [Combine data sources](/sul-dlss/rialto/wiki/RIALTO-Combine-Data-Sources)
 
+### Dev Docs
+
+**AWS**
+- [Setting up AWSCLI for DLSS Dev Env](/sul-dlss/rialto/wiki/AWS-DLSS-Dev-Env-Setup)
+
 ### VIVO Assessment
 - [Jena/TDB vs Blazegraph](/sul-dlss/rialto/wiki/Comparing-triplestores)
 - [Vitro Ingest Options](/sul-dlss/rialto/wiki/Vitro-Data-Ingest-Options)
@@ -19,12 +24,7 @@
 - [VIVO Community Convo Notes](/sul-dlss/rialto/wiki/Notes-from-exploration-of-other-implementations)
 - [Vitro vs Stand-Alone Datastore](/sul-dlss/rialto/wiki/Vitro-vs.-Stand-Alone-Datastore)
 
-### Dev Docs
-
-**AWS**
-- [Setting up AWSCLI for DLSS Dev Env](/sul-dlss/rialto/wiki/AWS-DLSS-Dev-Env-Setup)
-
-**VIVO/Vitro**
+**VIVO/Vitro Dev Docs**
 - [Provisioning a VM](/sul-dlss/rialto/wiki/Provisioning-and-setting-up-a-new-Vitro-VM-using-Capistrano)
 - [Deployment Process](/sul-dlss/rialto/wiki/Vitro-Dev-Test-Server-Deployment-Process)
 - [Toggle inferencing](/sul-dlss/rialto/wiki/Disable-enable-inferencing-at-startup)
