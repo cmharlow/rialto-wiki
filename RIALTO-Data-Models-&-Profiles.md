@@ -146,16 +146,10 @@ related topic areas | vivo:hasResearchArea | URI for skos:Concept | [0,n] | Topi
 
 Field   | Predicate        | Expected Data Type    | Cardinality | Definition
 ------- | ---------------- | --------------------- | ----------- | ----------
-address | vcard:hasAddress | URI for vcard:Address | [0,1]       | Address for the Agent.
-advisor | vivo:relatedBy vivo:AdvisingRelationship vivo:relates; obo:RO_000053 vivo:AdvisorRole | URI for foaf:Agent | [0,n] | Advisor of the person.
-country | dcterms:spatial  | URI for country in address | [0,n]  | Normalized country the Agent resides or is based in.
-department |  | | |
-email address | | | |
-funded by (grant) | | | |
-institutional affiliation | | | |
-name | | | |
-related topic areas | | | |
-role(s) / job(s) | | | |
+institution | bfo:0000050 foaf:Organization | URI for foaf:Organization | [0,n] | Organization this organization is a part of.
+name | skos:prefLabel, rdfs:label | string literal | [1,1] | Primary name for the Organization.
+alternate name | skos:altLabel | string literal | [0,n] | Alternate names for the Organization.
+abbreviation | vivo:abbrevation | string literal | [0,n] | Abbreviated names for the Organization.
 
 ## Grants
 
