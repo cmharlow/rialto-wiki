@@ -1,10 +1,21 @@
+# Proposed Conceptual Architecture
+
+[![Early Architecture Diagram for RIALTO](https://docs.google.com/drawings/d/e/2PACX-1vSQ02m-7tdxzE7UYSbWPsl8DmeWboT952DhosgTLjNCAIUb1f95q71XpijdMQiD60MaWCGBsURLkSmP/pub?w=1440&h=1080)](https://drive.google.com/file/d/14aOYXrn6iN1FzL21_BBQJmf90RuqGO4L/view?usp=sharing)
+
 # Current Working Architecture
 ## RIALTO Core
-![Work in Progress Architectural Diagram for RIALTO Core](https://www.draw.io/?lightbox=1&highlight=0000ff&nav=1&title=Current%20RIALTO%20Architecture#Uhttps%3A%2F%2Fdrive.google.com%2Fa%2Fstanford.edu%2Fuc%3Fid%3D14aOYXrn6iN1FzL21_BBQJmf90RuqGO4L%26export%3Ddownload)
+[![Work in Progress Architectural Diagram for RIALTO Core](/sul-dlss/rialto/wiki/Current_RIALTO_Architecture.png)](https://drive.google.com/file/d/14aOYXrn6iN1FzL21_BBQJmf90RuqGO4L/view?usp=sharing)
 
-# Current Dataflow Diagrams
+## RIALTO Combine
+TBD
 
+## RIALTO Web App
+TBD
 
-# Early Conceptual Architecture
+# Current Dataflows
 
-![Early Architecture Diagram for RIALTO](https://docs.google.com/drawings/d/e/2PACX-1vSQ02m-7tdxzE7UYSbWPsl8DmeWboT952DhosgTLjNCAIUb1f95q71XpijdMQiD60MaWCGBsURLkSmP/pub?w=1440&h=1080)
+## RIALTO Core
+
+* POST JSON-LD (create statements) => Triplestore via SPARQL UPDATE => Message (Subject URIs for each triple) => SPARQL for each Entity graph transformed to JSON (gets new with all data) => Entities in JSON to Index
+* POST SPARQL UPDATE INSERT/DELETE (CRUD statements) => Triplestore via SPARQL UPDATE INSERT/DELETE => Message (Subject URIs for each triple) => SPARQL for each Entity graph transformed to JSON (gets updated & new, drops deleted) => Entities in JSON to Index
+* DELETE JSON-LD (delete **entities**) => Triplestore via SPARQL UPDATE DELETE {`<entity URI> ?p ?o>`} => Message (Subject URIs for entities to delete) => Delete Entities JSON to Index
