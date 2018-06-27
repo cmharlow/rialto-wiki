@@ -167,9 +167,11 @@ Grants are awards for some project(s) or work(s), usually attached to one or mor
 
 Field        | Predicate     | Expected Data Type | Cardinality | Definition
 ------------ | ------------- | ------------------ | ----------- | ----------
-Grant Name   | dcterms:title | string-literal     | [1,1]       | Name or title of the grant. 
-Awardee      |               |                    | [1,n]       | 
-Grant Amount |               |                    | [0,1]       | 
+Grant Name   | skos:prefLabel, rdfs:label | string-literal     | [1,1]       | Name or title of the grant. 
+Grant Abstract | vivo:abstract | string-literal     | [1,1]       | Description or abstract of the grant. 
+Awardee Org  | vivo:relates vivo:AdminRole obo:RO_0000052 foaf:Organization | URI for foaf:Organization | [1,n] | Organization administering the grant (loosely, awarded).
+Grant Amount | vivo:totalAwardAmount | decimal-literal? | [0,1] | Amount awarded by the Grant.
+Principal Investigator  | vivo:relates vivo:PrincipalInvestigatorRole obo:RO_0000052 foaf:Person | URI for foaf:Person | [1,n] | Principal Investigator for the grant.
 Status       |               |                    | [1,1]       | Indicates if the grant has been awarded.
 Start Date   |               |                    | [0,1]       | 
 End Date     |               |                    | [0,1]       | 
