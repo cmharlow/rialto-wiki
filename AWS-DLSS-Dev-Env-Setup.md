@@ -30,11 +30,13 @@ NB: Install the AWS command line tool (awscli) if you haven't already before pro
 7. When prompted, enter the keys from your downloaded CSV as requested, then for region enter `us-east-1`, and for data output, `json` (unless you want something other than json).
 8. Once done, if you run this: `aws sts get-caller-identity --profile your-user-profile-name`
 you should get something like this (except with real UserId & Account entries):
+
 ```{
     "UserId": "fsajfkela;ks",
     "Account": "fjkdl;afjsakl;",
     "Arn": "arn:aws:iam::390882271260:user/your-sul-dlss-users-username"
-}``` 
+}
+``` 
 
 You can now use awscli with your `sul-dlss-users` account by applying the `--profile your-user-profile-name` flag to your commands.
 
@@ -46,21 +48,25 @@ Now we're going to set up a separate awscli profile for the shared developer rol
 2. Again in your terminal, enter `aws configure --profile your-dev-role-profile-name` (`your-dev-role-profile-name` can be whatever you want for labeling your use of the shared DevelopersRole within `sul-dlss-development`).
 3. When prompted, enter the access key and secret access key based on the keys returned in the step 1 (`sts assume-role`) command. Leave region as `us-east-1` and output as `json` (unless you prefer some other output).
 4. Now we're going to edit your local awscli config to allow the assumption of the role via awscli profile. Edit your aws config file by using in the terminal `vi ~/.aws/config` (or whatever editor you want to use).
-5. at the bottom of that config file, you'll see the `your-dev-role-profile-name` you just added. Update that entry to be this, entering `your-user-profile-name` from the above `sul-dlss-users` awscli configuration in the `source_profile` field: ```
+5. at the bottom of that config file, you'll see the `your-dev-role-profile-name` you just added. Update that entry to be this, entering `your-user-profile-name` from the above `sul-dlss-users` awscli configuration in the `source_profile` field: 
+
+```
 [profile your-dev-role-profile-name]
 output = json
 role_arn = arn:aws:iam::418214828013:role/DevelopersRole
 region = us-east-1
 source_profile = your-user-profile-name
 ```
-6. Close + save the update config file, then in a terminal, run `aws sts get-caller-identity --profile your-dev-role-profile-name`. You should get a response like:
+
+6. Close + save the update config file, then in a terminal, run `aws sts get-caller-identity --profile your-dev-role-profile-name`. You should get a response like (except with real identifiers):
+
 ```
 {
     "Arn": "arn:aws:sts::418214828013:assumed-role/DevelopersRole/botocore-session-47478484848",
     "Account": "418214828013",
     "UserId": "AFSJDKSAFJKFDJSAK:botocore-session-47478484848"
 }
-``` (except with real identifiers).
+``` 
 
 Now you can run the awscli with the shared DevelopersRole within the `sul-dlss-development` environment by using the `--profile your-dev-role-profile-name` flag at the end of the awscli commands.
 
