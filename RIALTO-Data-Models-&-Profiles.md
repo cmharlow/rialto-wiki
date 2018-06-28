@@ -61,6 +61,7 @@ Topics are subject areas or concepts. Works, grants, or departments may be assoc
 
 Field | Predicate | Expected Data Type | Cardinality | Definition
 ----- | --------- | ------------------ | ----------- | ----------
+@type | rdf:type  | URI from list above | [1,n]      |  Type of the resource.
 label | skos:prefLabel, rdfs:label | string-literal | [1,1] | Primary label for the Concept. 
 alternate labels | skos:altLabel | string-literal | [0,n] | Alternative labels for the Concept.
 broader than | skos:broader | Concept URI | [0,n] | Broader concepts (within a scheme).
@@ -88,13 +89,15 @@ Agents are some sort of actor involved in creating works or projects, or in supp
 
 Field   | Predicate        | Expected Data Type    | Cardinality | Definition
 ------- | ---------------- | --------------------- | ----------- | ----------
+@type   | rdf:type  | URI from list above | [1,n]      |  Type of the resource.
 about   | vivo:overview    | string-literal        | [0,n]       | About the Agent.
 address | vcard:hasAddress | URI for vcard:Address | [0,1]       | Address for the Agent.
 advisor | vivo:relatedBy vivo:AdvisingRelationship vivo:relates; obo:RO_000053 vivo:AdvisorRole | URI for foaf:Agent | [0,n] | Advisor of the person.
 country | dcterms:spatial  | URI for country in address | [0,n]  | Normalized country the Agent resides or is based in.
 department | vivo:relatedBy vivo:Position vivo:relates foaf:Organization | URI for foaf:Organization | [0,n] | Organization, at department level, that the person works (or has worked) for.
 email address | vcard:hasEmail | string literal | [0,n] | Email address for the individual.
-funded by (grant) | vivo:relatedBy vivo:Grant | URI for vivo:Grant | [0,n] | Grant having funded or currently funding the person in their work.
+PI of | vivo:relatedBy vivo:Grant | URI for vivo:Grant | [0,n] | Grant the person is currently PI or has been PI for.
+funded by (grant) | vivo:hasFundingVehicle | Grant URI | [0,n] | Grant (or contract) providing funding for the Agent (or their Position).
 institutional affiliation | vivo:relatedBy vivo:Position vivo:relates foaf:Organization bfo:0000050 foaf:Organization | URI for foaf:Organization | [0,n] | Organization, at institution level, that the person works (or has worked) for.
 name | vcard:hasName | URI for vcard:Name | [1,1] | Name (broken into data property components) for the person.
 hasResearchArea | vivo:hasResearchArea | URI for skos:Concept | [0,n] | Topical area the person does research on or in.
@@ -126,10 +129,12 @@ role(s) / job(s) | vivo:relatedBy vivo:Position | URI for vivo:Position | [0,n] 
 
 Field   | Predicate        | Expected Data Type    | Cardinality | Definition
 ------- | ---------------- | --------------------- | ----------- | ----------
+@type   | rdf:type  | URI from list above | [1,n]      |  Type of the resource.
 address | vcard:hasAddress | URI for vcard:Address | [0,1]       | Address for the Organization.
 country | dcterms:spatial  | URI for country in address | [0,n]  | Normalized country the Organization is based in.
 email address | vcard:hasEmail | string literal | [0,n] | Email address for the Organization.
-funded by (grant) | vivo:relatedBy vivo:Grant | URI for vivo:Grant | [0,n] | Grant having funded or currently funding the Organization.
+administering (grant) | vivo:relatedBy vivo:Grant | URI for vivo:Grant | [0,n] | Grant administered by the Organization.
+funded by (grant) | vivo:hasFundingVehicle | Grant URI | [0,n] | Grant (or contract) providing funding for the Agent (or their Position).
 children organizations | bfo:0000051 foaf:Organization | URI for foaf:Organization | [0,n] | Organization this organization is contains.
 parent organizations | bfo:0000050 foaf:Organization | URI for foaf:Organization | [0,n] | Organization this organization is a part of.
 employees | vivo:relatedBy vivo:Position* vivo:relates foaf:Agent | URIs for Agents | [0,n] | Agents that hold a position in the Organization.
@@ -146,6 +151,7 @@ related topic areas | vivo:hasResearchArea | URI for skos:Concept | [0,n] | Topi
 
 Field   | Predicate        | Expected Data Type    | Cardinality | Definition
 ------- | ---------------- | --------------------- | ----------- | ----------
+@type   | rdf:type  | URI from list above | [1,n]      |  Type of the resource.
 institution | bfo:0000050 foaf:Organization | URI for foaf:Organization | [0,n] | Organization this organization is a part of.
 name | skos:prefLabel, rdfs:label | string literal | [1,1] | Primary name for the Organization.
 alternate name | skos:altLabel | string literal | [0,n] | Alternate names for the Organization.
@@ -157,27 +163,21 @@ Grants are awards for some project(s) or work(s), usually attached to one or mor
 
 * **Sources**: Web of Science (funding agency string / grant number in metadata), SERA (not done yet)
 * **Types**: 
-  * Top level / generic: 
-  * Governmental
-    * Federal
-    * State
-    * Local
-  * Private
-  * Internal to Stanford
+  * Top level / generic: http://vivoweb.org/ontology/core#Grant
 
 Field        | Predicate     | Expected Data Type | Cardinality | Definition
 ------------ | ------------- | ------------------ | ----------- | ----------
+@type        | rdf:type  | URI from list above | [1,n]      |  Type of the resource.
 Grant Name   | skos:prefLabel, rdfs:label | string-literal     | [1,1]       | Name or title of the grant. 
-Grant Abstract | vivo:abstract | string-literal     | [1,1]       | Description or abstract of the grant. 
-Awardee Org  | vivo:relates vivo:AdminRole obo:RO_0000052 foaf:Organization | URI for foaf:Organization | [1,n] | Organization administering the grant (loosely, awarded).
+Abstract     | vivo:abstract | string-literal     | [1,1]       | Description or abstract of the grant. 
+Funds        | vivo:fundingVehicleFor | URI for vivo:Position, foaf:Agent, or bibo:Document | [0,n] | What has been funded by the Grant.
 Grant Amount | vivo:totalAwardAmount | decimal-literal? | [0,1] | Amount awarded by the Grant.
-Principal Investigator  | vivo:relates vivo:PrincipalInvestigatorRole obo:RO_0000052 foaf:Person | URI for foaf:Person | [1,n] | Principal Investigator for the grant.
-Status       |               |                    | [1,1]       | Indicates if the grant has been awarded.
-Start Date   |               |                    | [0,1]       | 
-End Date     |               |                    | [0,1]       | 
-Award Date   |               |                    | [1,1]       | 
-Related project |            |                    | [0,n]       | Projects related to or funded by the grant.
-Related work |               |                    | [0,n]       | Answer which publications resulted from which grants?
+Principal Investigator | vivo:relates vivo:PrincipalInvestigatorRole obo:RO_0000052 foaf:Person | URI for foaf:Person | [1,n] | Principal Investigator for the grant.
+Administered By | vivo:relates vivo:AdminRole obo:RO_0000052 foaf:Organization | URI for foaf:Organization | [1,n] | Administrating Organization for the grant's funds.
+Funded By    | vivo:assignedBy | URI for foaf:Organization | [1,n] | Funding Organization for the grant.
+Start Date   | frapo:hasStartDate | datetime literal | [0,1] | Date the Grant support / funding starts.
+End Date     | frapo:hasEndDate   | datetime literal | [0,1] | Date the Grant support / funding ends.
+Award Date   | frapo;hasAwardDate | date literal     | [1,1] | Date the Grant was awarded.
 
 ## Projects
 
