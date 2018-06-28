@@ -2,22 +2,61 @@ Drawn from use cases written up in (private) Jira repository: https://jirasul.st
 
 # CSV Reports
 
-| Year | academic institute | topic area | number of publications by faculty members of institute in that topic area | 
-| 2002 | school of medicine | biology    | 12 |
-| 2002 | school of medicine | chemistry  | 30 |
+Year | academic institute | topic area | number of publications by faculty members of institute in that topic area
+---- | ------------------ | ---------- | -------------
+2002 | school of medicine | biology    | 12
+2002 | school of medicine | chemistry  | 30
+2003 | school of medicine | chemistry  | 210
 
+Publication   | Grant
+------------- | ------
 Publication 1 | Grant 1 
-Publication 1 | Grant 1 
+Publication 2 | Grant 1 
+Publication 3 | Grant 1 
+Publication 2 | Grant 2 
+Publication 4 | Grant 2 
 
-  - grant per row, followed by publications underneath it (one per row)
-  - per department, department name, department org, institution department's authors has collaborated with, number of collaborations, collaborator org, collaborator name, collaborator country
-  - per author, author name, author org, institution author has collaborated with, number of collaborations, collaborator org, collaborator name, collaborator country
-  - Author Name, Total Publication Count, Total Profiles-derived Publication Count, Total number of times cited across all publications
-  - for department & timeframe, report showing journals in one table, and publishers in another, along with counts of publications for each by authors
-  - one column per month, row for each department, number of publications produced by faculty members associated with that department, topic area(s)
+Department | Institution | Author | Author's Co-Author | Co-Author Institution | Co-Author Department | Number of Collaborations | Co-Author Country
+--- | --- | --- | --- | --- | --- | --- | ---
+Chemistry  | Stanford    | John Smith | Jane Smith  | Harvard  | Biochemistry | 2 | USA
+Chemistry  | Stanford    | John Smith | Jane Okoye  | Ghent    | Informatics  | 10 | Belgium
+Medicine   | Stanford    | Lady Red   | Jane Okoye  | Ghent    | Informatics  | 10 | Belgium
+
+Author | Institution | Co-Authors' Institution | Institution Country | Number of Collaborations | Co-Authors' Names
+------ | ----------- | ----------------------- | ------------------- | ------------------------ | -----------------
+Jane Smith | Stanford | Harvard | USA | 10 | Jane Smith, John Doe, Jake Okuma
+Jane Smith | Stanford | Ghent | Belgium | 2 | Patrick Hoch, Richard Sanderson
+
+Author | Publications Count | Profiles-Sourced Publications Count | Number of times Cited
+------ | ------------------ | ----------------------------------- | ---------------------
+Jane Smith | 120 | 80 | 200
+Clifford the Dog | 2 | 1 | 10
+
+Department | Year | Journals | Count of Publications by Authors in Department
+---------- | ---- | -------- | ----------------------------------------------
+Chemistry  | 2002 | Science  | 5000
+Chemistry  | 2003 | Science  | 2000
+Biology    | 2016 | n+1      | 2
+
+
+Department | Year | Publishers | Count of Publications by Authors in Department
+---------- | ---- | ---------- | ----------------------------------------------
+Chemistry  | 2002 | Elsevier   | 2
+Chemistry  | 2014 | Springer   | 5
+English    | 2015 | MLA        | 30
+
+Department | # of Faculty Publications in Jan | ... Feb | ... March | ... April | ... May | ... June | ... July | ... Aug | ... Sept | ... Oct | ... Nov | ... Dev
+---------- | --- | --- | ----- | ----- | --- | ---- | ---- | --- | ---- | --- | --- | ---
+Chemistry  | 12  | 3   | 4     | 5000  |   2 |    0 |    2 |  10 | 2021 |  20 | 305 | 308
+English    | 109 |   2 |    43 |   36  |  83 |   49 |    0 | 489 |  981 |  34 | 738 |  21
+
+Department | Topics of Faculty Publications in Jan | ... Feb | ... March | ... April | ... May | ... June | ... July | ... Aug | ... Sept | ... Oct | ... Nov | ... Dev
+---------- | --- | --- | ----- | ----- | --- | ---- | ---- | --- | ---- | --- | --- | ---
+Chemistry  | Polymers, Astrochemistry  | Biochem   | Topic 2, Topic 3, Topic 4     | Topic 5  |  Topic 5, Topic 1, Topic 56 |    Topic 0 |   Topic 2 | Topic 10 | Topic 2, Topic 0, Topic 21 |  Topic 20 | Topic 3, Topic 0, Topic 5 | Topic 8
 
 # Blacklight / Search interface
-- Facets:
+
+Facets:
   - result entities types
   - years range
   - date range
@@ -28,7 +67,8 @@ Publication 1 | Grant 1
   - department or other organizational unit (e.g. school)
   - grants
   - agent (research / faculty member)
-- Results:
+
+Results:
   - grants with number of resulting connected publications
   - publications
   - projects
