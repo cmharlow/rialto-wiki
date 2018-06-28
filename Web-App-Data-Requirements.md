@@ -54,25 +54,26 @@ Department | Topics of Faculty Publications in Jan | ... Feb | ... March | ... A
 ---------- | --- | --- | ----- | ----- | --- | ---- | ---- | --- | ---- | --- | --- | ---
 Chemistry  | Polymers, Astrochemistry  | Biochem   | Topic 2, Topic 3, Topic 4     | Topic 5  |  Topic 5, Topic 1, Topic 56 |    Topic 0 |   Topic 2 | Topic 10 | Topic 2, Topic 0, Topic 21 |  Topic 20 | Topic 3, Topic 0, Topic 5 | Topic 8
 
-# Blacklight / Search interface
+# Search interface
 
-Facets:
+## Results (i.e. Entities that get indexed)
+  - Grants
+  - Publications
+  - Projects
+  - Faculty
+  - Organization
+
+## Facets
   - result entities types
   - years range
   - date range
   - topic areas
-  - number of publications
+  - number of publications (related to Grant, by a Person, from a Person at an Organization)
   - institute
   - academic unit or department
   - department or other organizational unit (e.g. school)
   - grants
   - agent (research / faculty member)
-
-Results:
-  - grants with number of resulting connected publications
-  - publications
-  - projects
-  - faculty
 
 # Visualizations
   - given agent, heat map of the world with color coding on countries to indicate frequency of collaboration.  This is determined by looking at the countries in the addresses shown for co-authors of that agent's publications.  Questions: (1) Is an agent an aggregative thing (i.e. can it be a department, a school, a single person, all of Stanford)?  (2) Can we filter the publications used to create the heatmap by date range?
