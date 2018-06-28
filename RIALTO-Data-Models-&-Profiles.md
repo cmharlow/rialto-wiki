@@ -43,6 +43,7 @@ DOI                 | bibo:doi | DOI IRI | [0,1] | Digital Object Identifier for
 editor              | vivo:relatedBy vivo:Editorship vivo:relates | URI for foaf:Agent | [0,n] | Editor of the publication.
 identifier          | bibo:identifier | IRI | [1,n] | Identifier for the resource. May be from multiple sources.
 funded by           | vivo:hasFundingVehicle | Grant URI | [0,n] | Grant (or contract) providing funding for the publication.
+has instrument      | gcis:hasInstrument | gcis:Instrument URI | [0,n] | A type of tool or device used for a particular task, especially for scientific work, as presented in the publication (specifically for Datasets).
 journal issue       | dcterms:hasPart  | Document URI (Article) | [0,n] | Journal is another entity with issue number, label / title, possibly isPartOf URI for the Journal title overall.
 link                | bibo:uri | URI / IRI | [0,n] | (Preferably, permanent) URL for accessing the resource on the internet. 
 publisher           | vivo:publisher | URI for foaf:Organization | [0,n] |  Publisher of the resource.
