@@ -1,7 +1,14 @@
 Drawn from use cases written up in (private) Jira repository: https://jirasul.stanford.edu/jira/secure/RapidBoard.jspa?rapidView=921&projectKey=RIALTO&view=planning
 
-# CSV: 
-  - One column per year, row for each academic institute, number of publications produced by faculty members associated with that institute in that topic area(s)
+# CSV Reports
+
+| Year | academic institute | topic area | number of publications by faculty members of institute in that topic area | 
+| 2002 | school of medicine | biology    | 12 |
+| 2002 | school of medicine | chemistry  | 30 |
+
+Publication 1 | Grant 1 
+Publication 1 | Grant 1 
+
   - grant per row, followed by publications underneath it (one per row)
   - per department, department name, department org, institution department's authors has collaborated with, number of collaborations, collaborator org, collaborator name, collaborator country
   - per author, author name, author org, institution author has collaborated with, number of collaborations, collaborator org, collaborator name, collaborator country
