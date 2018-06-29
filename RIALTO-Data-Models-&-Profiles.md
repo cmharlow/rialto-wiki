@@ -178,14 +178,19 @@ Administered By | vivo:relates vivo:AdminRole obo:RO_0000052 foaf:Organization |
 Funded By    | vivo:assignedBy | URI for foaf:Organization | [1,n] | Funding Organization for the grant.
 Start Date   | frapo:hasStartDate | datetime literal | [0,1] | Date the Grant support / funding starts.
 End Date     | frapo:hasEndDate   | datetime literal | [0,1] | Date the Grant support / funding ends.
-Award Date   | frapo;hasAwardDate | date literal     | [1,1] | Date the Grant was awarded.
+Award Date   | frapo:hasAwardDate | date literal     | [1,1] | Date the Grant was awarded.
 
 ## Projects
 
 Projects here are research projects that are funded by grants or institutions, worked on by agents, and may produce multiple works. 
-Sources: SERA (not done yet)
+
+* **Sources**: SERA (not done yet)
+* **Types**: 
+  * Top level / generic: Project: http://xmlns.com/foaf/0.1/Project
 
 Field           | Predicate     | Expected Data Type | Cardinality | Definition
 --------------- | ------------- | ------------------ | ----------- | ----------
-title           | dcterms:title | string-literal     | [1,1] | Title for the project. 
-alternate title | dcterms:alternative | string-literal | [0,n] | Alternative title(s) for the project. 
+Title           | dcterms:title | string-literal     | [1,1] | Title for the project. 
+Alternate title | dcterms:alternative | string-literal | [0,n] | Alternative title(s) for the project. 
+Start Date   | frapo:hasStartDate | datetime literal | [0,1] | Date the Project starts.
+End Date     | frapo:hasEndDate   | datetime literal | [0,1] | Date the Project ends.
