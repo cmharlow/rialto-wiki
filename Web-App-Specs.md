@@ -28,6 +28,7 @@ https://drive.google.com/drive/u/1/folders/1d-UFRxmHDFsb8vDXQvkNGlR66Tb-KkWp
 # CSV Reports
 
 :star: 
+
 Department | Institution | Author | Author's Co-Author | Co-Author Institution | Co-Author Department | Number of Collaborations | Co-Author Country
 --- | --- | --- | --- | --- | --- | --- | ---
 Chemistry  | Stanford    | John Smith | Jane Smith  | Harvard  | Biochemistry | 2 | USA
@@ -35,6 +36,7 @@ Chemistry  | Stanford    | John Smith | Jane Okoye  | Ghent    | Informatics  | 
 Medicine   | Stanford    | Lady Red   | Jane Okoye  | Ghent    | Informatics  | 10 | Belgium
 
 :star: 
+
 Author     | Institution | Co-Authors' Institution | Institution Country | Number of Collaborations | Co-Authors' Names
 ---------- | ----------- | ----------------------- | ------------------- | ------------------------ | -----------------
 Jane Smith | Stanford    | Harvard                 | USA                 | 10 | Jane Smith, John Doe, Jake Okuma
