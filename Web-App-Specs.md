@@ -75,5 +75,5 @@ Chemistry  | Polymers, Astrochemistry  | Biochem   | Topic 2, Topic 3, Topic 4  
   - agent (research / faculty member)
 
 # Visualizations
-  - given agent, heat map of the world with color coding on countries to indicate frequency of collaboration.  This is determined by looking at the countries in the addresses shown for co-authors of that agent's publications.  Questions: (1) Is an agent an aggregative thing (i.e. can it be a department, a school, a single person, all of Stanford)?  (2) Can we filter the publications used to create the heatmap by date range?
+  - given agent, heat map of the world with color coding on countries to indicate frequency of collaboration.  This is determined by looking at the countries in the addresses shown for co-authors of that agent's publications.  Questions: (1) Is an agent an aggregative thing (i.e. can it be a department, a school, a single person, all of Stanford)?  YES (2) Can we filter the publications used to create the heatmap by date range? YES
   - network visualization, showing institutions as nodes, with lines connecting the institutions represented by all co-authors of projects or works. The size of the nodes is determined by the number of authors at that institution. 
