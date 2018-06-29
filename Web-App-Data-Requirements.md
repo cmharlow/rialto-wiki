@@ -60,8 +60,7 @@ Chemistry  | Polymers, Astrochemistry  | Biochem   | Topic 2, Topic 3, Topic 4  
   - Grants
   - Publications
   - Projects
-  - Faculty
-  - Organization
+  - Faculty, Organizations, Departments < Agents
 
 ## Facets
   - result entities types
