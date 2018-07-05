@@ -5,7 +5,7 @@ message: JSON containing the following:
 ```javascript
 { 
   "action": "touch",
-  "entities":  ["id", "id", "id"],
+  "entities": ["id", "id", "id"],
   "body": "string"
 }
 ```
