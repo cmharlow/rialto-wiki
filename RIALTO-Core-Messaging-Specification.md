@@ -1,12 +1,12 @@
 See [[RIALTO Architecture]] to see the central role messaging plays.
 
-message: json containing the following:
+message: JSON containing the following:
 
-```
+```json
 { 
   "action": "touch",
-   "entities":  ["id", "id", "id"...]
-   "body": "string"
+  "entities":  ["id", "id", "id"...],
+  "body": "string"
 }
 ```
 
