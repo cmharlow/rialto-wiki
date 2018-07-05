@@ -5,6 +5,7 @@
 - [RIALTO Demo 1](/sul-dlss/rialto/wiki/RIALTO-Demo-1:-Notes)
 
 ### RIALTO Core
+- [Messaging Spec](/sul-dlss/rialto/wiki/RIALTO-Core-Messaging-Specification)
 
 ### RIALTO Web App
 - [Web App Data Requirements](/sul-dlss/rialto/wiki/Web-App-Data-Requirements)
