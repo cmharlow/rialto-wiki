@@ -18,6 +18,9 @@
 ### AWS
 - [Setting up AWSCLI for DLSS Dev Env](/sul-dlss/rialto/wiki/AWS-DLSS-Dev-Env-Setup)
 
+### Localstack
+- [Working with Localstack](/sul-dlss/rialto/wiki/Working-with-localstack)
+
 ### VIVO Assessment
 - [Jena/TDB vs Blazegraph](/sul-dlss/rialto/wiki/Comparing-triplestores)
 - [Vitro Ingest Options](/sul-dlss/rialto/wiki/Vitro-Data-Ingest-Options)
@@ -41,4 +44,3 @@
 - [Ingest via TDB Java API](/sul-dlss/rialto/wiki/Loading-data-into-Vitro:-TDB-Java-API)
 - [Vitro Logging](/sul-dlss/rialto/wiki/Vitro-Logging)
 - [Detecting TDB Changes](/sul-dlss/rialto/wiki/Detecting-TDB-Changes)
-- [Working with Localstack](/sul-dlss/rialto/wiki/%5BWIP%5D-Working-with-localstack)
