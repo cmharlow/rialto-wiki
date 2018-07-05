@@ -4,28 +4,28 @@
 - [RIALTO Data Models](/sul-dlss/rialto/wiki/RIALTO-Data-Models-&amp;-Profiles)
 - [RIALTO Demo 1](/sul-dlss/rialto/wiki/RIALTO-Demo-1:-Notes)
 
-## RIALTO Core
+### RIALTO Core
 - [Messaging Spec](/sul-dlss/rialto/wiki/RIALTO-Core-Messaging-Specification)
 
-## RIALTO Web App
+### RIALTO Web App
 - [Web App Data Requirements](/sul-dlss/rialto/wiki/Web-App-Data-Requirements)
 
-## RIALTO Combine
+### RIALTO Combine
 - [Combine data sources](/sul-dlss/rialto/wiki/RIALTO-Combine-Data-Sources)
 
 # Dev Docs
 
-## AWS
+### AWS
 - [Setting up AWSCLI for DLSS Dev Env](/sul-dlss/rialto/wiki/AWS-DLSS-Dev-Env-Setup)
 
-## VIVO Assessment
+### VIVO Assessment
 - [Jena/TDB vs Blazegraph](/sul-dlss/rialto/wiki/Comparing-triplestores)
 - [Vitro Ingest Options](/sul-dlss/rialto/wiki/Vitro-Data-Ingest-Options)
 - [VIVO/Vitro Assessment](/sul-dlss/rialto/wiki/Assessment)
 - [VIVO Community Convo Notes](/sul-dlss/rialto/wiki/Notes-from-exploration-of-other-implementations)
 - [Vitro vs Stand-Alone Datastore](/sul-dlss/rialto/wiki/Vitro-vs.-Stand-Alone-Datastore)
 
-### VIVO/Vitro Dev Docs
+#### VIVO/Vitro Dev Docs
 - [Provisioning a VM](/sul-dlss/rialto/wiki/Provisioning-and-setting-up-a-new-Vitro-VM-using-Capistrano)
 - [Deployment Process](/sul-dlss/rialto/wiki/Vitro-Dev-Test-Server-Deployment-Process)
 - [Toggle inferencing](/sul-dlss/rialto/wiki/Disable-enable-inferencing-at-startup)
