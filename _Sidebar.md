@@ -17,8 +17,6 @@
 
 ### AWS
 - [Setting up AWSCLI for DLSS Dev Env](/sul-dlss/rialto/wiki/AWS-DLSS-Dev-Env-Setup)
-
-### Localstack
 - [Working with Localstack](/sul-dlss/rialto/wiki/Working-with-localstack)
 
 ### VIVO Assessment
