@@ -2,10 +2,10 @@ See [[RIALTO Architecture]] to see the central role messaging plays.
 
 message: JSON containing the following:
 
-```json
+```javascript
 { 
   "action": "touch",
-  "entities":  ["id", "id", "id"...],
+  "entities":  ["id", "id", "id"],
   "body": "string"
 }
 ```
