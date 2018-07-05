@@ -4,13 +4,13 @@
 - [RIALTO Data Models](/sul-dlss/rialto/wiki/RIALTO-Data-Models-&amp;-Profiles)
 - [RIALTO Demo 1](/sul-dlss/rialto/wiki/RIALTO-Demo-1:-Notes)
 
-# RIALTO Core
+## RIALTO Core
 - [Messaging Spec](/sul-dlss/rialto/wiki/RIALTO-Core-Messaging-Specification)
 
-# RIALTO Web App
+## RIALTO Web App
 - [Web App Data Requirements](/sul-dlss/rialto/wiki/Web-App-Data-Requirements)
 
-# RIALTO Combine
+## RIALTO Combine
 - [Combine data sources](/sul-dlss/rialto/wiki/RIALTO-Combine-Data-Sources)
 
 # Dev Docs
