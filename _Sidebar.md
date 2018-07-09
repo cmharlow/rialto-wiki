@@ -18,7 +18,8 @@
 ### AWS
 - [Setting up AWSCLI (Dev Env)](/sul-dlss/rialto/wiki/AWS-DLSS-Dev-Env-Setup)
 - [Working with Localstack](/sul-dlss/rialto/wiki/Working-with-localstack)
-- [Ingest service config (Dev Env)](/sul-dlss/rialto/wiki/RIALTO-Ingest-Service-Configuration-(Dev-Env))
+- [Ingest Service info (Dev Env)](/sul-dlss/rialto/wiki/RIALTO-Ingest-Service-Configuration-(Dev-Env))
+- [SPARQL Proxy info (Dev Env)](/sul-dlss/rialto/wiki/RIALTO-SPARQL-Proxy-Configuration-(Dev-Env))
 
 ### VIVO Assessment
 - [Jena/TDB vs Blazegraph](/sul-dlss/rialto/wiki/Comparing-triplestores)
