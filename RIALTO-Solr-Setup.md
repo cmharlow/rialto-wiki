@@ -8,3 +8,25 @@ Let's use a single, EC2-based Solr instance set up just like we would have it on
 [Solr Installation Docs](https://lucene.apache.org/solr/guide/7_2/installing-solr.html)
 
 The first URL shows how to configure and set up Solr to run in "cloud" mode in AWS. This could be a backup for us if we find that a single-instance EC2 box isn't beefy enough (until we can use the DLSS Solr Cloud).
+
+Key setup steps:
+
+* Choose _Amazon Linux AMI, SSD Volume Type_ as the AMI when setting up the EC2 instance
+* t2.medium should be sufficient
+* Follow the [SolrCloud AWS Tutorial](https://lucene.apache.org/solr/guide/7_2/aws-solrcloud-tutorial.html) but just install a single Solr instance on one node.
+* Once you've verified that you can reach the EC2 Solr, manually set the EC2's storage to be persistent:
+
+`aws ec2 modify-instance-attribute --instance-id <instance_id> --block-device-mappings file://ec2_persist_mapping.json --region us-east-2 --profile dlss-DevelopersRole`
+
+Contents of `ec2_persist_mapping.json`:
+
+```
+[
+  {
+    "DeviceName": "/dev/xvda",
+    "Ebs" : {
+        "DeleteOnTermination": false
+    }
+  }
+]
+```
