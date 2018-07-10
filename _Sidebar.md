@@ -13,14 +13,12 @@
 ### RIALTO Combine
 - [Combine data sources](/sul-dlss/rialto/wiki/RIALTO-Combine-Data-Sources)
 
-# Dev Docs
-
-### AWS
+# Development
 - [Getting Started](/sul-dlss/rialto/wiki/Getting-Started-(Dev-Env))
 - [Working with Localstack](/sul-dlss/rialto/wiki/Working-with-localstack)
-- [Setting up AWS CLI (Dev Env)](/sul-dlss/rialto/wiki/AWS-DLSS-Dev-Env-Setup)
-- [Ingest Service (Dev Env)](/sul-dlss/rialto/wiki/RIALTO-Ingest-Service-Configuration-(Dev-Env))
-- [SPARQL Proxy (Dev Env)](/sul-dlss/rialto/wiki/RIALTO-SPARQL-Proxy-Configuration-(Dev-Env))
+- [Setting up AWS CLI](/sul-dlss/rialto/wiki/AWS-DLSS-Dev-Env-Setup)
+- [Ingest Service](/sul-dlss/rialto/wiki/RIALTO-Ingest-Service-Configuration-(Dev-Env))
+- [SPARQL Proxy](/sul-dlss/rialto/wiki/RIALTO-SPARQL-Proxy-Configuration-(Dev-Env))
 
 ### VIVO Assessment
 - [Jena/TDB vs Blazegraph](/sul-dlss/rialto/wiki/Comparing-triplestores)
