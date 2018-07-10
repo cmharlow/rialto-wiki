@@ -5,7 +5,7 @@ The dev instance of the RIALTO SPARQL Proxy is running as an AWS Lambda. See mor
 ### Create a new Lambda Function
 
 1. Create Function
-  1. Name
+ 1. Name
   1. Runtime => Go 1.x
   1. Role => "Choose an existing role"
   1. Existing Role => RialtoLambda
