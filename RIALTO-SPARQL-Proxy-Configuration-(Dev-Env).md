@@ -11,17 +11,17 @@ The dev instance of the RIALTO SPARQL Proxy is running as an AWS Lambda. See mor
     1. Existing Role => RialtoLambda
 
 1. Configuration
-  1. Designer - used to setup triggers... TBD
-  1. Function Code => Upload the ZIP file created for the Lambda
-    1. Runtime (verify set to Go 1.x)
-    1. Handler => "main"
-  1. Environment variables
-  1. Tags => N/A
-  1. Execution Role (Verify set to "RialtoLambda")
-  1. Network
-    1. Select "vpc-xxx | rialto-core"
-    1. Subnets
-    1. Security Groups => " ... | rialto-core"
-  1. Execution Role 
+    1. Designer - used to setup triggers... TBD
+    1. Function Code => Upload the ZIP file created for the Lambda
+        1. Runtime (verify set to Go 1.x)
+        1. Handler => "main"
+    1. Environment variables
+    1. Tags => N/A
+    1. Execution Role (Verify set to "RialtoLambda")
+    1. Network
+        1. Select "vpc-xxx | rialto-core"
+        1. Subnets
+        1. Security Groups => " ... | rialto-core"
+    1. Execution Role 
 
 MORE HERE
