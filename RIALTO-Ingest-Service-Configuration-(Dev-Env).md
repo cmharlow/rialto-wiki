@@ -12,7 +12,7 @@ To check on the status of the service, use `sudo status rialto-ingest-service`. 
 
 # Networking
 
-The security group governing access to the EC2 host running this service locks down SSH and HTTP to IP address blocks within the Stanford University VPN. To access the host via SSH or HTTP, do make sure you are running the VPN in "full tunnel" mode (rather than "split-tunnel mode").
+The security group governing access to the EC2 host running this service locks down SSH and HTTP to IP address blocks within the Stanford University VPN. To access the host via SSH or HTTP, do make sure you are running the VPN in "full tunnel" mode (rather than "split-tunnel" mode).
 
 
 
