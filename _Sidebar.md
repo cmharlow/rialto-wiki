@@ -5,7 +5,7 @@
 - [RIALTO Demo 1](/sul-dlss/rialto/wiki/RIALTO-Demo-1:-Notes)
 
 ### RIALTO Core
-- [Messaging Spec](/sul-dlss/rialto/wiki/RIALTO-Core-Messaging-Specification)
+- [Messaging Specification](/sul-dlss/rialto/wiki/RIALTO-Core-Messaging-Specification)
 - [SPARQL Proxy (Dev)](/sul-dlss/rialto/wiki/RIALTO-SPARQL-Proxy-Configuration-(Dev-Env))
 - [Ingest Service (Dev)](/sul-dlss/rialto/wiki/RIALTO-Ingest-Service-Configuration-(Dev-Env))
 - [Solr Setup (Dev)](/sul-dlss/rialto/wiki/RIALTO-Solr-Setup)
