@@ -5,6 +5,7 @@
 - [RIALTO Demo 1](/sul-dlss/rialto/wiki/RIALTO-Demo-1:-Notes)
 
 ### RIALTO Core
+- [AWS Build Specification](/sul-dlss/rialto/wiki/AWS-Build-Specification)
 - [Messaging Specification](/sul-dlss/rialto/wiki/RIALTO-Core-Messaging-Specification)
 - [SPARQL Proxy λ (Dev)](/sul-dlss/rialto/wiki/RIALTO-SPARQL-Proxy-Lambda-(Dev-Env))
 - [Rebuild Trigger λ (Dev)](/sul-dlss/rialto/wiki/RIALTO-Rebuild-Trigger-Lambda-(Dev-Env))
