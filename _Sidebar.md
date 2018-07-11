@@ -6,9 +6,10 @@
 
 ### RIALTO Core
 - [Messaging Spec](/sul-dlss/rialto/wiki/RIALTO-Core-Messaging-Specification)
+- [Solr Setup](/sul-dlss/rialto/wiki/RIALTO-Solr-Setup)
 
 ### RIALTO Web App
-- [Web App Data Requirements](/sul-dlss/rialto/wiki/Web-App-Data-Requirements)
+- [Web App Data Requirements](/sul-dlss/rialto/wiki/Web-App-Specs)
 
 ### RIALTO Combine
 - [Combine data sources](/sul-dlss/rialto/wiki/RIALTO-Combine-Data-Sources)
