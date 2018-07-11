@@ -2,7 +2,9 @@ The dev instance of the RIALTO ingest service is running on Amazon EC2. You can 
 
 # Service
 
-We use Upstart to configure the service, making sure it spins up at boot time and spins down on shutdown. This start/stop configuration lives in `/etc/init/rialto-ingest-service.conf`; its PID file is in `/var/run/rialto-ingest-service.pid`; and it logs to `/var/log/rialto-ingest-service.log`. The configuration delegates knowledge about the service and its environment variables (e.g., `GOPATH`, `RIALTO_SPARQL_ENDPOINT`, `AWS_REGION`...) to a shell script that lives at `~/bin/rialto-ingest-service.sh`. Values we care about here are: `GOPATH='/home/ec2-user/go' RIALTO_SPARQL_ENDPOINT='http://cluster-rialto-id.cluster-cthpl10nkjdp.us-east-1.neptune.amazonaws.com:8182/sparql' RIALTO_TOPIC_ARN='arn:aws:sns:us-east-1:418214828013:rialto-core' RIALTO_SNS_ENDPOINT='https://sns.us-east-1.amazonaws.com' AWS_REGION='us-east-1' AWS_PROFILE='role' PORT='8080' HOST='0.0.0.0'`.
+We use Upstart to configure the service, making sure it spins up at boot time and spins down on shutdown. This start/stop configuration lives in `/etc/init/rialto-ingest-service.conf`; its PID file is in `/var/run/rialto-ingest-service.pid`; and it logs to `/var/log/rialto-ingest-service.log`.
+
+The configuration delegates knowledge about the service and its environment variables (e.g., `GOPATH`, `RIALTO_SPARQL_ENDPOINT`, `AWS_REGION`...) to a shell script that lives at `~/bin/rialto-ingest-service.sh`. Values we care about here are: `GOPATH='/home/ec2-user/go' RIALTO_SPARQL_ENDPOINT='http://cluster-rialto-id.cluster-cthpl10nkjdp.us-east-1.neptune.amazonaws.com:8182/sparql' RIALTO_TOPIC_ARN='arn:aws:sns:us-east-1:418214828013:rialto-core' RIALTO_SNS_ENDPOINT='https://sns.us-east-1.amazonaws.com' AWS_REGION='us-east-1' AWS_PROFILE='role' PORT='8080' HOST='0.0.0.0'`.
 
 The Go source code for the service lives in `~/go/src/github.com/sul-dlss-labs/rialto-ingest-service`.
 
