@@ -6,7 +6,9 @@
 
 ### RIALTO Core
 - [Messaging Spec](/sul-dlss/rialto/wiki/RIALTO-Core-Messaging-Specification)
-- [Solr Setup](/sul-dlss/rialto/wiki/RIALTO-Solr-Setup)
+- [SPARQL Proxy (Dev)](/sul-dlss/rialto/wiki/RIALTO-SPARQL-Proxy-Configuration-(Dev-Env))
+- [Ingest Service (Dev)](/sul-dlss/rialto/wiki/RIALTO-Ingest-Service-Configuration-(Dev-Env))
+- [Solr Setup (Dev)](/sul-dlss/rialto/wiki/RIALTO-Solr-Setup)
 
 ### RIALTO Web App
 - [Web App Data Requirements](/sul-dlss/rialto/wiki/Web-App-Specs)
@@ -18,8 +20,6 @@
 - [Getting Started](/sul-dlss/rialto/wiki/Getting-Started-(Dev-Env))
 - [Working with Localstack](/sul-dlss/rialto/wiki/Working-with-localstack)
 - [Setting up AWS CLI](/sul-dlss/rialto/wiki/AWS-DLSS-Dev-Env-Setup)
-- [Ingest Service](/sul-dlss/rialto/wiki/RIALTO-Ingest-Service-Configuration-(Dev-Env))
-- [SPARQL Proxy](/sul-dlss/rialto/wiki/RIALTO-SPARQL-Proxy-Configuration-(Dev-Env))
 
 ### VIVO Assessment
 - [Jena/TDB vs Blazegraph](/sul-dlss/rialto/wiki/Comparing-triplestores)
