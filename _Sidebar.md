@@ -11,7 +11,7 @@
 - [Rebuild Trigger λ (Dev)](/sul-dlss/rialto/wiki/RIALTO-Rebuild-Trigger-Lambda-(Dev-Env))
 - [Derivatives λs (Dev)](/sul-dlss/rialto/wiki/RIALTO-Derivatives-Lambdas-(Dev-Env))
 - [Solr Setup (Dev)](/sul-dlss/rialto/wiki/RIALTO-Solr-Setup)
-- [Ingest Service (Dev)](/sul-dlss/rialto/wiki/RIALTO-Ingest-Service-Configuration-(Dev-Env))
+- [Ingest Service (Dev)](/sul-dlss/rialto/wiki/RIALTO-Ingest-Service-(Dev-Env))
 
 ### RIALTO Web App
 - [Web App Data Requirements](/sul-dlss/rialto/wiki/Web-App-Specs)
