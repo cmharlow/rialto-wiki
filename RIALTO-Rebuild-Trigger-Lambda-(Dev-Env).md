@@ -1,1 +1,1 @@
-This is where the rebuild trigger lambda will be documented.
+See the [README](https://github.com/sul-dlss-labs/rialto-core-rebuild/blob/master/README.md).
