@@ -24,7 +24,7 @@
 - [Working with Localstack](/sul-dlss/rialto/wiki/Working-with-localstack)
 - [Setting up AWS CLI](/sul-dlss/rialto/wiki/AWS-DLSS-Dev-Env-Setup)
 
-### VIVO Assessment
+# VIVO Assessment
 - [Jena/TDB vs Blazegraph](/sul-dlss/rialto/wiki/Comparing-triplestores)
 - [Vitro Ingest Options](/sul-dlss/rialto/wiki/Vitro-Data-Ingest-Options)
 - [VIVO/Vitro Assessment](/sul-dlss/rialto/wiki/Assessment)
