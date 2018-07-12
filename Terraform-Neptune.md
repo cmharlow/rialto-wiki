@@ -1,0 +1,1 @@
+**NOTE:** Currently (as of 7/12/18), Terraform does not fully support neptune. See ticket: https://github.com/terraform-providers/terraform-provider-aws/issues/4713
