@@ -13,7 +13,7 @@ We are using a single EC2 instance to run Solr.
    * 24G of `General Purpose SSD (GP2)`
    * Add a Name tag for your new EC2 instance (this is optional, but makes life easier later)
    * Select the existing `rialto-core` security group
-4. 
+4. You should now see your instance starting up in the EC2 console. Confirm in the `Description` tab that there is an assigned address under the `Public DNS (IPv4)` field. If this is not the case, follow the steps in [https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-ip-addressing.html#subnet-public-ip](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-ip-addressing.html#subnet-public-ip) to enable auto-assignment of public IP addresses for your instances.
 
 Let's use a single, EC2-based Solr instance set up just like we would have it on our laptops. This should be good enough for development purposes, at least in the beginning. There are two Solr documentation pages that are relevant:
 
