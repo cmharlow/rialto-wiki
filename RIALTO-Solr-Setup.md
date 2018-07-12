@@ -23,7 +23,9 @@ We are using a single EC2 instance to run Solr. "Instance" is the Amazon word fo
    * If the returned JSON has `DeleteOnTermination` set to `true` under `BlockDeviceMappings` then storage is NOT persistent and you need to complete step 8 below.
 8. Set your EC2 storage to be persistent by changing the `DeleteOnTermination` property to `false`.
    *  `aws ec2 modify-instance-attribute --instance-id <instance_id> --block-device-mappings file://ec2_persist_mapping.json --region us-east-1 --profile dlss-DevelopersRole`
-   * The contents of `ec2_persist_mapping.json`: ```[
+   * The contents of `ec2_persist_mapping.json`: 
+```
+[
   {
     "DeviceName": "/dev/xvda",
     "Ebs" : {
@@ -31,7 +33,6 @@ We are using a single EC2 instance to run Solr. "Instance" is the Amazon word fo
     }
   }
 ]
-
 ```
 
 
