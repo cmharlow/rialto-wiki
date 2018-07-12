@@ -1,1 +1,1 @@
-See the [README](https://github.com/sul-dlss-labs/rialto-core-rebuild/blob/master/README.md).
+See the [README](https://github.com/sul-dlss-labs/rialto-trigger-rebuild/blob/master/README.md).
