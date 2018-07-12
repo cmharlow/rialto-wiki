@@ -24,7 +24,7 @@
 # Staging / Production
 
 ### Terraform
-- [Neptune](/sul-dlss/rialto/wiki/Terraform-Neptune)
+- [Neptune Support](/sul-dlss/rialto/wiki/Neptune-Support-in-Terraform)
 
 # Development
 - [Getting Started](/sul-dlss/rialto/wiki/Getting-Started-(Dev-Env))
