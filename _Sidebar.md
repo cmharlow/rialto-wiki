@@ -7,6 +7,7 @@
 ### RIALTO Core
 - [AWS Build Specification](/sul-dlss/rialto/wiki/AWS-Build-Specification)
 - [Messaging Specification](/sul-dlss/rialto/wiki/RIALTO-Core-Messaging-Specification)
+- [Neptune/λ Integration](/sul-dlss/rialto/wiki/Neptune-Lambda-Integration)
 - [SPARQL Proxy λ (Dev)](/sul-dlss/rialto/wiki/RIALTO-SPARQL-Proxy-Lambda-(Dev-Env))
 - [Rebuild Trigger λ (Dev)](/sul-dlss/rialto/wiki/RIALTO-Rebuild-Trigger-Lambda-(Dev-Env))
 - [Derivatives λs (Dev)](/sul-dlss/rialto/wiki/RIALTO-Derivatives-Lambdas-(Dev-Env))
