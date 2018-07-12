@@ -1,5 +1,9 @@
 The dev instance of the RIALTO SPARQL Proxy is running as an AWS Lambda. See more in the [AWS Console](https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/sparqlProxy?tab=graph)
 
+## Authorization
+
+To access this lambda via API gateway, you need to pass an API key along with the request. See [[RIALTO Combine Core Integration]] for more details.
+
 ## In the AWS Console
 
 ### Create a new Lambda Function
