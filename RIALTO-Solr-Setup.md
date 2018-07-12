@@ -2,7 +2,7 @@ For production we have been asked (by Operations) to use our in-house DLSS Solr 
 
 ## EC2 Setup
 
-We are using a single EC2 instance to run Solr.
+We are using a single EC2 instance to run Solr. "Instance" is the Amazon word for "server". You can't call it a "server" if it runs in the cloud, because that word is old-school and implies that somewhere there is hardware that runs your code.
 
 1. Log in at [https://console.aws.amazon.com](https://console.aws.amazon.com) and be sure to switch to the "DevelopersRole"
 2. Make sure you're using AWS region `us-east-1` (N. Virginia). This is where we run everything RIALTO-related, so don't provision anything in any other regions.
@@ -14,6 +14,12 @@ We are using a single EC2 instance to run Solr.
    * Add a Name tag for your new EC2 instance (this is optional, but makes life easier later)
    * Select the existing `rialto-core` security group
 4. You should now see your instance starting up in the EC2 console. Confirm in the `Description` tab that there is an assigned address under the `Public DNS (IPv4)` field. If this is not the case, follow the steps in [https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-ip-addressing.html#subnet-public-ip](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-ip-addressing.html#subnet-public-ip) to enable auto-assignment of public IP addresses for your instances.
+5. Assign a persistent IP address. This is done by associating an [Elastic IP](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#ip-addressing-eips) with your instance.
+6. Set up outside network access. It's easiest to require users/team members to use **full tunnel** Stanford VPN. The IP ranges for the Stanford VPN are documented [here](https://uit.stanford.edu/guide/lna/network-numbers). Under the `Network & Security` heading in the left sidebar of the AWS Console page, choose the `Security Groups` link. Then choose the `rialto-core` security group and click `Actions` - `Edit Inbound Rules`.
+   * Add one SSH rule per Stanford VPN IP range (port 22)
+   * Add one TCP rule per Stanford VPN IP range for accessing the Solr admin page (we'll use the Solr default of port 8983)
+
+
 
 Let's use a single, EC2-based Solr instance set up just like we would have it on our laptops. This should be good enough for development purposes, at least in the beginning. There are two Solr documentation pages that are relevant:
 
