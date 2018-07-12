@@ -50,34 +50,13 @@ You should now be able to SSH into your EC2 instance, provided that you've [crea
    * `sudo chown -R solr /home/solr`
 6. Create a new Solr core for RIALTO, using the configuration information from the rialto-derivatives repository:
    * `sudo -u solr /opt/solr/bin/solr create -c rialto-dev -d /home/solr/rialto-derivatives/solr_config`
+7. Confirm that Solr is set up to start automatically upon reboot with `chkconfig`.
+8. Reboot the instance using the EC2 console, then check that Solr is rebooted and that your core from step 6 is still there.
 
+Your Solr instance should now be usable. Note that lambdas should use the **private IP** for connecting, as documented in the [EC2 User Guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#concepts-private-addresses).
 
+Further detail:
 
-Let's use a single, EC2-based Solr instance set up just like we would have it on our laptops. This should be good enough for development purposes, at least in the beginning. There are two Solr documentation pages that are relevant:
+[SolrCloud AWS Tutorial](https://lucene.apache.org/solr/guide/7_4/aws-solrcloud-tutorial.html)<br/>
+[Solr Installation Docs](https://lucene.apache.org/solr/guide/7_4/installing-solr.html)
 
-[SolrCloud AWS Tutorial](https://lucene.apache.org/solr/guide/7_2/aws-solrcloud-tutorial.html)<br/>
-[Solr Installation Docs](https://lucene.apache.org/solr/guide/7_2/installing-solr.html)
-
-The first URL shows how to configure and set up Solr to run in "cloud" mode in AWS. This could be a backup for us if we find that a single-instance EC2 box isn't beefy enough (until we can use the DLSS Solr Cloud).
-
-Key setup steps:
-
-* Choose _Amazon Linux AMI, SSD Volume Type_ as the AMI when setting up the EC2 instance
-* t2.medium should be sufficient
-* Follow the [SolrCloud AWS Tutorial](https://lucene.apache.org/solr/guide/7_2/aws-solrcloud-tutorial.html) but just install a single Solr instance on one node.
-* Once you've verified that you can reach the EC2 Solr, manually set the EC2's storage to be persistent:
-
-`aws ec2 modify-instance-attribute --instance-id <instance_id> --block-device-mappings file://ec2_persist_mapping.json --region us-east-2 --profile dlss-DevelopersRole`
-
-Contents of `ec2_persist_mapping.json`:
-
-```
-[
-  {
-    "DeviceName": "/dev/xvda",
-    "Ebs" : {
-        "DeleteOnTermination": false
-    }
-  }
-]
-```
