@@ -1,6 +1,19 @@
 For production we have been asked (by Operations) to use our in-house DLSS Solr Cloud. However, due to development work being done in the near future on our Solr Cloud, and due to network/firewall requirements, we'll have to use a Solr instance in the AWS cloud for the moment.
 
-## Basic Setup
+## EC2 Setup
+
+We are using a single EC2 instance to run Solr.
+
+1. Log in at [https://console.aws.amazon.com](https://console.aws.amazon.com) and be sure to switch to the "DevelopersRole"
+2. Make sure you're using AWS region `us-east-1` (N. Virginia). This is where we run everything RIALTO-related, so don't provision anything in any other regions.
+3. Choose the EC2 service, and press "Launch Instance". Your configuration choices should be:
+  * `Amazon Linux 2 AMI (HVM), SSD Volume Type`
+  * `t2.medium`
+  * `rialto-core` Subnet (we use this VPC for everything, so everything RIALTO that lives in AWS can talk to everything else)
+  * 24G of `General Purpose SSD (GP2)`
+  * Add a Name tag for your new EC2 instance (this is optional, but makes life easier later)
+  * Select the existing `rialto-core` security group
+4. 
 
 Let's use a single, EC2-based Solr instance set up just like we would have it on our laptops. This should be good enough for development purposes, at least in the beginning. There are two Solr documentation pages that are relevant:
 
