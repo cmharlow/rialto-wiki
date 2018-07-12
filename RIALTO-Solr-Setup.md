@@ -35,6 +35,15 @@ We are using a single EC2 instance to run Solr. "Instance" is the Amazon word fo
 ]
 ```
 
+## Solr Setup
+
+You should now be able to SSH into your EC2 instance, provided that you've [created a key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). Copy the command you get when you press the `Connect` button under `Instances` in the EC2 console, and run it to get a shell on your instance.
+
+1. Install Java: `sudo yum install java`
+2. Set the maximum number of open files and processes available to the solr user to be 65000 for both. Edit `/etc/security/limits.conf` to achieve this.
+3. Download and install Solr as described on the [Taking Solr to Production](https://lucene.apache.org/solr/guide/7_4/taking-solr-to-production.html#run-the-solr-installation-script) page.
+
+
 
 Let's use a single, EC2-based Solr instance set up just like we would have it on our laptops. This should be good enough for development purposes, at least in the beginning. There are two Solr documentation pages that are relevant:
 
