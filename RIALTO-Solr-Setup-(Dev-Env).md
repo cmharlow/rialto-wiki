@@ -41,7 +41,15 @@ You should now be able to SSH into your EC2 instance, provided that you've [crea
 
 1. Install Java: `sudo yum install java`
 2. Set the maximum number of open files and processes available to the solr user to be 65000 for both. Edit `/etc/security/limits.conf` to achieve this.
-3. Download and install Solr as described on the [Taking Solr to Production](https://lucene.apache.org/solr/guide/7_4/taking-solr-to-production.html#run-the-solr-installation-script) page.
+3. Download and install Solr as described on the [Taking Solr to Production](https://lucene.apache.org/solr/guide/7_4/taking-solr-to-production.html#run-the-solr-installation-script) page. This should start Solr on port 8983.
+4. Create a home directory for the solr user:
+   * `sudo mkdir /home/solr`
+5. Check out the rialto-derivatives repository, which contains our Solr configuration, and set the permissions on the new directory:
+   * `cd /home/solr`
+   * `git clone https://github.com/sul-dlss-labs/rialto-derivatives`
+   * `sudo chown -R solr /home/solr`
+6. Create a new Solr core for RIALTO, using the configuration information from the rialto-derivatives repository:
+   * `sudo -u solr /opt/solr/bin/solr create -c rialto-dev -d /home/solr/rialto-derivatives/solr_config`
 
 
 
