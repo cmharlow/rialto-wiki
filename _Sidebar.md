@@ -24,7 +24,12 @@
 # Staging / Production
 
 ### Terraform
+- [API Gateway Support](/sul-dlss/rialto/wiki/API-Gateway-Support-in-Terraform)
+- [EC2 Support](/sul-dlss/rialto/wiki/EC2-Support-in-Terraform)
+- [Lambda Support](/sul-dlss/rialto/wiki/Lambda-Support-in-Terraform)
 - [Neptune Support](/sul-dlss/rialto/wiki/Neptune-Support-in-Terraform)
+- [S3 Support](/sul-dlss/rialto/wiki/S3-Support-in-Terraform)
+- [SNS Support](/sul-dlss/rialto/wiki/SNS-Support-in-Terraform)
 
 # Development
 - [Getting Started](/sul-dlss/rialto/wiki/Getting-Started-(Dev-Env))
