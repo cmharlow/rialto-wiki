@@ -1,0 +1,1 @@
+Communication between the RIALTO canonical datastore (Amazon Neptune) and both the SPARQL Proxy lambda and the derivative lambdas is possible by configuring the lambdas to sit within the same VPC as Neptune.
