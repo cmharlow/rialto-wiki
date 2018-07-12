@@ -1,1 +1,1 @@
-See the lambdas' [README](https://github.com/sul-dlss-labs/rialto-lambda/blob/master/README.md)
+See the lambdas' [README](https://github.com/sul-dlss-labs/rialto-derivatives/blob/master/README.md)
