@@ -12,7 +12,7 @@
 - [SPARQL Proxy λ (Dev)](/sul-dlss/rialto/wiki/RIALTO-SPARQL-Proxy-Lambda-(Dev-Env))
 - [Rebuild Trigger λ (Dev)](/sul-dlss/rialto/wiki/RIALTO-Rebuild-Trigger-Lambda-(Dev-Env))
 - [Derivatives λs (Dev)](/sul-dlss/rialto/wiki/RIALTO-Derivatives-Lambdas-(Dev-Env))
-- [Solr Setup (Dev)](/sul-dlss/rialto/wiki/RIALTO-Solr-Setup)
+- [Solr Setup (Dev)](/sul-dlss/rialto/wiki/RIALTO-Solr-Setup-(Dev-Env))
 - [Ingest Service (Dev)](/sul-dlss/rialto/wiki/RIALTO-Ingest-Service-(Dev-Env))
 
 ### RIALTO Web App
