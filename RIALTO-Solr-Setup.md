@@ -18,7 +18,21 @@ We are using a single EC2 instance to run Solr. "Instance" is the Amazon word fo
 6. Set up outside network access. It's easiest to require users/team members to use **full tunnel** Stanford VPN. The IP ranges for the Stanford VPN are documented [here](https://uit.stanford.edu/guide/lna/network-numbers). Under the `Network & Security` heading in the left sidebar of the AWS Console page, choose the `Security Groups` link. Then choose the `rialto-core` security group and click `Actions` - `Edit Inbound Rules`.
    * Add one SSH rule per Stanford VPN IP range (port 22)
    * Add one TCP rule per Stanford VPN IP range for accessing the Solr admin page (we'll use the Solr default of port 8983)
+7. Check if the storage on your EC2 instance is persistent or not.
+   * `aws ec2 describe-instances --instance-ids <instance_id> --region us-east-1 --profile dlss-DevelopersRole`
+   * If the returned JSON has `DeleteOnTermination` set to `true` under `BlockDeviceMappings` then storage is NOT persistent and you need to complete step 8 below.
+8. Set your EC2 storage to be persistent by changing the `DeleteOnTermination` property to `false`.
+   *  `aws ec2 modify-instance-attribute --instance-id <instance_id> --block-device-mappings file://ec2_persist_mapping.json --region us-east-1 --profile dlss-DevelopersRole`
+   * The contents of `ec2_persist_mapping.json`: ```[
+  {
+    "DeviceName": "/dev/xvda",
+    "Ebs" : {
+        "DeleteOnTermination": false
+    }
+  }
+]
 
+```
 
 
 Let's use a single, EC2-based Solr instance set up just like we would have it on our laptops. This should be good enough for development purposes, at least in the beginning. There are two Solr documentation pages that are relevant:
