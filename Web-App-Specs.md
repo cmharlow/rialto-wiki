@@ -48,8 +48,8 @@ Raw data output via an API or special CSV export is also requested with the repo
 Department | Institution | Author | Author's Co-Author | Co-Author Institution | Co-Author Department | Number of Collaborations | Co-Author Country
 --- | --- | --- | --- | --- | --- | --- | ---
 Chemistry  | Stanford    | John Smith | Jane Smith  | Harvard  | Biochemistry | 2 | USA
-Chemistry  | Stanford    | John Smith | Jane Okoye, Patrick Hoch  | Ghent    | Informatics  | 10 | Belgium
-Chemistry  | Stanford    | John Smith | Peter Smith  | Brussels U | Informatics, Computer Science  | 10 | Belgium
+Chemistry  | Stanford    | John Smith | Jane Okoye, Patrick Hoch  | Ghent    | Informatics, Computer Science  | 10 | Belgium
+Chemistry  | Stanford    | John Smith | Peter Smith  | Brussels U | Informatics  | 10 | Belgium
 Medicine   | Stanford    | Lady Red   | Jane Okoye  | Ghent    | Informatics  | 10 | Belgium
 
 :star: (this appears to be same as the report above) 
