@@ -49,6 +49,7 @@ Department | Institution | Author | Author's Co-Author | Co-Author Institution |
 --- | --- | --- | --- | --- | --- | --- | ---
 Chemistry  | Stanford    | John Smith | Jane Smith  | Harvard  | Biochemistry | 2 | USA
 Chemistry  | Stanford    | John Smith | Jane Okoye, Patrick Hoch  | Ghent    | Informatics  | 10 | Belgium
+Chemistry  | Stanford    | John Smith | Peter Smith  | Brussels U | Informatics, Computer Science  | 10 | Belgium
 Medicine   | Stanford    | Lady Red   | Jane Okoye  | Ghent    | Informatics  | 10 | Belgium
 
 :star: (this appears to be same as the report above) 
