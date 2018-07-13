@@ -28,14 +28,40 @@ https://drive.google.com/drive/u/1/folders/1d-UFRxmHDFsb8vDXQvkNGlR66Tb-KkWp
 # CSV Reports
 
 :star: Authors joined with Co-Authors aggregate count of publications
+```
+Output:
+A list of institutions the authors in that department have collaborated with, along with number of collaborations.
+
+e.g.
+University of California, Berkeley 456
+Harvard University 200
+etc.
+
+Raw data output via an API or special CSV export is also requested with the report including:
+1) Stanford faculty member name
+2) Stanford faculty member Org
+3) Stanford faculty member's international co-author name
+4) Stanford faculty member's international co-author institution name
+5) Stanford faculty member's international co-author institution country
+```
 
 Department | Institution | Author | Author's Co-Author | Co-Author Institution | Co-Author Department | Number of Collaborations | Co-Author Country
 --- | --- | --- | --- | --- | --- | --- | ---
 Chemistry  | Stanford    | John Smith | Jane Smith  | Harvard  | Biochemistry | 2 | USA
-Chemistry  | Stanford    | John Smith | Jane Okoye  | Ghent    | Informatics  | 10 | Belgium
+Chemistry  | Stanford    | John Smith | Jane Okoye, Patrick Hoch  | Ghent    | Informatics  | 10 | Belgium
 Medicine   | Stanford    | Lady Red   | Jane Okoye  | Ghent    | Informatics  | 10 | Belgium
 
 :star: (this appears to be same as the report above) 
+
+```
+A report that shows a list of countries that the authors in that department have collaborated with, along with the number of collaborations, 
+
+e.g.
+USA 1050
+Canada 900
+Italy 345
+etc.
+```
 
 Author     | Institution | Co-Authors' Institution | Institution Country | Number of Collaborations | Co-Authors' Names
 ---------- | ----------- | ----------------------- | ------------------- | ------------------------ | -----------------
