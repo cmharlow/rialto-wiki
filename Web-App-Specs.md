@@ -40,7 +40,6 @@ Medicine   | Stanford    | Lady Red   | Jane Okoye  | Ghent    | Informatics  | 
 Author     | Institution | Co-Authors' Institution | Institution Country | Number of Collaborations | Co-Authors' Names
 ---------- | ----------- | ----------------------- | ------------------- | ------------------------ | -----------------
 Jane Smith | Stanford    | Harvard                 | USA                 | 10 | Jane Smith, John Doe, Jake Okuma
-Jane Smith | Stanford    | Yale                    | USA                 | 1 | Leslie Goodrich
 Jane Smith | Stanford    | Ghent                   | Belgium             | 2 | Patrick Hoch, Richard Sanderson
 
 
