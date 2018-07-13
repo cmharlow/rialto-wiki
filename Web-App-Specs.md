@@ -27,7 +27,7 @@ https://drive.google.com/drive/u/1/folders/1d-UFRxmHDFsb8vDXQvkNGlR66Tb-KkWp
 
 # CSV Reports
 
-:star: 
+:star: Authors joined with Co-Authors aggregate count of publications
 
 Department | Institution | Author | Author's Co-Author | Co-Author Institution | Co-Author Department | Number of Collaborations | Co-Author Country
 --- | --- | --- | --- | --- | --- | --- | ---
@@ -35,12 +35,14 @@ Chemistry  | Stanford    | John Smith | Jane Smith  | Harvard  | Biochemistry | 
 Chemistry  | Stanford    | John Smith | Jane Okoye  | Ghent    | Informatics  | 10 | Belgium
 Medicine   | Stanford    | Lady Red   | Jane Okoye  | Ghent    | Informatics  | 10 | Belgium
 
-:star: 
+:star: (this appears to be same as the report above) 
 
 Author     | Institution | Co-Authors' Institution | Institution Country | Number of Collaborations | Co-Authors' Names
 ---------- | ----------- | ----------------------- | ------------------- | ------------------------ | -----------------
 Jane Smith | Stanford    | Harvard                 | USA                 | 10 | Jane Smith, John Doe, Jake Okuma
+Jane Smith | Stanford    | Yale                    | USA                 | 1 | Leslie Goodrich
 Jane Smith | Stanford    | Ghent                   | Belgium             | 2 | Patrick Hoch, Richard Sanderson
+
 
 Year | academic institute | topic area | number of publications by faculty members of institute in that topic area
 ---- | ------------------ | ---------- | -------------
