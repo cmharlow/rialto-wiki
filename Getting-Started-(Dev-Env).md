@@ -10,7 +10,7 @@ Review the [[RIALTO Architecture]] to become familiar with the different compone
 
 * A SPARQL Update request hits the API Gateway fronting the [SPARQL Proxy lambda](https://github.com/sul-dlss/rialto/wiki/RIALTO-SPARQL-Proxy-Lambda-(Dev-Env)). Assuming a [valid API key](https://github.com/sul-dlss/rialto/wiki/RIALTO-SPARQL-Proxy-Lambda-(Dev-Env)#authorization) is provided, the request is routed to the lambda.
 * The SPARQL Proxy lambda parses entities out of the SPARQL Update request and does two things:
-  * Sends a message (conforming to the [[messaging specification]]) to the environment-specific RIALTO Core messaging topic via AWS Simple Notification Service ([SNS](https://aws.amazon.com/sns/)) letting downstream systems know that certain entity URIs have changed; and
+  * Sends a message (conforming to the [messaging specification](https://github.com/sul-dlss/rialto/wiki/RIALTO-Core-Messaging-Specification)) to the environment-specific RIALTO Core messaging topic via AWS Simple Notification Service ([SNS](https://aws.amazon.com/sns/)) letting downstream systems know that certain entity URIs have changed; and
   * Forwards the SPARQL Update request to [Amazon Neptune](https://aws.amazon.com/neptune/), a triplestore serving as the canonical datastore within the RIALTO architecture.
 * SNS messages sent to the env-specific RIALTO Core messaging topic, such as the one sent by the SPARQL Proxy, trigger spinning up the [RIALTO Derivatives lambda](https://github.com/sul-dlss/rialto/wiki/RIALTO-Derivatives-Lambdas-(Dev-Env)).
 * The RIALTO Derivatives lambda parses the incoming message and based on the content of the message either:
