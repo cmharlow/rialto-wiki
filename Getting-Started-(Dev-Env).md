@@ -16,10 +16,11 @@ Review the [[RIALTO Architecture]] to become familiar with the different compone
 * The RIALTO Derivatives lambda parses the incoming message and based on the content of the message either:
   * Rebuilds the derivative datastore (Solr) based on the contents of the canonical datastore (Amazon Neptune), dropping all documents in Solr and reindexing the entirety of what's in Neptune (determined via a SPARQL query directly to Neptune); or
   * Indexes one or more entities from Neptune (via SPARQL query) into Solr, for piecemeal updates.
+* The derivative datastore we're using for RIALTO is Solr (read more about our [Solr setup](https://github.com/sul-dlss/rialto/wiki/RIALTO-Solr-Setup-(Dev-Env))).
 
 There are other components in the architecture not involved with the data flow above, and they include:
 
-* the RIALTO Ingest service, which is a Go-based codebase that runs on EC2 and is an alternative to the SPARQL Proxy. We decided to put our energy into the proxy rather than the ingest service since the proxy provides greater community overlap opportunities, because VIVO/Vitro exposes a SPARQL Update API for loading data.
+* the [RIALTO Ingest service](https://github.com/sul-dlss/rialto/wiki/RIALTO-Ingest-Service-(Dev-Env)), which is a Go-based codebase that runs on EC2 and is an alternative to the SPARQL Proxy. We decided to put our energy into the proxy rather than the ingest service since the proxy provides greater community overlap opportunities, because VIVO/Vitro exposes a SPARQL Update API for loading data.
 * the [Rebuild Trigger lambda](https://github.com/sul-dlss/rialto/wiki/RIALTO-Rebuild-Trigger-Lambda-(Dev-Env)), which allows us to schedule a nightly rebuild (and trigger manual rebuilds) of the derivative datastore from what's in Neptune.
 
 
@@ -31,12 +32,10 @@ Some of the "glue" that connects components within RIALTO Core is supported by [
 
 Before you begin working with our AWS-based development environment, you'll need to walk through the [setup](https://github.com/sul-dlss/rialto/wiki/AWS-DLSS-Dev-Env-Setup) document. Note that if you do not yet have a `sul-dlss-users` AWS login, you can request one in the `#dlss-operations` channel within the Stanford Libraries Slack workspace.
 
-# Resources
+# Authorization
 
-* links to READMEs here
+Both the RIALTO SPARQL Proxy lambda and the Rebuild Trigger lambda expose HTTP APIs. We control access to these APIs using API keys, via AWS API Gateway. Clients, such as the tools we build for the RIALTO Combine (data pipeline/ETL, if you will), can connect to RIALTO Core using these API keys. Read more about [Combine/Core integration](https://github.com/sul-dlss/rialto/wiki/RIALTO-Combine-Core-Integration).
 
+# Network
 
-
-Add bit about setting up Stanford VPN in full-tunnel mode.
-
-(When done with first draft of this document, close https://github.com/sul-dlss/rialto/issues/113)
+The AWS security group we have set up for the RIALTO development environment allows network access for some of the above services to IP addresses within [Stanford University's VPN](https://uit.stanford.edu/service/vpn) range. To be able to connect (*e.g.,* via SSH) to these boxes, make sure you are running the Stanford VPN in "full-tunnel" mode rather than "split-tunnel" mode. If you connect in the latter mode, Amazon sees your IP address as originating from your internet provider, not the Stanford VPN.
