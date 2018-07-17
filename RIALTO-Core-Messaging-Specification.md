@@ -4,9 +4,9 @@ message: JSON containing the following:
 
 ```javascript
 { 
-  "action": "touch",
-  "entities": ["id", "id", "id"],
-  "body": "string"
+  "Action": "touch",
+  "Entities": ["id", "id", "id"],
+  "Body": "string"
 }
 ```
 
