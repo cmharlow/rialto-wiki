@@ -8,7 +8,7 @@ Will cover all components in the architecture and their needs, such as security 
 
 # VPCs 
 
-https://github.com/sul-dlss/rialto/wiki/Neptune-Lambda-Integration
+https://github.com/sul-dlss/rialto/wiki/Neptune-Lambda-Integration  
 `rialto-core` VPC
 
 # Security Groups
@@ -21,26 +21,26 @@ https://github.com/sul-dlss-labs/rialto-trigger-rebuild#add-schedule-event
 
 # API Gateway 
 
-https://github.com/sul-dlss/rialto/wiki/RIALTO-Combine-Core-Integration
+https://github.com/sul-dlss/rialto/wiki/RIALTO-Combine-Core-Integration  
 each lambda has its own api gateway, and each gateway has a dedicated api key and usage plan for rialto-internal usage
 
 # Lambda
 
-All lambdas use same `RialtoLambda` execution role
-`sparqlProxy` lambda has one trigger: its API Gateway
-`derivatives` lambda has one trigger: SNS
-`triggerRebuild` lambda has two triggers: its API Gateway, and CloudWatch Events (for scheduled/cron use case)
-We use CircleCI/GitHub integration to automatically deploy lambdas to AWS.
+All lambdas use same `RialtoLambda` execution role  
+`sparqlProxy` lambda has one trigger: its API Gateway  
+`derivatives` lambda has one trigger: SNS  
+`triggerRebuild` lambda has two triggers: its API Gateway, and CloudWatch Events (for scheduled/cron use case)  
+We use CircleCI/GitHub integration to automatically deploy lambdas to AWS.  
 
 # EC2
 
-one instance running ingest service
-one instance running solr
-both using same VPC and Security Group
+one instance running ingest service  
+one instance running solr  
+both using same VPC and Security Group  
 
 # Neptune
 
-1 cluster containing 1 instance of class db.r4.xlarge
+1 cluster containing 1 instance of class db.r4.xlarge  
 running within same VPC and using same Security Group as above
 
 # SNS 
