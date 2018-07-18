@@ -10,8 +10,8 @@
 - [Neptune/λ Integration](/sul-dlss/rialto/wiki/Neptune-Lambda-Integration)
 - [Core/Combine Integration](/sul-dlss/rialto/wiki/RIALTO-Combine-Core-Integration)
 - [SPARQL Proxy λ (Dev)](/sul-dlss/rialto/wiki/RIALTO-SPARQL-Proxy-Lambda-(Dev-Env))
+- [Derivatives λ (Dev)](/sul-dlss/rialto/wiki/RIALTO-Derivatives-Lambda-(Dev-Env))
 - [Rebuild Trigger λ (Dev)](/sul-dlss/rialto/wiki/RIALTO-Rebuild-Trigger-Lambda-(Dev-Env))
-- [Derivatives λs (Dev)](/sul-dlss/rialto/wiki/RIALTO-Derivatives-Lambdas-(Dev-Env))
 - [Solr Setup (Dev)](/sul-dlss/rialto/wiki/RIALTO-Solr-Setup-(Dev-Env))
 - [Ingest Service (Dev)](/sul-dlss/rialto/wiki/RIALTO-Ingest-Service-(Dev-Env))
 
