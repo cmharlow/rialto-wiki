@@ -1,6 +1,6 @@
-This is for https://github.com/sul-dlss-labs/rialto#88.
+The canonical AWS build specification for RIALTO lives in our [Terraform repository](https://github.com/sul-dlss/terraform-aws).
 
-Will cover all components in the architecture and their needs, such as security groups, VPCs, Neptune cluster/instance info, parameter groups, EC2, SNS topic, lambdas (triggers), API gateways (api keys, usage plans), cloudwatch, execution roles (?), + presumed policies between all these.
+Here are some notes that may help building out our Terraform work.
 
 # Region
 
