@@ -17,3 +17,11 @@ Just as for regular application code, we require PR review for changes to our Te
 * Only Ops can merge and apply PRs against the production environment. The person who merges is also responsible for running terraform-apply. Production merge privileges will be granted to anyone who wishes and is capable of being on the ops on-call rotation.
 * Note that the use of Terraform is only required for stage and production. In the development organization you can use whatever you want.
 * At this time, we have decided not to automate `terraform apply`. We explicitly want a firebreak between approving a PR in the GUI and a change making it into production and potentially breaking things.
+
+## Containerize Whenever Possible
+
+Our default plan is to follow [UIT's principles for server/infrastructure management](https://uit.stanford.edu/cloud-transformation/principles-and-practices-all-servers), and only deviate where necessary. In particular, observe the following guidelines:
+
+* Consider Docker first. Can you do it with a Docker container? Then do it that way.
+* If Docker won't work, build a [custom AMI](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-custom-ami.html). The running EC2 instance isn't patched; instead, rebuild the AMI with necessary updates and redeploy.
+* If neither of the above options work then run an EC2 instance with puppet on it, and manage it as a traditional VM. This is not a good choice, so we should really try avoid this.
