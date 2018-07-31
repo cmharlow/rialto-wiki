@@ -18,6 +18,15 @@ Just as for regular application code, we require PR review for changes to our Te
 * Note that the use of Terraform is only required for stage and production. In the development organization you can use whatever you want.
 * At this time, we have decided not to automate `terraform apply`. We explicitly want a firebreak between approving a PR in the GUI and a change making it into production and potentially breaking things.
 
+## The Stage Environment
+
+* Stage is to verify production code, prior to deploying into production.
+* Stage is transient. We do not leave systems (ECS instances, EC2 instances, RDS instances)  running in stage. We either:
+  * Push to stage, verify code works, then tear down OR
+  * Push to stage, verify code works, then push to prod and tear down.
+* We explicitly DO NOT push to stage, then leave it running over the weekend. However, it is OK to let S3 buckets and EFS content persist in stage, if it's got sample data in it that's different from production and would be a pain to re-populate for every deploy.
+
+
 ## Containerize Whenever Possible
 
 Our default plan is to follow [UIT's principles for server/infrastructure management](https://uit.stanford.edu/cloud-transformation/principles-and-practices-all-servers), and only deviate where necessary. In particular, observe the following guidelines:
