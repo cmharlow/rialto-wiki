@@ -25,3 +25,13 @@ Our default plan is to follow [UIT's principles for server/infrastructure manage
 * Consider Docker first. Can you do it with a Docker container? Then do it that way.
 * If Docker won't work, build a [custom AMI](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-custom-ami.html). The running EC2 instance isn't patched; instead, rebuild the AMI with necessary updates and redeploy.
 * If neither of the above options work then run an EC2 instance with puppet on it, and manage it as a traditional VM. This is not a good choice, so we should really try avoid this.
+
+
+## AWS Regions
+
+* **Dev environment:** Any US-based region is fine, with a preference to us-west-2 (Oregon) as the default, just so it's easier to find stuff.
+* **Stage & Production:** Use us-west-2 (Oregon), unless:
+  * The service you require isn't available in that region OR
+  * You're implementing a multi-region service and already have the stack spun up in us-west-2, in which case, your second region is us-east-1.
+  * If you need 3 or more regions, pick whatever makes sense to you for the 3rd region and above, as long as it's documented.
+* In all cases, DO NOT use any region outside the United States. If you have a use case that may require an international region, bring it to Direct.
