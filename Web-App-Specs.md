@@ -14,16 +14,14 @@ https://drive.google.com/drive/u/1/folders/1d-UFRxmHDFsb8vDXQvkNGlR66Tb-KkWp
   - :star: Authors (co-authors), Faculty, Universities, Organizations, Departments < Agents
 
 ## Facets
-  - result entities types
-  - years range
-  - :star: date range
+  - result entities types (e.g. publication, grant, person)
+  -- number of publications is a value of this facet (related to Grant, by a Person, from a Person at an Organization)
+  - date range (similar to "Last Accessioned" facet in Argo)
   - topic areas
-  - number of publications (related to Grant, by a Person, from a Person at an Organization)
   - institute
   - academic unit or department
   - department or other organizational unit (e.g. school)
-  - grants
-  - agent (research / faculty member)
+  - agent (researcher / faculty member)
 
 # CSV Reports
 
