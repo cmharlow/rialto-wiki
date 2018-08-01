@@ -17,7 +17,7 @@ https://drive.google.com/drive/u/1/folders/1d-UFRxmHDFsb8vDXQvkNGlR66Tb-KkWp
   - result entities types (e.g. publication, grant, person)
   -- number of publications is a value of this facet (related to Grant, by a Person, from a Person at an Organization)
   - date range (similar to "Last Accessioned" facet in Argo)
-  - topic areas
+  - subject/topic area (i.e. dcterms:subject)
   - institute
   - academic unit or department
   - department or other organizational unit (e.g. school)
