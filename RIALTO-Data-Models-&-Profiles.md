@@ -2,9 +2,9 @@ RIALTO is primarily interested in **Publications** (articles, research output, p
 
 ## Publications (aka Documents or Citations)
 
-Publications are representations (published meant generally) of articles, research outputs, datasets, etc. If feasible, there should link to manifestations of that Work (i.e. DOI).
+Publications are representations of articles, research outputs, datasets, etc. If feasible, there should link to manifestations of that Work (i.e. DOI).
 
-* **Sources**: Web of Science, Profiles
+* **Sources**: Web of Science, Profiles, Dimensions
 * **Types**: 
   * Top level / generic: Publication or Document: http://purl.org/ontology/bibo/Document
   * Abstract: http://vivoweb.org/ontology/core#Abstract
