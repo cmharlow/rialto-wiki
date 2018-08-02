@@ -139,5 +139,7 @@ Questions:
 1. Is an agent an aggregative thing (i.e. can it be a department, a school, a single person, all of Stanford)?  YES 
 1. Can we filter the publications used to create the heatmap by date range? YES
 
+***
+**Institution Collaboration Visualization** ([RIALTO-17](https://jirasul.stanford.edu/jira/browse/RIALTO-17))
 
 Network visualization, showing institutions as nodes, with lines connecting the institutions represented by all co-authors of projects or works. The size of the nodes is determined by the number of authors at that institution. 
