@@ -50,10 +50,11 @@ USA 1050
 Canada 900
 Italy 345
 etc.
-
+```
 **Institution/Country Collaboration Raw Data Export** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
-Both of the above reports can utilize the same raw data output via an API or special CSV export is also requested with the report including:
 
+Both of the above reports can utilize the same raw data output via an API or special CSV export is also requested with the report including:
+```
 1) Stanford faculty member name
 2) Stanford faculty member Org
 3) Stanford faculty member's co-author name(s) -- could be many if they are at the same institution for a given paper
@@ -72,11 +73,15 @@ Medicine   | Stanford    | Lady Red   | Jane Okoye, YY, ZZ, etc.   | Ghent    | 
 Medicine   | Stanford    | John Doe   | Mary Cary   | Sorbonne    | Oncology  | 1 | France
 
 
+**Research Trends Report** ([RIALTO-13](https://jirasul.stanford.edu/jira/browse/RIALTO-13))
+
 Year | academic institute | topic area | number of publications by faculty members of institute in that topic area
 ---- | ------------------ | ---------- | -------------
 2002 | school of medicine | biology    | 12
 2002 | school of medicine | chemistry  | 30
 2003 | school of medicine | chemistry  | 210
+
+**Grant Publication Report** ([RIALTO-12](https://jirasul.stanford.edu/jira/browse/RIALTO-12))
 
 Publication   | Grant
 ------------- | ------
@@ -86,10 +91,14 @@ Publication 3 | Grant 1
 Publication 2 | Grant 2 
 Publication 4 | Grant 2 
 
+**Researcher Publication Report** ([RIALTO-7](https://jirasul.stanford.edu/jira/browse/RIALTO-7))
+
 Author | Publications Count | Profiles-Sourced Publications Count | Number of times Cited
 ------ | ------------------ | ----------------------------------- | ---------------------
 Jane Smith | 120 | 80 | 200
 Clifford the Dog | 2 | 1 | 10
+
+**Journal Publication and Publisher Reports** ([RIALTO-10](https://jirasul.stanford.edu/jira/browse/RIALTO-10))
 
 Department | Year | Journals | Count of Publications by Authors in Department
 ---------- | ---- | -------- | ----------------------------------------------
@@ -103,6 +112,8 @@ Department | Year | Publishers | Count of Publications by Authors in Department
 Chemistry  | 2002 | Elsevier   | 2
 Chemistry  | 2014 | Springer   | 5
 English    | 2015 | MLA        | 30
+
+**Monthly Productivity Reports** ([RIALTO-16](https://jirasul.stanford.edu/jira/browse/RIALTO-16))
 
 Department | # of Faculty Publications in Jan | ... Feb | ... March | ... April | ... May | ... June | ... July | ... Aug | ... Sept | ... Oct | ... Nov | ... Dev
 ---------- | --- | --- | ----- | ----- | --- | ---- | ---- | --- | ---- | --- | --- | ---
