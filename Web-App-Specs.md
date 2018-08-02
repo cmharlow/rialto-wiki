@@ -25,7 +25,7 @@ https://drive.google.com/drive/u/1/folders/1d-UFRxmHDFsb8vDXQvkNGlR66Tb-KkWp
 
 # CSV Reports
 
-:star: Authors joined with Co-Authors aggregate count of publications
+Authors joined with Co-Authors aggregate count of publications by institution
 ```
 Output:
 A list of institutions the authors in that department have co-authored with, along with number of collaborations.
@@ -34,8 +34,21 @@ e.g.
 University of California, Berkeley 456
 Harvard University 200
 etc.
+```
 
-Raw data output via an API or special CSV export is also requested with the report including:
+Authors joined with Co-Authors aggregate count of publications by country
+```
+Output:
+A list of countries that the authors in that department have collaborated with, along with the number of collaborations. 
+
+e.g.
+USA 1050
+Canada 900
+Italy 345
+etc.
+
+Both of the above reports can utilize the same raw data output via an API or special CSV export is also requested with the report including:
+
 1) Stanford faculty member name
 2) Stanford faculty member Org
 3) Stanford faculty member's co-author name(s) -- could be many if they are at the same institution for a given paper
@@ -51,23 +64,6 @@ Chemistry  | Stanford    | John Smith | Jane Smith  | Harvard  | Biochemistry | 
 Chemistry  | Stanford    | John Smith | Jane Okoye, Patrick Hoch  | Ghent    | Informatics, Computer Science  | 10 | Belgium
 Chemistry  | Stanford    | John Smith | Peter Smith  | Brussels U | Informatics  | 10 | Belgium
 Medicine   | Stanford    | Lady Red   | Jane Okoye  | Ghent    | Informatics  | 10 | Belgium
-
-:star: (this appears to be same as the report above) 
-
-```
-A report that shows a list of countries that the authors in that department have collaborated with, along with the number of collaborations, 
-
-e.g.
-USA 1050
-Canada 900
-Italy 345
-etc.
-```
-
-Author     | Institution | Co-Authors' Institution | Institution Country | Number of Collaborations | Co-Authors' Names
----------- | ----------- | ----------------------- | ------------------- | ------------------------ | -----------------
-Jane Smith | Stanford    | Harvard                 | USA                 | 10 | Jane Smith, John Doe, Jake Okuma
-Jane Smith | Stanford    | Ghent                   | Belgium             | 2 | Patrick Hoch, Richard Sanderson
 
 
 Year | academic institute | topic area | number of publications by faculty members of institute in that topic area
