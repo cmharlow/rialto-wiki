@@ -25,6 +25,8 @@ https://drive.google.com/drive/u/1/folders/1d-UFRxmHDFsb8vDXQvkNGlR66Tb-KkWp
 
 # CSV Reports
 
+[RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8) - Institution Collaboration Report
+
 Authors joined with Co-Authors aggregate count of publications by institution
 ```
 Output:
@@ -35,6 +37,8 @@ University of California, Berkeley 456
 Harvard University 200
 etc.
 ```
+
+[RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8) - Country Collaboration Report
 
 Authors joined with Co-Authors aggregate count of publications by country
 ```
@@ -60,10 +64,11 @@ Note that the table below may have multiple rows per paper, if the paper has co-
 
 Department | Institution | Author | Author's Co-Author | Co-Author Institution | Co-Author Department | Number of Collaborations | Co-Author Country
 --- | --- | --- | --- | --- | --- | --- | ---
-Chemistry  | Stanford    | John Smith | Jane Smith  | Harvard  | Biochemistry | 2 | USA
-Chemistry  | Stanford    | John Smith | Jane Okoye, Patrick Hoch  | Ghent    | Informatics, Computer Science  | 10 | Belgium
-Chemistry  | Stanford    | John Smith | Peter Smith  | Brussels U | Informatics  | 10 | Belgium
-Medicine   | Stanford    | Lady Red   | Jane Okoye  | Ghent    | Informatics  | 10 | Belgium
+Chemistry  | Stanford    | John Smith | Jane Smith, XXX  | Harvard  | Biochemistry | 2 | USA
+Chemistry  | Stanford    | John Smith | Jane Okoye, Patrick Hoch, XX, YY, etc.  | Ghent    | Informatics, Computer Science  | 10 | Belgium
+Chemistry  | Stanford    | John Smith | Peter Smith, YY, ZZ, etc.  | Brussels U | Informatics  | 10 | Belgium
+Medicine   | Stanford    | Lady Red   | Jane Okoye, YY, ZZ, etc.   | Ghent    | Informatics  | 10 | Belgium
+Medicine   | Stanford    | John Doe   | Mary Cary   | Sorbonne    | Oncology  | 1 | France
 
 
 Year | academic institute | topic area | number of publications by faculty members of institute in that topic area
@@ -108,5 +113,13 @@ Department | Topics of Faculty Publications in Jan | ... Feb | ... March | ... A
 Chemistry  | Polymers, Astrochemistry  | Biochem   | Topic 2, Topic 3, Topic 4     | Topic 5  |  Topic 5, Topic 1, Topic 56 |    Topic 0 |   Topic 2 | Topic 10 | Topic 2, Topic 0, Topic 21 |  Topic 20 | Topic 3, Topic 0, Topic 5 | Topic 8
 
 # Visualizations
-  - given agent, heat map of the world with color coding on countries to indicate frequency of collaboration.  This is determined by looking at the countries in the addresses shown for co-authors of that agent's publications.  Questions: (1) Is an agent an aggregative thing (i.e. can it be a department, a school, a single person, all of Stanford)?  YES (2) Can we filter the publications used to create the heatmap by date range? YES
-  - network visualization, showing institutions as nodes, with lines connecting the institutions represented by all co-authors of projects or works. The size of the nodes is determined by the number of authors at that institution. 
+
+[RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8) - Country Collaboration Visualization
+
+Given agent, heat map of the world with color coding on countries to indicate frequency of collaboration.  This is determined by looking at the countries in the addresses shown for co-authors of that agent's publications.  
+Questions: 
+1. Is an agent an aggregative thing (i.e. can it be a department, a school, a single person, all of Stanford)?  YES 
+1. Can we filter the publications used to create the heatmap by date range? YES
+
+
+Network visualization, showing institutions as nodes, with lines connecting the institutions represented by all co-authors of projects or works. The size of the nodes is determined by the number of authors at that institution. 
