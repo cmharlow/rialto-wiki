@@ -28,7 +28,7 @@ https://drive.google.com/drive/u/1/folders/1d-UFRxmHDFsb8vDXQvkNGlR66Tb-KkWp
 :star: Authors joined with Co-Authors aggregate count of publications
 ```
 Output:
-A list of institutions the authors in that department have collaborated with, along with number of collaborations.
+A list of institutions the authors in that department have co-authored with, along with number of collaborations.
 
 e.g.
 University of California, Berkeley 456
@@ -38,9 +38,11 @@ etc.
 Raw data output via an API or special CSV export is also requested with the report including:
 1) Stanford faculty member name
 2) Stanford faculty member Org
-3) Stanford faculty member's international co-author name
-4) Stanford faculty member's international co-author institution name
-5) Stanford faculty member's international co-author institution country
+3) Stanford faculty member's co-author name(s) -- could be many if they are at the same institution for a given paper
+4) Stanford faculty member's co-author institution name
+5) Stanford faculty member's co-author institution country
+
+Note that the table below may have multiple rows per paper, if the paper has co-authors across multiple institutions.  In this case, there would be one row per unique institution of co-authorship.  In the case of only one co-authorship institution (i.e. one co-author, or many co-authors but all at the same institution), there will be one row for that publication.  The number of collaborations column counts the name of co-authors at the institution (will be at least one for each row).
 ```
 
 Department | Institution | Author | Author's Co-Author | Co-Author Institution | Co-Author Department | Number of Collaborations | Co-Author Country
