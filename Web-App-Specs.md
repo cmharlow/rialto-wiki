@@ -38,6 +38,7 @@ Harvard University 200
 etc.
 ```
 
+***
 **Country Collaboration Report** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
 
 Authors joined with Co-Authors aggregate count of publications by country
@@ -51,6 +52,8 @@ Canada 900
 Italy 345
 etc.
 ```
+
+***
 **Institution/Country Collaboration Raw Data Export** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
 
 Both of the above reports can utilize the same raw data output via an API or special CSV export is also requested with the report including:
@@ -72,7 +75,7 @@ Chemistry  | Stanford    | John Smith | Peter Smith, YY, ZZ, etc.  | Brussels U 
 Medicine   | Stanford    | Lady Red   | Jane Okoye, YY, ZZ, etc.   | Ghent    | Informatics  | 10 | Belgium
 Medicine   | Stanford    | John Doe   | Mary Cary   | Sorbonne    | Oncology  | 1 | France
 
-
+***
 **Research Trends Report** ([RIALTO-13](https://jirasul.stanford.edu/jira/browse/RIALTO-13))
 
 Year | academic institute | topic area | number of publications by faculty members of institute in that topic area
@@ -81,6 +84,7 @@ Year | academic institute | topic area | number of publications by faculty membe
 2002 | school of medicine | chemistry  | 30
 2003 | school of medicine | chemistry  | 210
 
+***
 **Grant Publication Report** ([RIALTO-12](https://jirasul.stanford.edu/jira/browse/RIALTO-12))
 
 Publication   | Grant
@@ -91,6 +95,7 @@ Publication 3 | Grant 1
 Publication 2 | Grant 2 
 Publication 4 | Grant 2 
 
+***
 **Researcher Publication Report** ([RIALTO-7](https://jirasul.stanford.edu/jira/browse/RIALTO-7))
 
 Author | Publications Count | Profiles-Sourced Publications Count | Number of times Cited
@@ -98,6 +103,7 @@ Author | Publications Count | Profiles-Sourced Publications Count | Number of ti
 Jane Smith | 120 | 80 | 200
 Clifford the Dog | 2 | 1 | 10
 
+***
 **Journal Publication and Publisher Reports** ([RIALTO-10](https://jirasul.stanford.edu/jira/browse/RIALTO-10))
 
 Department | Year | Journals | Count of Publications by Authors in Department
@@ -106,13 +112,13 @@ Chemistry  | 2002 | Science  | 5000
 Chemistry  | 2003 | Science  | 2000
 Biology    | 2016 | n+1      | 2
 
-
 Department | Year | Publishers | Count of Publications by Authors in Department
 ---------- | ---- | ---------- | ----------------------------------------------
 Chemistry  | 2002 | Elsevier   | 2
 Chemistry  | 2014 | Springer   | 5
 English    | 2015 | MLA        | 30
 
+***
 **Monthly Productivity Reports** ([RIALTO-16](https://jirasul.stanford.edu/jira/browse/RIALTO-16))
 
 Department | # of Faculty Publications in Jan | ... Feb | ... March | ... April | ... May | ... June | ... July | ... Aug | ... Sept | ... Oct | ... Nov | ... Dev
@@ -126,7 +132,7 @@ Chemistry  | Polymers, Astrochemistry  | Biochem   | Topic 2, Topic 3, Topic 4  
 
 # Visualizations
 
-**Country Collaboration Visualization** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8)
+**Country Collaboration Visualization** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
 
 Given agent, heat map of the world with color coding on countries to indicate frequency of collaboration.  This is determined by looking at the countries in the addresses shown for co-authors of that agent's publications.  
 Questions: 
