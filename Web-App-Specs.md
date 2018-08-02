@@ -25,7 +25,7 @@ https://drive.google.com/drive/u/1/folders/1d-UFRxmHDFsb8vDXQvkNGlR66Tb-KkWp
 
 # CSV Reports
 
-[RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8) - Institution Collaboration Report
+**Institution Collaboration Report** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
 
 Authors joined with Co-Authors aggregate count of publications by institution
 ```
@@ -38,7 +38,7 @@ Harvard University 200
 etc.
 ```
 
-[RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8) - Country Collaboration Report
+**Country Collaboration Report** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
 
 Authors joined with Co-Authors aggregate count of publications by country
 ```
@@ -51,6 +51,7 @@ Canada 900
 Italy 345
 etc.
 
+**Institution/Country Collaboration Raw Data Export** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
 Both of the above reports can utilize the same raw data output via an API or special CSV export is also requested with the report including:
 
 1) Stanford faculty member name
@@ -114,7 +115,7 @@ Chemistry  | Polymers, Astrochemistry  | Biochem   | Topic 2, Topic 3, Topic 4  
 
 # Visualizations
 
-[RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8) - Country Collaboration Visualization
+**Country Collaboration Visualization** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8)
 
 Given agent, heat map of the world with color coding on countries to indicate frequency of collaboration.  This is determined by looking at the countries in the addresses shown for co-authors of that agent's publications.  
 Questions: 
