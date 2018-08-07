@@ -4,9 +4,8 @@
 - [RIALTO Data Models](/sul-dlss/rialto/wiki/RIALTO-Data-Models-&amp;-Profiles)
 - [RIALTO Derivative Solr Data Model](/sul-dlss/rialto/wiki/RIALTO-Derivative-Solr-Data-Model)
 - [RIALTO Derivative Database Data Model](/sul-dlss/rialto/wiki/RIALTO-Derivative-Database-Data-Model)
-
-### Demos
-- [Demo 1](/sul-dlss/rialto/wiki/RIALTO-Demo-1:-Notes)
+- Demos
+  - [Demo 1](/sul-dlss/rialto/wiki/RIALTO-Demo-1:-Notes)
 
 ### RIALTO Core
 - [AWS Build Specification](/sul-dlss/rialto/wiki/AWS-Build-Specification)
