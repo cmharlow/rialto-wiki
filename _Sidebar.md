@@ -1,4 +1,4 @@
-# About RIALTO: Architecture and Data Models
+# About RIALTO
 - [RIALTO Wiki Homepage](/sul-dlss/rialto/wiki)
 - [RIALTO Architecture](/sul-dlss/rialto/wiki/RIALTO-Architecture)
 - [RIALTO Data Models](/sul-dlss/rialto/wiki/RIALTO-Data-Models-&amp;-Profiles)
