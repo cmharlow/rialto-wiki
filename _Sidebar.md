@@ -2,8 +2,6 @@
 - [RIALTO Wiki Homepage](/sul-dlss/rialto/wiki)
 - [RIALTO Architecture](/sul-dlss/rialto/wiki/RIALTO-Architecture)
 - [RIALTO Data Models](/sul-dlss/rialto/wiki/RIALTO-Data-Models-&amp;-Profiles)
-  - [Deriv. Solr Data Model](/sul-dlss/rialto/wiki/RIALTO-Derivative-Solr-Data-Model)
-  - [Deriv. DB Data Model](/sul-dlss/rialto/wiki/RIALTO-Derivative-Database-Data-Model)
 - Demo Videos
   - [June 2018](/sul-dlss/rialto/wiki/RIALTO-Demo-1:-Notes)
   - [August 2018](/sul-dlss/rialto/wiki/RIALTO-Demo-2:-Notes)
@@ -21,6 +19,8 @@
 
 ### RIALTO Web App
 - [Web App Specs](/sul-dlss/rialto/wiki/Web-App-Specs)
+  - [Deriv. Solr Data Model](/sul-dlss-labs/rialto-webapp/wiki/RIALTO-Derivative-Solr-Data-Model)
+  - [Deriv. DB Data Model](/sul-dlss-labs/rialto-webapp/wiki/RIALTO-Derivative-Solr-Data-Model)
 
 ### RIALTO Combine
 - [Combine Data Sources](/sul-dlss/rialto/wiki/RIALTO-Combine-Data-Sources)
