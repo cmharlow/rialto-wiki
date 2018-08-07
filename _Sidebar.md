@@ -1,8 +1,12 @@
-# About RIALTO
+# About RIALTO: Architecture and Data Models
 - [RIALTO Wiki Homepage](/sul-dlss/rialto/wiki)
 - [RIALTO Architecture](/sul-dlss/rialto/wiki/RIALTO-Architecture)
 - [RIALTO Data Models](/sul-dlss/rialto/wiki/RIALTO-Data-Models-&amp;-Profiles)
-- [RIALTO Demo 1](/sul-dlss/rialto/wiki/RIALTO-Demo-1:-Notes)
+- [RIALTO Derivative Solr Data Model](/sul-dlss/rialto/wiki/RIALTO-Derivative-Solr-Data-Model)
+- [RIALTO Derivative Database Data Model](/sul-dlss/rialto/wiki/RIALTO-Derivative-Database-Data-Model)
+
+### Demos
+- [Demo 1](/sul-dlss/rialto/wiki/RIALTO-Demo-1:-Notes)
 
 ### RIALTO Core
 - [AWS Build Specification](/sul-dlss/rialto/wiki/AWS-Build-Specification)
@@ -16,10 +20,10 @@
 - [Ingest Service (Dev)](/sul-dlss/rialto/wiki/RIALTO-Ingest-Service-(Dev-Env))
 
 ### RIALTO Web App
-- [Web App Data Requirements](/sul-dlss/rialto/wiki/Web-App-Specs)
+- [Web App Specs](/sul-dlss/rialto/wiki/Web-App-Specs)
 
 ### RIALTO Combine
-- [Combine data sources](/sul-dlss/rialto/wiki/RIALTO-Combine-Data-Sources)
+- [Combine Data Sources](/sul-dlss/rialto/wiki/RIALTO-Combine-Data-Sources)
 
 # Staging / Production
 
