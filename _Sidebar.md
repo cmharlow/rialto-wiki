@@ -20,7 +20,7 @@
 ### RIALTO Web App
 - [Web App Specs](/sul-dlss/rialto/wiki/Web-App-Specs)
   - [Deriv. Solr Data Model](/sul-dlss-labs/rialto-webapp/wiki/RIALTO-Derivative-Solr-Data-Model)
-  - [Deriv. DB Data Model](/sul-dlss-labs/rialto-webapp/wiki/RIALTO-Derivative-Solr-Data-Model)
+  - [Deriv. DB Data Model](/sul-dlss-labs/rialto-webapp/wiki/RIALTO-Derivative-Database-Data-Model)
 
 ### RIALTO Combine
 - [Combine Data Sources](/sul-dlss/rialto/wiki/RIALTO-Combine-Data-Sources)
