@@ -1,4 +1,3 @@
-# Solr data model
 All models have the following fields:
 
 Field               | Expected Data Type | Cardinality | Definition
@@ -6,19 +5,19 @@ Field               | Expected Data Type | Cardinality | Definition
 `id` | URI | 1 | The identifier of the resource
 `type_ssi` | URI | 1 | This is a URI to one of the types in: https://github.com/sul-dlss/rialto/wiki/RIALTO-Data-Models-&-Profiles
 
-## Person
+# Person
 
 Field               | Expected Data Type | Cardinality | Definition
 ------------------- | ------------------ | ----------- | ----------------------
 `name_ssim` | String | 1 | The person's name
 
-## Organization
+# Organization
 
 Field               | Expected Data Type | Cardinality | Definition
 ------------------- | ------------------ | ----------- | ----------------------
 `title_tesi` | String | 1 | The organization's name. Tokenized so that partial matches will occur.
 
-## Project
+# Project
 
 Field               | Expected Data Type | Cardinality | Definition
 ------------------- | ------------------ | ----------- | ----------------------
@@ -27,13 +26,13 @@ Field               | Expected Data Type | Cardinality | Definition
 `start_date_ssi` | String | 1 | The project's starting date.
 `end_date_ssi` | String | 1 | The project's ending date.
 
-## Grant
+# Grant
 
 Field               | Expected Data Type | Cardinality | Definition
 ------------------- | ------------------ | ----------- | ----------------------
 `title_tesi` | String | 1 | The grant's name. Tokenized so that partial matches will occur.
 
-## Publication
+# Publication
 
 Field               | Expected Data Type | Cardinality | Definition
 ------------------- | ------------------ | ----------- | ----------------------
