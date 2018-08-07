@@ -4,6 +4,6 @@ TF-related demo (August 2018):
 * Deploy infrastructure with terraform
 * Show infrastructure setup in AWS console
 * View the services?
-** SPARQL query against Neptune?
-** Go to the web-app home page
+  * SPARQL query against Neptune?
+  * Go to the web-app home page
 
