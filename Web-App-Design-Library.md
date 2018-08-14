@@ -1,0 +1,1 @@
+Placeholder for design elements: assets, palettes, fonts, etc.
