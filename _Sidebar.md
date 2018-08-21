@@ -36,6 +36,7 @@
 - [Neptune Support](/sul-dlss/rialto/wiki/Neptune-Support-in-Terraform)
 - [S3 Support](/sul-dlss/rialto/wiki/S3-Support-in-Terraform)
 - [SNS Support](/sul-dlss/rialto/wiki/SNS-Support-in-Terraform)
+- [Terraform and RIALTO](/sul-dlss/rialto/wiki/Terraform-and-RIALTO)
 
 # Development
 - [Getting Started](/sul-dlss/rialto/wiki/Getting-Started-(Dev-Env))
