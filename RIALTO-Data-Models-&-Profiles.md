@@ -99,7 +99,7 @@ department | vivo:relatedBy vivo:Position vivo:relates foaf:Organization | URI f
 email address | vcard:hasEmail | string literal | [0,n] | Email address for the individual.
 PI of | vivo:relatedBy vivo:Grant | URI for vivo:Grant | [0,n] | Grant the person is currently PI or has been PI for.
 funded by (grant) | vivo:hasFundingVehicle | Grant URI | [0,n] | Grant (or contract) providing funding for the Agent (or their Position).
-institutional affiliation | vivo:relatedBy vivo:Position vivo:relates foaf:Organization bfo:0000050 foaf:Organization | URI for foaf:Organization | [0,n] | Organization, at institution level, that the person works (or has worked) for.
+institutional affiliation | vivo:relatedBy vivo:Position vivo:relates foaf:Organization obo:BFO_0000050 foaf:Organization | URI for foaf:Organization | [0,n] | Organization, at institution level, that the person works (or has worked) for.
 name | vcard:hasName | URI for vcard:Name | [1,1] | Name (broken into data property components) for the person.
 hasResearchArea | vivo:hasResearchArea | URI for skos:Concept | [0,n] | Topical area the person does research on or in.
 role(s) / job(s) | vivo:relatedBy vivo:Position | URI for vivo:Position | [0,n] | Position or job the person currently holds or previously held.
@@ -136,8 +136,8 @@ country | dcterms:spatial  | URI for country in address | [0,n]  | Normalized co
 email address | vcard:hasEmail | string literal | [0,n] | Email address for the Organization.
 administering (grant) | vivo:relatedBy vivo:Grant | URI for vivo:Grant | [0,n] | Grant administered by the Organization.
 funded by (grant) | vivo:hasFundingVehicle | Grant URI | [0,n] | Grant (or contract) providing funding for the Agent (or their Position).
-children organizations | bfo:0000051 foaf:Organization | URI for foaf:Organization | [0,n] | Organization this organization is contains.
-parent organizations | bfo:0000050 foaf:Organization | URI for foaf:Organization | [0,n] | Organization this organization is a part of.
+children organizations | obo:BFO_0000051 foaf:Organization | URI for foaf:Organization | [0,n] | Organization this organization is contains.
+parent organizations | obo:BFO_0000050 foaf:Organization | URI for foaf:Organization | [0,n] | Organization this organization is a part of.
 employees | vivo:relatedBy vivo:Position* vivo:relates foaf:Agent | URIs for Agents | [0,n] | Agents that hold a position in the Organization.
 name | skos:prefLabel, rdfs:label | string literal | [1,1] | Primary name for the Organization.
 alternate name | skos:altLabel | string literal | [0,n] | Alternate names for the Organization.
@@ -153,7 +153,7 @@ related topic areas | vivo:hasResearchArea | URI for skos:Concept | [0,n] | Topi
 Field   | Predicate        | Expected Data Type    | Cardinality | Definition
 ------- | ---------------- | --------------------- | ----------- | ----------
 @type   | rdf:type  | URI from list above | [1,n]      |  Type of the resource.
-institution | bfo:0000050 foaf:Organization | URI for foaf:Organization | [0,n] | Organization this organization is a part of.
+institution | obo:BFO_0000050 foaf:Organization | URI for foaf:Organization | [0,n] | Organization this organization is a part of.
 name | skos:prefLabel, rdfs:label | string literal | [1,1] | Primary name for the Organization.
 alternate name | skos:altLabel | string literal | [0,n] | Alternate names for the Organization.
 abbreviation | vivo:abbrevation | string literal | [0,n] | Abbreviated names for the Organization.
