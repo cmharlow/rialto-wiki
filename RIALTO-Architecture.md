@@ -12,6 +12,9 @@ TBD
 ## RIALTO Web App
 TBD
 
+## AWS Architecture
+[![AWS Architecture for RIALTO](/sul-dlss/rialto/wiki/RIALTO-AWS.png)](https://docs.google.com/drawings/d/1bLg28G1qyYBrU6ruLe50cUrZKQuo4CtwrUkmOsbErnc/view?usp=sharing)
+
 # Current Dataflows
 
 ## RIALTO Core
