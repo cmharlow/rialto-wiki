@@ -58,7 +58,7 @@ Topics are subject areas or concepts. Works, grants, or departments may be assoc
 
 * **Sources**: Web of Science, Profiles
 * **Types**: 
-  * Top level / generic: Topic: http://www.w3.org/2004/02/skos/core#Concept
+  * Top level / generic: Topic: http://www.w3.org/2008/05/skos#Concept
 
 Field | Predicate | Expected Data Type | Cardinality | Definition
 ----- | --------- | ------------------ | ----------- | ----------
