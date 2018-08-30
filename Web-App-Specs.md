@@ -78,11 +78,13 @@ Medicine   | Stanford    | John Doe   | Mary Cary   | Sorbonne    | Oncology  | 
 ***
 **Research Trends Report** ([RIALTO-13](https://jirasul.stanford.edu/jira/browse/RIALTO-13))
 
-Year | academic institute | topic area | number of publications by faculty members of institute in that topic area
----- | ------------------ | ---------- | -------------
-2002 | school of medicine | biology    | 12
-2002 | school of medicine | chemistry  | 30
-2003 | school of medicine | chemistry  | 210
+Publication Topic Area(s): chemistry, art
+
+academic institute | 2001 | 2002 | 2003
+------------------ | ---- | ---- | ----
+school of medicine | 12   |    8 |  92
+school of art      | 30   |    0 | 103
+hoover institution | 210  |   56 |  3
 
 ***
 **Grant Publication Report** ([RIALTO-12](https://jirasul.stanford.edu/jira/browse/RIALTO-12))
