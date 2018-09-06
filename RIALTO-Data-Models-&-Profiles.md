@@ -100,6 +100,7 @@ email address | vcard:hasEmail | string literal | [0,n] | Email address for the 
 PI of | vivo:relatedBy vivo:Grant | URI for vivo:Grant | [0,n] | Grant the person is currently PI or has been PI for.
 funded by (grant) | vivo:hasFundingVehicle | Grant URI | [0,n] | Grant (or contract) providing funding for the Agent (or their Position).
 institutional affiliation | vivo:relatedBy vivo:Position vivo:relates foaf:Organization obo:BFO_0000050 foaf:Organization | URI for foaf:Organization | [0,n] | Organization, at institution level, that the person works (or has worked) for.
+full name | vcard:fn | String Literal | [1,1] | Full name of the person (some sort of preferred label for the entity).
 name | vcard:hasName | URI for vcard:Name | [1,1] | Name (broken into data property components) for the person.
 hasResearchArea | vivo:hasResearchArea | URI for skos:Concept | [0,n] | Topical area the person does research on or in.
 role(s) / job(s) | vivo:relatedBy vivo:Position | URI for vivo:Position | [0,n] | Position or job the person currently holds or previously held.
