@@ -91,6 +91,7 @@ Agents are some sort of actor involved in creating works or projects, or in supp
 Field   | Predicate        | Expected Data Type    | Cardinality | Definition
 ------- | ---------------- | --------------------- | ----------- | ----------
 @type   | rdf:type  | URI from list above | [1,n]      |  Type of the resource.
+orcid   | vivo:orcidId | String | [0,1] | The researchers ORCID
 about   | vivo:overview    | string-literal        | [0,n]       | About the Agent.
 address | vcard:hasAddress | URI for vcard:Address | [0,1]       | Address for the Agent.
 advisor | vivo:relatedBy vivo:AdvisingRelationship vivo:relates; obo:RO_000053 vivo:AdvisorRole | URI for foaf:Agent | [0,n] | Advisor of the person.
