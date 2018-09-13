@@ -23,7 +23,7 @@ https://drive.google.com/drive/u/1/folders/1d-UFRxmHDFsb8vDXQvkNGlR66Tb-KkWp
   - department or other organizational unit (e.g. school)
   - agent (researcher / faculty member)
 
-# CSV Reports
+# Reports
 
 <a name="RIALTO8"></a>**Institution Collaboration Report** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
 
