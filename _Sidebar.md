@@ -3,8 +3,9 @@
 - [RIALTO Architecture](/sul-dlss/rialto/wiki/RIALTO-Architecture)
 - [RIALTO Data Models](/sul-dlss/rialto/wiki/RIALTO-Data-Models-&amp;-Profiles)
 - Demo Videos
-  - [June 2018](/sul-dlss/rialto/wiki/RIALTO-Demo-1:-Notes)
-  - [August 2018](/sul-dlss/rialto/wiki/RIALTO-Demo-2:-Notes)
+  - [Intro (2018/06)](https://youtu.be/hNdJFbDfAmk)
+  - [UI Comps (2018/08)](https://youtu.be/ZEfgRXGxsGc)
+  - [Terraform (2018/09)](https://youtu.be/tk9vsPpdcw0)
 
 ### RIALTO Core
 - [AWS Build Specification](/sul-dlss/rialto/wiki/AWS-Build-Specification)
