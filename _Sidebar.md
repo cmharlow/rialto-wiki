@@ -27,6 +27,7 @@
 ### RIALTO Combine
 - [Combine Data Sources](/sul-dlss/rialto/wiki/RIALTO-Combine-Data-Sources)
 - [Data Mappings](https://github.com/sul-dlss-labs/rialto-etl/wiki)
+- [First Load Procedure](https://github.com/sul-dlss-labs/rialto-etl/wiki/ETL-First-load-procedure)
 
 # Staging / Production
 
