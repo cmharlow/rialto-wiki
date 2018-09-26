@@ -50,9 +50,59 @@ Note: It is common to see errors in terraform that are related to dependency bet
 
 # Shutdown
 
+## Option 1 - Create a snapshot on shutdown
+
+### Remove prior development snapshot(s)
+
+Terraform will error out if the `final-snapshot-identifier` already exists. 
+
+1. Log into AWS Console
+1. Select RDS
+1. Click Snapshots
+1. Select Snapshot (`rialto-development-rds-hold`)
+1. Actions > Delete snapshot
+1. Select Neptune
+1. Click Snapshots
+1. Select Snapshot (`rialto-development-neptune-hold`)
+1. Actions > Delete snapshot
+
+### Edit rialto-rds.tf
+
+#### Under resource > aws_db_instance > rialto_db_instance
+```
+  skip_final_snapshot       = false
+  ...
+  final_snapshot_identifier = "rialto-development-rds-hold"
+```
+
+### Edit rialto-neptune.tf
+
+```
+   TBD
+```
+
+### Destroy infrastructure
+
 ```
 terraform destroy
 ```
 
+## Option 1 - Manually create snapshot(s) before shutdown
+
+1. Log into AWS Console
+1. Select RDS
+1. Select Instance `rialto-development-rds`
+1. Create Snapshot
+    1. Instance actions
+    1. Take snapshot
+    1. Enter a snapshot name (i.e. `rialto-development-rds-hold`)
+1. Select Neptune
+1. Select Instance `rialto-dev`
+1. Create Snapshot
+    1. Instance actions
+    1. Take snapshot
+    1. Enter a snapshot name (i.e. `rialto-development-neptune-hold`)
+
 # Rebuild from snapshots
 
+TBD
