@@ -18,6 +18,7 @@
 - [Solr Setup (Dev)](/sul-dlss/rialto/wiki/RIALTO-Solr-Setup-(Dev-Env))
 - [Ingest Service (Dev)](/sul-dlss/rialto/wiki/RIALTO-Ingest-Service-(Dev-Env))
 - [Infrastructure (Dev)](/sul-dlss/rialto/wiki/Development-Infrastructure---Starting-and-Stopping)
+- [Performance](/sul-dlss/rialto/wiki/Performance)
 
 ### RIALTO Web App
 - [Web App Specs](/sul-dlss/rialto/wiki/Web-App-Specs)
