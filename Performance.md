@@ -20,6 +20,14 @@ The purpose of this page is to capture an initial performance assessment of vari
 3. **Average**: 1.38s
 4. **TOTAL**: 928.82 seconds / 15.48 minutes
 
+#### Neptune Breakdown
+
+| Execution Time | Percentage of Responses | Total Time | Percentage of Total Time |
+|---|---|---|---|
+| < 1 Second | 14.6 | 72 seconds | 7.8 |
+| 1 - 2 Seconds |  84.8 | 847 seconds | 91.2 | 
+| 2 - 3 Seconds | 0.6 | 9 seconds | 1.0 |
+
 ### SPARQL Parsing Performance
 
 1. **Shortest**: .277s
