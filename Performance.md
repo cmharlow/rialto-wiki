@@ -41,7 +41,7 @@ The response time from Neptune to the SPARQL Proxy is very consistently between 
 3. **Average**: .763s
 4. **Total**: 510.23 seconds / 8.50 minutes
 
-#### SPARQL Breakdown
+#### SPARQL Parsing Breakdown
 
 | Execution Time | Percentage of Responses | Total Time | Percentage of Total Time |
 |---|---|---|---|
@@ -51,3 +51,6 @@ The response time from Neptune to the SPARQL Proxy is very consistently between 
 | 3 - 4 Seconds | 2.5 | 57 seconds | 11.1 |
 | > 5 Seconds | 0.2 | 11 seconds | 2.2 |
 
+#### SPARQL Parsing Summary
+
+As expected, the SPARQL parsing process of the ingest takes much less time since it doesn't do any external calls. Further, less than 13% of the processes added almost 40% of the run time. This seems to indicate that system resources and states out of our control are contributing to the slow down for such a small number of calls. It is not likely that we could easily recover this time, and would likely not provide enough value (at this point) to attempt.
