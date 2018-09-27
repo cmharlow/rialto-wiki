@@ -19,6 +19,7 @@ The purpose of this page is to capture an initial performance assessment of vari
 2. **Longest**: 2.91s
 3. **Average**: 1.38s
 4. **TOTAL**: 928.82 seconds / 15.48 minutes
+
 ### SPARQL Parsing Performance
 
 1. **Shortest**: .277s
@@ -26,4 +27,13 @@ The purpose of this page is to capture an initial performance assessment of vari
 3. **Average**: .763s
 4. **Total**: 510.23 seconds / 8.50 minutes
 
+#### SPARQL Breakdown
+
+| Execution Time | Percentage of Responses | Total Time | Percentage of Total Time |
+|---|---|---|---|
+| < 1 Second | 87.5 | 318 seconds | 61.6 |
+| 1 - 2 Seconds |  5.2 | 55 seconds | 10.8 | 
+| 2 - 3 Seconds | 4.6 | 74 seconds | 14.3 |
+| 3 - 4 Seconds | 2.5 | 57 seconds | 11.1 |
+| > 5 Seconds | 0.2 | 11 seconds | 2.2 |
 
