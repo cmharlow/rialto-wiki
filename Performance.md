@@ -15,6 +15,8 @@ The purpose of this page is to capture an initial performance assessment of vari
 
 ### AWS Neptune Insert Performance
 
+**This test was against a single AWS Neptune instance, with a _db.r4.large_ class.**
+
 1. **Shortest**: .150s
 2. **Longest**: 2.91s
 3. **Average**: 1.38s
@@ -27,6 +29,10 @@ The purpose of this page is to capture an initial performance assessment of vari
 | < 1 Second | 14.6 | 72 seconds | 7.8 |
 | 1 - 2 Seconds |  84.8 | 847 seconds | 91.2 | 
 | 2 - 3 Seconds | 0.6 | 9 seconds | 1.0 |
+
+#### Neptune Summary
+
+The response time from Neptune to the SPARQL Proxy is very consistently between 1 and 2 seconds. When averaging only the responses in that time frame, most fall between 1.4 and 1.6 seconds. In this testing, no calls took more than 3 seconds. In a subsequent test with a larger (**db.r4.xlarge**) instance, these response times were not significantly different. Indicating that boosting a single instance type will not likely improve performance.
 
 ### SPARQL Parsing Performance
 
