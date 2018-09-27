@@ -10,8 +10,8 @@ The purpose of this page is to capture an initial performance assessment of vari
 
 | Data | Records | Ingest Time |
 |------|---------|-------------|
-| Organizations | 7047 | 7201 seconds |
-| Researchers | 258875 | 5650 seconds |
+| Organizations | 7047 | 273 seconds / 4.55 minutes |
+| Researchers | 258875 | 5650 seconds / 94.17 minutes |
 
 ### AWS Neptune Insert Performance
 
