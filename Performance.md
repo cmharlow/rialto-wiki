@@ -4,7 +4,18 @@ The purpose of this page is to capture an initial performance assessment of vari
 
 # RIALTO Core Ingest
 
-**Note**: The following data is based on ingesting via (LINK to Rialto ETL) for Stanford Organizations and Researchers Data. (TODO: verify/explain the data and it's source for this test)
+**Note**: The following data is based on ingesting via ([Rialto ETL](https://github.com/sul-dlss-labs/rialto-etl)) for Stanford Organizations and Researchers Data.
+
+## Procedure
+
+1. Install ([Rialto ETL](https://github.com/sul-dlss-labs/rialto-etl))
+2. Follow steps 4.iii and 5.i at (https://github.com/sul-dlss-labs/rialto-etl/wiki/ETL-First-load-procedure) to download the organization researcher data to use for ETL
+3. Run step 4.iv to transform the Organization Data
+4. Run step 4.v to load the Organization Data
+5. Run step 5.ii to transform the Researcher Data
+6. Run step 5.iii to load the Researcher Data
+7. Extract the data from CloudWatch
+1. 1. ttt
 
 ## Overall
 
