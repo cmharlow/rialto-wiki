@@ -8,14 +8,32 @@ The purpose of this page is to capture an initial performance assessment of vari
 
 ## Procedure
 
+### Run ETL (Extract - Transform - Load)
 1. Install ([Rialto ETL](https://github.com/sul-dlss-labs/rialto-etl))
 2. Follow steps 4.iii and 5.i at (https://github.com/sul-dlss-labs/rialto-etl/wiki/ETL-First-load-procedure) to download the organization researcher data to use for ETL
 3. Run step 4.iv to transform the Organization Data
 4. Run step 4.v to load the Organization Data
 5. Run step 5.ii to transform the Researcher Data
 6. Run step 5.iii to load the Researcher Data
-7. Extract the data from CloudWatch
-    1. 1. ttt
+
+### Extract CloudWatch Log Data
+
+Each iteration of the Rialto sparql-loader outputs profile data to the logs like:
+
+```
+START RequestId: cd3ca114-c28d-11e8-8bcd-eb363f165b17 Version: $LATEST
+2018/09/27 19:44:52 Neptune begin: 2018-09-27 19:44:52.650918936 +0000 UTC m=+0.050914288
+2018/09/27 19:44:54 Neptune elapsed time: 1.68649536s
+2018/09/27 19:44:54 SPARQL parse begin: 2018-09-27 19:44:54.337488395 +0000 UTC m=+1.737483730
+2018/09/27 19:44:54 SPARQL parse elapsed time: 544.82917ms
+2018/09/27 19:44:54 SNS publish begin: 2018-09-27 19:44:54.882359193 +0000 UTC m=+2.282354506
+2018/09/27 19:44:54 SNS publish elapsed time: 100.815745ms
+END RequestId: cd3ca114-c28d-11e8-8bcd-eb363f165b17
+```
+
+1. Filter the logs on `Neptune elapsed time` and extract
+1. Filter the logs on `SPARQL parse elapsed time` and extract
+1. Filter the logs on `SNS publish elapsed time` and extract (Note: SNS publishing is incredibly fast. All calls were under .01 seconds at most - so I did not include that data in the review below.)
 
 ## Overall
 
