@@ -100,6 +100,8 @@ Publication 4 | Grant 2
 ***
 **Researcher Publication Report** ([RIALTO-7](https://jirasul.stanford.edu/jira/browse/RIALTO-7))
 
+Important note: this use case requires us to have the sul-pub database as another data source (for the "profiles-sourced publication count" which implies the manually accepted publications). 
+
 Author | Publications Count | Profiles-Sourced Publications Count | Number of times Cited
 ------ | ------------------ | ----------------------------------- | ---------------------
 Jane Smith | 120 | 80 | 200
