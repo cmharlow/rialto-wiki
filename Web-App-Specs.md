@@ -56,24 +56,23 @@ etc.
 ***
 **Institution/Country Collaboration Raw Data Export** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
 
-Both of the above reports display a table on the screen.  In each case, the data is displayed on the screen (and used to create the choropleth in the case of the countries).  However, we will also provide the option to download the raw data used to create those aggregated reports in CSV export, so that the user can perform other analysis in a program like Excel.  The CSV export would include the following:
+Both of the above reports display a table on the screen.  In each case, the data is displayed on the screen (and used to create the choropleth in the case of the countries).  However, we will also provide the option to download the raw data used to create those aggregated reports in CSV export, so that the user can perform other analysis in a program like Excel.  The CSV export would include rows with the following:
 ```
 1) Stanford faculty member name
 2) Stanford faculty member Org
 3) Stanford faculty member's co-author name(s) -- could be many if they are at the same institution for a given paper
 4) Stanford faculty member's co-author institution name
-5) Stanford faculty member's co-author institution country
-
-Note that the csv output below may have multiple rows per paper, if the paper has co-authors across multiple institutions.  In this case, there would be one row per unique institution of co-authorship.  In the case of only one co-authorship institution (i.e. one co-author, or many co-authors but all at the same institution), there will be one row for that publication.  The number of collaborations column counts the name of co-authors at the institution (will be at least one for each row).
 ```
 
-Department | Institution | Author | Author's Co-Author | Co-Author Institution | Co-Author Department | Number of Collaborations | Co-Author Country
---- | --- | --- | --- | --- | --- | --- | ---
-Chemistry  | Stanford    | John Smith | Jane Smith, XXX  | Harvard  | Biochemistry | 2 | USA
-Chemistry  | Stanford    | John Smith | Jane Okoye, Patrick Hoch, XX, YY, etc.  | Ghent    | Informatics, Computer Science  | 10 | Belgium
-Chemistry  | Stanford    | John Smith | Peter Smith, YY, ZZ, etc.  | Brussels U | Informatics  | 10 | Belgium
-Medicine   | Stanford    | Lady Red   | Jane Okoye, YY, ZZ, etc.   | Ghent    | Informatics  | 10 | Belgium
-Medicine   | Stanford    | John Doe   | Mary Cary   | Sorbonne    | Oncology  | 1 | France
+Note that the csv output below may have multiple rows per paper, if the paper has co-authors across multiple institutions.  In this case, there would be one row per unique institution of co-authorship.  In the case of only one co-authorship institution (i.e. one co-author, or many co-authors but all at the same institution), there will be one row for that publication.  The number of collaborations column counts the name of co-authors at the institution (will be at least one for each row).
+
+Department | Institution | Author | Author's Co-Author | Co-Author Institution | Co-Author Department | Number of Collaborations 
+--- | --- | --- | --- | --- | --- | --- 
+Chemistry  | Stanford    | John Smith | Jane Smith, XXX  | Harvard  | Biochemistry | 2 
+Chemistry  | Stanford    | John Smith | Jane Okoye, Patrick Hoch, XX, YY, etc.  | Ghent    | Informatics, Computer Science  | 10 
+Chemistry  | Stanford    | John Smith | Peter Smith, YY, ZZ, etc.  | Brussels U | Informatics  | 10 
+Medicine   | Stanford    | Lady Red   | Jane Okoye, YY, ZZ, etc.   | Ghent    | Informatics  | 10 
+Medicine   | Stanford    | John Doe   | Mary Cary   | Sorbonne    | Oncology  | 1 
 
 ***
 **Research Trends Report** ([RIALTO-13](https://jirasul.stanford.edu/jira/browse/RIALTO-13))
