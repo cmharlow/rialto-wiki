@@ -4,7 +4,7 @@ For AWS work at DLSS, we are attempting a new process:
 - for a 'Stage' AWS environment, there is a `sul-dlss-stage` organization, which is built via Terraform;
 - and for the 'Prod' AWS environment, there is a `sul-dlss-prod` organization, which is built via Terraform.
 
-The instructions below go through setting up access to `sul-dlss-development` after Ops has made you a user of `sul-dlss-users`. If you do not have a `sul-dlss-users` login, chat with our friendly Ops colleagues. This will eventually be open to all of DLSS via a mechanism like shib, but right now, it is limited to projects needing AWS development access right away.
+The instructions below go through setting up access to `sul-dlss-development` or `sul-dlss-staging` after Ops has made you a user of `sul-dlss-users`. If you do not have a `sul-dlss-users` login, chat with our friendly Ops colleagues. This will eventually be open to all of DLSS via a mechanism like shib, but right now, it is limited to projects needing AWS development access right away.
 
 # Accessing your `sul-dlss-users` & `sul-dlss-development` User Accounts
 
@@ -14,6 +14,8 @@ The instructions below go through setting up access to `sul-dlss-development` af
 4. In the `Switch Role` login page, enter Account: `sul-dlss-development`, Role: `DevelopersRole` (case sensitive), and optionally rename the role in Display Name. Then click `Switch Role`.
 5. The top right corner should now show `DevelopersRole @ sul-dlss-development` (or whatever you changed the Display Name to in the last step). You now have access to the `sul-dlss-development` environment as a generic `DevelopersRole` user.
 6. To switch back to your username in the `sul-dlss-users` console, go to `DevelopersRole @ sul-dlss-development` in the top right corner, click to expand the menu, then select `Back to [your username]`.
+7. To set this up for `sul-dlss-staging`, do the same as step four, but choose Account: `sul-dlss-staging`.  
+8. The past 4-5 accounts you have set up will stay in the menu there, letting you select them without having to retype. 
 
 # Set up AWSCLI for `sul-dlss-user`
 
@@ -55,7 +57,7 @@ Now we're going to set up a separate awscli profile for the shared developer rol
 [profile your-dev-role-profile-name]
 output = json
 role_arn = arn:aws:iam::418214828013:role/DevelopersRole
-region = us-east-1
+region = us-west-2
 source_profile = your-user-profile-name
 ```
 
@@ -75,6 +77,6 @@ Now you can run the awscli with the shared DevelopersRole within the `sul-dlss-d
 
 As for the permissions on that shared DevelopersRole within `sul-dlss-development` environment - its meant to be open for development usage, but its not entirely open yet. You can see here an example PR for adding permissions to the role: https://github.com/sul-dlss/terraform-aws/pull/45
 
-Some things Ops can give blanket access to (i.e. `neptune:*`) but other things they can't (i.e. `iam` or the user management stuff). For things like `iam`, we're trying to add specific permissions as we run into them, and in the PR, mention what exactly we were trying to do when hitting the block (so Ops can adequately decide if to grant full development environment permissions for that scenario).
+Usually Ops can give blanket access to resources (i.e. `neptune:*`), but there may be things where they only wish to give access to specific operations for that research (such as read but not write).  In the PR, mention what exactly we were trying to do when hitting the block so Ops can adequately decide if to grant full development environment permissions for that scenario.
 
 For anything else you run into or errors that aren't a clear permissions PR, put them on the Ops channel in Slack so they can know and multiple people can follow along with fixing.
