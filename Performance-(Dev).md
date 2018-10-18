@@ -10,11 +10,7 @@ The purpose of this page is to capture an initial performance assessment of vari
 
 ### Run ETL (Extract - Transform - Load)
 1. Install ([Rialto ETL](https://github.com/sul-dlss-labs/rialto-etl))
-2. Follow steps 4.iii and 5.i at (https://github.com/sul-dlss-labs/rialto-etl/wiki/ETL-First-load-procedure) to download the organization researcher data to use for ETL
-3. Run step 4.iv to transform the Organization Data
-4. Run step 4.v to load the Organization Data
-5. Run step 5.ii to transform the Researcher Data
-6. Run step 5.iii to load the Researcher Data
+2. [Extract, transform, and load organization and researcher data](https://github.com/sul-dlss-labs/rialto-etl/wiki/RIALTO-Combine-Load-Procedure)
 
 ### Extract CloudWatch Log Data
 
