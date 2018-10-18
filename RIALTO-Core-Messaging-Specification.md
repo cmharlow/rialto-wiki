@@ -12,8 +12,8 @@ message: JSON containing the following:
 
 Action options:
 - touch == C[R]UD on triples / rdf statements,
-- delete == full entity delete (stretch goal, i.e. completely remove an entity graph)
-- rebuild == full derivative dataset(s) rebuild. 
+- delete == full entity delete (**stretch goal, i.e. completely remove an entity graph**)
+- rebuild == full derivative dataset(s) rebuild. (**no longer used, left here in case we return to this approach**)
 - others as needed for edge cases or to differentiate sparql-load from ingest-service
 
 Entities: array of identifiers (URIs) that need to be updated / synced in derivative datastores. 
