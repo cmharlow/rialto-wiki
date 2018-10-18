@@ -31,7 +31,6 @@ each lambda has its own api gateway, and each gateway has a dedicated api key an
 All lambdas use same `RialtoLambda` execution role  
 `sparqlProxy` lambda has one trigger: its API Gateway  
 `derivatives` lambda has one trigger: SNS  
-`triggerRebuild` lambda has two triggers: its API Gateway, and CloudWatch Events (for scheduled/cron use case)  
 We use CircleCI/GitHub integration to automatically deploy lambdas to AWS.  
 
 # EC2
@@ -39,6 +38,12 @@ We use CircleCI/GitHub integration to automatically deploy lambdas to AWS.
 one instance running ingest service  
 one instance running solr  
 both using same VPC and Security Group  
+
+# ECS
+
+* `triggerRebuild` is an ECS task run on a schedule by CloudWatch Events
+* RIALTO Webapp is an ECS service
+* RIALTO-entity-resolver is an ECS service fronting the data store
 
 # Neptune
 
