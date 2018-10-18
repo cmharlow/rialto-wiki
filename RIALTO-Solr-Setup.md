@@ -1,3 +1,5 @@
+The primary purpose of Solr in RIALTO is as a backing store for the webapp. It holds data that is derived from the canonical store.
+
 For production we have been asked (by Operations) to use our in-house DLSS Solr Cloud. However, due to development work being done in the near future on our Solr Cloud, and due to network/firewall requirements, we'll have to use a Solr instance in the AWS cloud for the moment.
 
 ## EC2 Setup
