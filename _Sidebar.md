@@ -55,7 +55,7 @@
 # Development
 - [Getting Started](/sul-dlss/rialto/wiki/Getting-Started-(Dev-Env))
 - [Working with Localstack](/sul-dlss/rialto/wiki/Working-with-localstack)
-- [Setting up AWS CLI](/sul-dlss/rialto/wiki/AWS-DLSS-Dev-Env-Setup)
+- [Setting up AWS CLI](/sul-dlss/terraform-aws/wiki/AWS-DLSS-Dev-Env-Setup)
 
 # VIVO Assessment
 - [Jena/TDB vs Blazegraph](/sul-dlss/rialto/wiki/Comparing-triplestores)
