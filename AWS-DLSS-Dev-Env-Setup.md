@@ -10,7 +10,7 @@ The instructions below go through setting up access to `sul-dlss-development` or
 
 1. Go to http://console.aws.amazon.com/.
 2. Log into `sul-dlss-users` with your relevant account, with the Account Alias (top field) as `sul-dlss-users`, then your username and password. *NB: this does not correspond with user accounts in `sul-dlss` or other DLSS projects in AWS (like dlme, hybox, or others).*
-3. Once in your user account, you can assume the DevelopersRole in `sul-dlss-development` (our AWS development environment) by going to `your username @ sul-dlss-users`, clicking to expand the menu, then selecting `switch role`.
+3. Once in your user account, you can assume the DevelopersRole in `sul-dlss-development` (our AWS development environment) by going to `your username @ sul-dlss-users`, clicking to expand the menu, then selecting `Switch Role`.
 4. In the `Switch Role` login page, enter Account: `sul-dlss-development`, Role: `DevelopersRole` (case sensitive), and optionally rename the role in Display Name. Then click `Switch Role`.
 5. The top right corner should now show `DevelopersRole @ sul-dlss-development` (or whatever you changed the Display Name to in the last step). You now have access to the `sul-dlss-development` environment as a generic `DevelopersRole` user.
 6. To switch back to your username in the `sul-dlss-users` console, go to `DevelopersRole @ sul-dlss-development` in the top right corner, click to expand the menu, then select `Back to [your username]`.
