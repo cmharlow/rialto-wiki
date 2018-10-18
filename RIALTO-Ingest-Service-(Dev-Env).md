@@ -1,3 +1,5 @@
+**Note that the Ingest Service is not being targeted for usage or further development at this time. The "front door" of RIALTO Core is the SPARQL Proxy for community alignment purposes.**
+
 The dev instance of the RIALTO ingest service is running on Amazon EC2. You can get the IP address of the instance via the AWS Console.
 
 # Service
