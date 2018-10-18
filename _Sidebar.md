@@ -12,6 +12,7 @@
 - [Terraform and RIALTO](/sul-dlss/rialto/wiki/Terraform-and-RIALTO)
 - [Start/Stop Infra (Dev)](/sul-dlss/rialto/wiki/Development-Infrastructure---Starting-and-Stopping)
 - [Performance (Dev)](/sul-dlss/rialto/wiki/Performance-(Dev))
+- [SPARQL Recipes](/sul-dlss/rialto/wiki/SPARQL-Recipes)
 
 #### Specs
 
