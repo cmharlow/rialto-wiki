@@ -47,5 +47,15 @@ DELETE { ?s ?p ?o . }
 WHERE {
       ?s rdf:type <http://xmlns.com/foaf/0.1/Organization> .
       ?s ?p ?o
-};
+}
 ```
+
+## Wipe all data
+
+**WARNING: This will delete every triple in the store.**
+
+```sparql
+DROP ALL
+```
+
+Note that the last time I ran this, the endpoint responds with a `504 Gateway Timeout` and a `"Endpoint request timed out"` message. Despite that error status, the entire graph was wiped a few moments later without my needing to intervene.
