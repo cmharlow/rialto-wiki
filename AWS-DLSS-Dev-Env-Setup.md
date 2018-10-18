@@ -54,9 +54,9 @@ aws sts assume-role --role-session-name DevelopersRole --role-arn arn:aws:iam::4
 where `your-user-profile-name` is what you set above for awscli to `sul-dlss-users`. Save the response somewhere handy, as that gives you the information back you need for the next steps.
 
 2. Again in your terminal, enter `aws configure --profile your-dev-role-profile-name` (`your-dev-role-profile-name` can be whatever you want for labeling your use of the shared DevelopersRole within `sul-dlss-development`).
-3. When prompted, enter the access key and secret access key based on the keys returned in the step 1 (`sts assume-role`) command. Leave region as `us-east-1` and output as `json` (unless you prefer some other output).
+3. When prompted, enter the Access Key Id and Secret Access Key based on the keys returned in the step 1 (`sts assume-role`) command. Leave region as `us-east-1` and output as `json` (unless you prefer some other output).
 4. Now we're going to edit your local awscli config to allow the assumption of the role via awscli profile. Edit your aws config file by using in the terminal `vi ~/.aws/config` (or whatever editor you want to use).
-5. at the bottom of that config file, you'll see the `your-dev-role-profile-name` you just added. Update that entry to be this, entering `your-user-profile-name` from the above `sul-dlss-users` awscli configuration in the `source_profile` field: 
+5. At the bottom of that config file, you'll see the `your-dev-role-profile-name` you just added. Update that entry to be this, entering `your-user-profile-name` from the above `sul-dlss-users` awscli configuration in the `source_profile` field: 
 
 ```ini
 [profile your-dev-role-profile-name]
@@ -66,7 +66,7 @@ region = us-west-2
 source_profile = your-user-profile-name
 ```
 
-6. Close + save the update config file, then in a terminal, run `aws sts get-caller-identity --profile your-dev-role-profile-name`. You should get a response like (except with real identifiers):
+6. Save and close the update config file, then in a terminal, run `aws sts get-caller-identity --profile your-dev-role-profile-name`. You should get a response like (except with real identifiers):
 
 ```json
 {
