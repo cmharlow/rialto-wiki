@@ -50,8 +50,9 @@ Now we're going to set up a separate awscli profile for the shared developer rol
 1. In your terminal, enter: 
 ```bash
 aws sts assume-role --role-session-name DevelopersRole --role-arn arn:aws:iam::418214828013:role/DevelopersRole --profile your-user-profile-name
-``` 
+```
 where `your-user-profile-name` is what you set above for awscli to `sul-dlss-users`. Save the response somewhere handy, as that gives you the information back you need for the next steps.
+
 2. Again in your terminal, enter `aws configure --profile your-dev-role-profile-name` (`your-dev-role-profile-name` can be whatever you want for labeling your use of the shared DevelopersRole within `sul-dlss-development`).
 3. When prompted, enter the access key and secret access key based on the keys returned in the step 1 (`sts assume-role`) command. Leave region as `us-east-1` and output as `json` (unless you prefer some other output).
 4. Now we're going to edit your local awscli config to allow the assumption of the role via awscli profile. Edit your aws config file by using in the terminal `vi ~/.aws/config` (or whatever editor you want to use).
