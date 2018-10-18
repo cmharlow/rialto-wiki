@@ -9,11 +9,17 @@
   - [Terraform (2018/09)](https://youtu.be/tk9vsPpdcw0)
 
 ### RIALTO Core
+- [Terraform and RIALTO](/sul-dlss/rialto/wiki/Terraform-and-RIALTO)
 - [Start/Stop Infra (Dev)](/sul-dlss/rialto/wiki/Development-Infrastructure---Starting-and-Stopping)
 - [Performance (Dev)](/sul-dlss/rialto/wiki/Performance-(Dev))
-- [Terraform and RIALTO](/sul-dlss/rialto/wiki/Terraform-and-RIALTO)
+
+#### Specs
+
 - [AWS Build Specification](/sul-dlss/rialto/wiki/AWS-Build-Specification)
 - [Messaging Specification](/sul-dlss/rialto/wiki/RIALTO-Core-Messaging-Specification)
+
+#### Integration and Components
+
 - [Neptune/λ Integration](/sul-dlss/rialto/wiki/Neptune-Lambda-Integration)
 - [Core/Combine Integration](/sul-dlss/rialto/wiki/RIALTO-Combine-Core-Integration)
 - [SPARQL Proxy λ](/sul-dlss/rialto/wiki/RIALTO-SPARQL-Proxy-Lambda)
