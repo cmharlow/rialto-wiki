@@ -1,5 +1,7 @@
 The canonical AWS build specification for RIALTO lives in our [Terraform repository](https://github.com/sul-dlss/terraform-aws).
 
+**This page is largely out of date, replaced by the aforementioned Terraform definitions.**
+
 Here are some notes that may help building out our Terraform work.
 
 # Region
