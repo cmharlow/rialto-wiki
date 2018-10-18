@@ -28,8 +28,8 @@ NB: Install the AWS command line tool (awscli) if you haven't already before pro
 3. In the "Identity and Access Management" (IAM) console page, using the side navigation, select `Users`. 
 4. Find your username and click on it.
 5. On the summary page for your username account, go to the `Security Credentials` tab, then under Access Keys, click `Create access key`, which will create & download a CSV to your computer with your access id and access secret key.
-6. Once you have that, go to your terminal and run `aws configure --profile your-user-profile-name` (`your-user-profile-name` can be whatever you want for labeling your `sul-dlss-users` account).
-7. When prompted, enter the keys from your downloaded CSV as requested, then for region enter `us-east-1`, and for data output, `json` (unless you want something other than json).
+6. Once you have that, go to your terminal and run `aws configure --profile your-user-profile-name` (`your-user-profile-name` can be whatever you want for labeling your `sul-dlss-users` account, but we recommend naming it `users` as Terraform expects that).
+7. When prompted, enter the keys from your downloaded CSV as requested, then for region enter `us-west-2`, and for data output, `json` (unless you want something other than json).
 8. Once done, if you run this: `aws sts get-caller-identity --profile your-user-profile-name`
 you should get something like this (except with real UserId & Account entries):
 
@@ -54,7 +54,7 @@ aws sts assume-role --role-session-name DevelopersRole --role-arn arn:aws:iam::4
 where `your-user-profile-name` is what you set above for awscli to `sul-dlss-users`. Save the response somewhere handy, as that gives you the information back you need for the next steps.
 
 2. Again in your terminal, enter `aws configure --profile your-dev-role-profile-name` (`your-dev-role-profile-name` can be whatever you want for labeling your use of the shared DevelopersRole within `sul-dlss-development`).
-3. When prompted, enter the Access Key Id and Secret Access Key based on the keys returned in the step 1 (`sts assume-role`) command. Leave region as `us-east-1` and output as `json` (unless you prefer some other output).
+3. When prompted, enter the Access Key Id and Secret Access Key based on the keys returned in the step 1 (`sts assume-role`) command. Leave region as `us-west-2` and output as `json` (unless you prefer some other output).
 4. Now we're going to edit your local awscli config to allow the assumption of the role via awscli profile. Edit your aws config file by using in the terminal `vi ~/.aws/config` (or whatever editor you want to use).
 5. At the bottom of that config file, you'll see the newly added `your-dev-role-profile-name`. Update that entry to include `role_arn` and `source_profile` (referencing your user profile, e.g. `your-user-profile-name`). 
 
