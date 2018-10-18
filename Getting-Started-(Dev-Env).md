@@ -21,7 +21,7 @@ Review the [[RIALTO Architecture]] to become familiar with the different compone
 There are other components in the architecture not involved with the data flow above, and they include:
 
 * the [RIALTO Ingest service](https://github.com/sul-dlss/rialto/wiki/RIALTO-Ingest-Service-(Dev-Env)), which is a Go-based codebase that runs on EC2 and is an alternative to the SPARQL Proxy. We decided to put our energy into the proxy rather than the ingest service since the proxy provides greater community overlap opportunities, because VIVO/Vitro exposes a SPARQL Update API for loading data.
-* the [Rebuild Trigger lambda](https://github.com/sul-dlss/rialto/wiki/RIALTO-Rebuild-Trigger-Lambda-(Dev-Env)), which allows us to schedule a nightly rebuild (and trigger manual rebuilds) of the derivative datastore from what's in Neptune.
+* the [Rebuild Trigger task](https://github.com/sul-dlss/rialto/wiki/RIALTO-Rebuild-Trigger), which allows us to schedule a nightly rebuild of the derivative datastore from what's in Neptune.
 
 
 # Localstack
@@ -34,7 +34,7 @@ Before you begin working with our AWS-based development environment, you'll need
 
 # Authorization
 
-Both the RIALTO SPARQL Proxy lambda and the Rebuild Trigger lambda expose HTTP APIs. We control access to these APIs using API keys, via AWS API Gateway. Clients, such as the tools we build for the RIALTO Combine (data pipeline/ETL, if you will), can connect to RIALTO Core using these API keys. Read more about [Combine/Core integration](https://github.com/sul-dlss/rialto/wiki/RIALTO-Combine-Core-Integration).
+Both the RIALTO SPARQL Proxy lambda and the Entity Resolver service expose HTTP APIs. We control access to these APIs using API keys, via AWS API Gateway. Clients, such as the tools we build for the RIALTO Combine (data pipeline/ETL, if you will), can connect to RIALTO Core using these API keys. Read more about [Combine/Core integration](https://github.com/sul-dlss/rialto/wiki/RIALTO-Combine-Core-Integration), and see [shared_configs](https://github.com/sul-dlss/shared_configs/blob/rialto-etl-prod/config/settings/production.yml) for URLs and API keys.
 
 # Network
 
