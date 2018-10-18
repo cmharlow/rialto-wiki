@@ -2,23 +2,25 @@
 - [RIALTO Wiki Homepage](/sul-dlss/rialto/wiki)
 - [RIALTO Architecture](/sul-dlss/rialto/wiki/RIALTO-Architecture)
 - [RIALTO Data Models](/sul-dlss/rialto/wiki/RIALTO-Data-Models-&amp;-Profiles)
+- [RIALTO Acceptance Criteria](/sul-dlss/rialto/wiki/RIALTO-Core-Acceptance-Criteria-&amp;-Tests)
 - Demo Videos
   - [Intro (2018/06)](https://youtu.be/hNdJFbDfAmk)
   - [UI Comps (2018/08)](https://youtu.be/ZEfgRXGxsGc)
   - [Terraform (2018/09)](https://youtu.be/tk9vsPpdcw0)
 
 ### RIALTO Core
+- [Start/Stop Infrastructure (Dev)](/sul-dlss/rialto/wiki/Development-Infrastructure---Starting-and-Stopping)
+- [Performance](/sul-dlss/rialto/wiki/Performance-(Dev))
+- [Terraform and RIALTO](/sul-dlss/rialto/wiki/Terraform-and-RIALTO)
 - [AWS Build Specification](/sul-dlss/rialto/wiki/AWS-Build-Specification)
 - [Messaging Specification](/sul-dlss/rialto/wiki/RIALTO-Core-Messaging-Specification)
 - [Neptune/λ Integration](/sul-dlss/rialto/wiki/Neptune-Lambda-Integration)
 - [Core/Combine Integration](/sul-dlss/rialto/wiki/RIALTO-Combine-Core-Integration)
-- [SPARQL Proxy λ (Dev)](/sul-dlss/rialto/wiki/RIALTO-SPARQL-Proxy-Lambda-(Dev-Env))
-- [Derivatives λ (Dev)](/sul-dlss/rialto/wiki/RIALTO-Derivatives-Lambda-(Dev-Env))
-- [Rebuild Trigger λ (Dev)](/sul-dlss/rialto/wiki/RIALTO-Rebuild-Trigger-Lambda-(Dev-Env))
-- [Solr Setup (Dev)](/sul-dlss/rialto/wiki/RIALTO-Solr-Setup-(Dev-Env))
-- [Ingest Service (Dev)](/sul-dlss/rialto/wiki/RIALTO-Ingest-Service-(Dev-Env))
-- [Infrastructure (Dev)](/sul-dlss/rialto/wiki/Development-Infrastructure---Starting-and-Stopping)
-- [Performance](/sul-dlss/rialto/wiki/Performance)
+- [SPARQL Proxy λ](/sul-dlss/rialto/wiki/RIALTO-SPARQL-Proxy-Lambda)
+- [Derivatives λ](/sul-dlss/rialto/wiki/RIALTO-Derivatives-Lambda)
+- [Rebuild Trigger λ](/sul-dlss/rialto/wiki/RIALTO-Rebuild-Trigger-Lambda)
+- [Solr Setup](/sul-dlss/rialto/wiki/RIALTO-Solr-Setup)
+- [Ingest Service](/sul-dlss/rialto/wiki/RIALTO-Ingest-Service)
 
 ### RIALTO Web App
 - [Web App Specs](/sul-dlss/rialto/wiki/Web-App-Specs)
@@ -41,7 +43,6 @@
 - [Neptune Support](/sul-dlss/rialto/wiki/Neptune-Support-in-Terraform)
 - [S3 Support](/sul-dlss/rialto/wiki/S3-Support-in-Terraform)
 - [SNS Support](/sul-dlss/rialto/wiki/SNS-Support-in-Terraform)
-- [Terraform and RIALTO](/sul-dlss/rialto/wiki/Terraform-and-RIALTO)
 
 # Development
 - [Getting Started](/sul-dlss/rialto/wiki/Getting-Started-(Dev-Env))
