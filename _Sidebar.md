@@ -9,8 +9,8 @@
   - [Terraform (2018/09)](https://youtu.be/tk9vsPpdcw0)
 
 ### RIALTO Core
-- [Start/Stop Infrastructure (Dev)](/sul-dlss/rialto/wiki/Development-Infrastructure---Starting-and-Stopping)
-- [Performance](/sul-dlss/rialto/wiki/Performance-(Dev))
+- [Start/Stop Infra (Dev)](/sul-dlss/rialto/wiki/Development-Infrastructure---Starting-and-Stopping)
+- [Performance (Dev)](/sul-dlss/rialto/wiki/Performance-(Dev))
 - [Terraform and RIALTO](/sul-dlss/rialto/wiki/Terraform-and-RIALTO)
 - [AWS Build Specification](/sul-dlss/rialto/wiki/AWS-Build-Specification)
 - [Messaging Specification](/sul-dlss/rialto/wiki/RIALTO-Core-Messaging-Specification)
