@@ -25,7 +25,7 @@
 - [Core/Combine Integration](/sul-dlss/rialto/wiki/RIALTO-Combine-Core-Integration)
 - [SPARQL Proxy λ](/sul-dlss/rialto/wiki/RIALTO-SPARQL-Proxy-Lambda)
 - [Derivatives λ](/sul-dlss/rialto/wiki/RIALTO-Derivatives-Lambda)
-- [Rebuild Trigger λ](/sul-dlss/rialto/wiki/RIALTO-Rebuild-Trigger-Lambda)
+- [Rebuild Trigger Task](/sul-dlss/rialto/wiki/RIALTO-Rebuild-Trigger)
 - [Solr Setup](/sul-dlss/rialto/wiki/RIALTO-Solr-Setup)
 - [Ingest Service](/sul-dlss/rialto/wiki/RIALTO-Ingest-Service)
 
