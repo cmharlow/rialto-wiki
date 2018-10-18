@@ -1,6 +1,6 @@
 # Introduction
 
-The purpose of this page is to capture an initial performance assessment of various components of RIALTO Core.
+The purpose of this page is to capture an initial performance assessment of various components of RIALTO Core, tested within the development environment in AWS.
 
 # RIALTO Core Ingest
 
