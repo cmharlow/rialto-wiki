@@ -77,6 +77,10 @@ role_arn = arn:aws:iam::742528315309:role/DevelopersRole
 source_profile = your-user-profile-name
 ```
 
+# Using the profiles with Terraform
+
+When you use Terraform, you want to use the profile for `sul-dlss-users`.  The Terraform config itself will try to switch roles to the proper one for the environment you want to work on, so trying to give it a profile for a specific environment will just confuse things and give you an error when, for example, the already-assumed developers role tries to then re-assume the developers role and is told that it can't do so.
+
 # A Note on Shared DevelopersRole Permissions
 
 As for the permissions on that shared DevelopersRole within `sul-dlss-development` environment - its meant to be open for development usage, but its not entirely open yet. You can see here an example PR for adding permissions to the role: https://github.com/sul-dlss/terraform-aws/pull/45
