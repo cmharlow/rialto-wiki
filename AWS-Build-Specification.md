@@ -6,7 +6,7 @@ Here are some notes that may help building out our Terraform work.
 
 # Region
 
-`us-east-1` (changing to `us-west-2`)
+`us-west-2`
 
 # VPCs 
 
