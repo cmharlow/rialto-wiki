@@ -45,28 +45,17 @@ You can now use awscli with your `sul-dlss-users` account by applying the `--pro
 
 # Set up AWSCLI for `sul-dlss-development`
 
-Now we're going to set up a separate awscli profile for the shared developer role within `sul-dlss-development`. You must have done the awscli setup above for your account in `sul-dlss-users` first!
+Now we're going to set up a separate awscli profile for the shared developer role within `sul-dlss-development`. You must have done the awscli setup above for your account in `sul-dlss-users` first!  The developer profile will just inherit the settings for the main `sul-dlss-users` account and then add a role change.
 
-1. In your terminal, enter: 
-```bash
-aws sts assume-role --role-session-name DevelopersRole --role-arn arn:aws:iam::418214828013:role/DevelopersRole --profile your-user-profile-name
-```
-where `your-user-profile-name` is what you set above for awscli to `sul-dlss-users`. Save the response somewhere handy, as that gives you the information back you need for the next steps.
-
-2. Again in your terminal, enter `aws configure --profile your-dev-role-profile-name` (`your-dev-role-profile-name` can be whatever you want for labeling your use of the shared DevelopersRole within `sul-dlss-development`).
-3. When prompted, enter the Access Key Id and Secret Access Key based on the keys returned in the step 1 (`sts assume-role`) command. Leave region as `us-west-2` and output as `json` (unless you prefer some other output).
-4. Now we're going to edit your local awscli config to allow the assumption of the role via awscli profile. Edit your aws config file by using in the terminal `vi ~/.aws/config` (or whatever editor you want to use).
-5. At the bottom of that config file, you'll see the newly added `your-dev-role-profile-name`. Update that entry to include `role_arn` and `source_profile` (referencing your user profile, e.g. `your-user-profile-name`). 
+1. Edit your local awscli config to allow the assumption of the role via awscli profile. Edit your aws config file by using in the terminal `vi ~/.aws/config` (or whatever editor you want to use).
+2. At the bottom of that config file, you'll add a new entry including `role_arn` and `source_profile` (referencing your user profile, e.g. `your-user-profile-name`). 
 
 ```ini
-[profile your-dev-role-profile-name]
-output = json
+[your-dev-role-profile-name]
 role_arn = arn:aws:iam::418214828013:role/DevelopersRole
-region = us-west-2
 source_profile = your-user-profile-name
 ```
-
-6. Save and close the update config file, then in a terminal, run `aws sts get-caller-identity --profile your-dev-role-profile-name`. You should get a response like (except with real identifiers):
+3. Save and close the update config file, then in a terminal, run `aws sts get-caller-identity --profile your-dev-role-profile-name`. You should get a response like (except with real identifiers):
 
 ```json
 {
@@ -77,6 +66,16 @@ source_profile = your-user-profile-name
 ``` 
 
 Now you can run the awscli with the shared DevelopersRole within the `sul-dlss-development` environment by using the `--profile your-dev-role-profile-name` flag at the end of the awscli commands.
+
+# Set up AWSCLI for `sul-dlss-staging`
+
+Follow the instructions for `sul-dlss-staging`, but use a different profile name and the account ID for staging.
+
+```ini
+[your-stage-role-profile-name]
+role_arn = arn:aws:iam::742528315309:role/DevelopersRole
+source_profile = your-user-profile-name
+```
 
 # A Note on Shared DevelopersRole Permissions
 
