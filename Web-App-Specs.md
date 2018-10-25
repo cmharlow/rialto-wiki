@@ -67,7 +67,7 @@ Both of the above reports display a table on the screen.  In each case, the data
 Note that the csv output below may have multiple rows per paper, if the paper has co-authors across multiple institutions.  In this case, there would be one row per unique institution of co-authorship.  In the case of only one co-authorship institution (i.e. one co-author, or many co-authors but all at the same institution), there will be one row for that publication.  The number of collaborations column counts the name of co-authors at the institution (will be at least one for each row).
 
 Department | Institution | Author | Author's Co-Author | Co-Author Institution  | Number of Collaborations 
---- | --- | --- | --- | --- | --- | --- 
+--- | --- | --- | --- | --- | --- 
 Chemistry  | Stanford    | John Smith | Jane Smith, XXX  | Harvard  | 2 
 Chemistry  | Stanford    | John Smith | Jane Okoye, Patrick Hoch, XX, YY, etc.  | Ghent    | 10 
 Chemistry  | Stanford    | John Smith | Peter Smith, YY, ZZ, etc.  | Brussels U | 10 
