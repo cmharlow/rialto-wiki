@@ -4,7 +4,6 @@ Drawn from use cases written up in [our (private) Jira RIALTO repository](https:
 
 https://drive.google.com/drive/u/1/folders/1d-UFRxmHDFsb8vDXQvkNGlR66Tb-KkWp
 
-
 # Search interface
 
 ## Results (i.e. Entities that get indexed)
@@ -23,7 +22,7 @@ https://drive.google.com/drive/u/1/folders/1d-UFRxmHDFsb8vDXQvkNGlR66Tb-KkWp
   - department or other organizational unit (e.g. school)
   - agent (researcher / faculty member)
 
-<a name="REPORTS"></a># Reports for 2018 Workcycle
+# <a name="REPORTS"></a>Reports for 2018 Workcycle
 
 ## <a name="RIALTO8"></a>**Collaboration Reports** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
 
