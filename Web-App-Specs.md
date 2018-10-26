@@ -78,19 +78,32 @@ Medicine   | Stanford    | Lady Red   | Jane Okoye, YY, ZZ, etc.   | Ghent    | 
 Medicine   | Stanford    | John Doe   | Mary Cary   | Sorbonne   | 1 
 
 ***
-## **Research Trends Report** ([RIALTO-13](https://jirasul.stanford.edu/jira/browse/RIALTO-13))
+## **Cross-Disciplinary Research Output by Topic Report** ([RIALTO-15](https://jirasul.stanford.edu/jira/browse/RIALTO-15))
 
-Administrator selects a range of years and an administrative unit (school, institute or department).  The report shows one column per year, with a row for each subject heading which shows the number of publications in that subject heading.  The report is sorted by number of publications, you can quickly see which subject areas had the most publications in any given year.
+Administrator selects a range of years and a topic area or areas.  The report shows one column per year, with a row for each academic institute which shows the number of publications produced by faculty members associated with that institute in that topic area(s).  
 
 Since we do not know which academic units are institutes and which are departments from the Profiles organization API, we will need to manually curate this list and add it to configuration in order to run this report.
 
-e.g. Publication Topic Area(s): chemistry, art
-
-academic institute | 2001 | 2002 | 2003
+institute | 2001 | 2002 | 2003
 ------------------ | ---- | ---- | ----
 school of medicine | 12   |    8 |  92
 school of art      | 30   |    0 | 103
 hoover institution | 210  |   56 |  3
+
+***
+## **Research Trends Report** ([RIALTO-13](https://jirasul.stanford.edu/jira/browse/RIALTO-13))
+
+Administrator selects a range of years and an administrative unit (school, institute or department).  The report shows one column per year, with a row for each subject heading which shows the number of publications in that subject heading.  The report is sorted by number of publications, you can quickly see which subject areas had the most publications in any given year.
+
+Topics/subject headings are pulled from WoS data. 
+
+e.g. Institutes(s): school of arts and sciences; medical school
+
+topic | 2001 | 2002 | 2003
+------------------ | ---- | ---- | ----
+physics | 12   |    8 |  92
+math     | 30   |    0 | 103
+oncology | 210  |   56 |  3
 
 ***
 # Potential Reports for Future Workcycle
