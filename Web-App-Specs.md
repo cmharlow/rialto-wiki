@@ -68,7 +68,7 @@ Output is one row per co-author with the information below.  Example tabular out
 4) Stanford faculty member's co-author institution name
 ```
 
-Note that this tabular output may have multiple rows per paper, if the paper has co-authors across multiple institutions.  In this case, there would be one row per unique institution of co-authorship.  In the case of only one co-authorship institution (i.e. one co-author, or many co-authors but all at the same institution), there will be one row for that publication.  The number of collaborations column counts the name of co-authors at the institution (will be at least one for each row).
+Note that this tabular output may have multiple rows per paper, if the paper has co-authors across multiple institutions.  In this case, there would be one row per unique institution of co-authorship.  In the case of only one co-authorship institution (i.e. one co-author, or many co-authors but all at the same institution), there will be one row for that publication.  The number of collaborations column counts the number of co-authors at the institution (will be at least one for each row).
 
 Department | Institution | Author | Author's Co-Author | Co-Author Institution  | Number of Collaborations 
 --- | --- | --- | --- | --- | --- 
