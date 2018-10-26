@@ -57,18 +57,9 @@ Italy 345
 etc.
 ```
 
-### Report 3 of Collaboration Report - by co-author ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8)):
+### Report 3 of Collaboration Report - co-author by institution ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8)):
 
-Output is one row per co-author with the information below.  Example tabular output is below the description.
-
-```
-1) Stanford faculty member name
-2) Stanford faculty member Org
-3) Stanford faculty member's co-author name(s) -- could be many if they are at the same institution for a given paper
-4) Stanford faculty member's co-author institution name
-```
-
-Note that this tabular output may have multiple rows per paper, if the paper has co-authors across multiple institutions.  In this case, there would be one row per unique institution of co-authorship.  In the case of only one co-authorship institution (i.e. one co-author, or many co-authors but all at the same institution), there will be one row for that publication.  The number of collaborations column counts the number of co-authors at the institution (will be at least one for each row).
+Output is one row per institution per paper with the information below. Note that this tabular output may have multiple rows per paper, if the paper has co-authors across multiple institutions.  In this case, there would be one row per unique institution of co-authorship.  In the case of only one co-authorship institution (i.e. one co-author, or many co-authors but all at the same institution), there will be one row for that publication.  The number of collaborations column counts the number of co-authors at the institution (will be at least one for each row).
 
 In this example, there are two papers, but five rows, because there are five unique institutions for co-authors of those two papers represented.
 
