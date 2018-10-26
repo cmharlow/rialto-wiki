@@ -23,11 +23,13 @@ https://drive.google.com/drive/u/1/folders/1d-UFRxmHDFsb8vDXQvkNGlR66Tb-KkWp
   - department or other organizational unit (e.g. school)
   - agent (researcher / faculty member)
 
-# Reports for 2018 Workcycle
+<a name="REPORTS"></a># Reports for 2018 Workcycle
 
 ## <a name="RIALTO8"></a>**Collaboration Reports** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
 
-This use case consists of three reports, all related to how Stanford authors collaborate with our institutions (and thus also other countries).  These three reports are all accessible via a single button navigational element from the home screen called "Collaboration Reports".  They all have the same filtering/faceting mechanisms.  Each of the reports shows tabular output on screen and has a link to download the same tabuluar data as CSV.  To navigate between the three different tables of the collaboration report, you use a drop-down menu and a submit button (we can make usability changes to the UI later as needed).
+Also see the [visualizations](#VISUALIZATIONS) for this report.
+
+This use case consists of three reports, all related to how Stanford authors collaborate with our institutions (and thus also other countries).  These three reports are all accessible via a single button navigational element from the home screen called "Collaboration Reports".  They all have the same filtering/faceting mechanisms.  Each of the reports shows tabular output on screen and has a link to download the same tabular data as CSV.  To navigate between the three different tables of the collaboration report, you use a drop-down menu and a submit button (we can make usability changes to the UI later as needed).
 
 ### Report 1 of Collaboration Report - by institution ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8)):
 
@@ -156,7 +158,7 @@ Department | Topics of Faculty Publications in Jan | ... Feb | ... March | ... A
 ---------- | --- | --- | ----- | ----- | --- | ---- | ---- | --- | ---- | --- | --- | ---
 Chemistry  | Polymers, Astrochemistry  | Biochem   | Topic 2, Topic 3, Topic 4     | Topic 5  |  Topic 5, Topic 1, Topic 56 |    Topic 0 |   Topic 2 | Topic 10 | Topic 2, Topic 0, Topic 21 |  Topic 20 | Topic 3, Topic 0, Topic 5 | Topic 8
 
-# Visualizations
+<a name="VISUALIZATIONS"></a># Visualizations
 
 ## **Country Collaboration Visualization** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
 
