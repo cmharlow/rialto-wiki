@@ -27,7 +27,7 @@ https://drive.google.com/drive/u/1/folders/1d-UFRxmHDFsb8vDXQvkNGlR66Tb-KkWp
 
 ## <a name="RIALTO8"></a>**Collaboration Reports** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
 
-Also see the [visualizations](#VISUALIZATIONS) for this report.
+Also see the [visualizations](#user-content-VISUALIZATIONS) for this report.
 
 This use case consists of three reports, all related to how Stanford authors collaborate with our institutions (and thus also other countries).  These three reports are all accessible via a single button navigational element from the home screen called "Collaboration Reports".  They all have the same filtering/faceting mechanisms.  Each of the reports shows tabular output on screen and has a link to download the same tabular data as CSV.  To navigate between the three different tables of the collaboration report, you use a drop-down menu and a submit button (we can make usability changes to the UI later as needed).
 
@@ -162,7 +162,7 @@ Chemistry  | Polymers, Astrochemistry  | Biochem   | Topic 2, Topic 3, Topic 4  
 
 ## **Country Collaboration Visualization** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
 
-See also the related [CSV and tabular output](#RIALTO8) associated with this visualization above.
+See also the related [CSV and tabular output](#user-content-RIALTO8) associated with this visualization above.
 
 Given agent, heat map of the world with color coding on countries to indicate frequency of collaboration.  This is determined by looking at the countries in the addresses shown for co-authors of that agent's publications.  
 Questions: 
