@@ -70,13 +70,15 @@ Output is one row per co-author with the information below.  Example tabular out
 
 Note that this tabular output may have multiple rows per paper, if the paper has co-authors across multiple institutions.  In this case, there would be one row per unique institution of co-authorship.  In the case of only one co-authorship institution (i.e. one co-author, or many co-authors but all at the same institution), there will be one row for that publication.  The number of collaborations column counts the number of co-authors at the institution (will be at least one for each row).
 
-Department | Institution | Author | Author's Co-Author | Co-Author Institution  | Number of Collaborations 
---- | --- | --- | --- | --- | --- 
-Chemistry  | Stanford    | John Smith | Jane Smith, XXX  | Harvard  | 2 
-Chemistry  | Stanford    | John Smith | Jane Okoye, Patrick Hoch, XX, YY, etc.  | Ghent    | 10 
-Chemistry  | Stanford    | John Smith | Peter Smith, YY, ZZ, etc.  | Brussels U | 10 
-Medicine   | Stanford    | Lady Red   | Jane Okoye, YY, ZZ, etc.   | Ghent    | 10 
-Medicine   | Stanford    | John Doe   | Mary Cary   | Sorbonne   | 1 
+In this example, there are two papers, but five rows, because there are five unique institutions for co-authors of those two papers represented.
+
+Title | WoSUID (unique ID for pub) | Department | Institution | Author | Author's Co-Author | Co-Author Institution  | Number of Collaborations Per Publication 
+--- | --- | --- | --- | --- | --- | --- | --- 
+Some Paper Title | 1234 | Chemistry  | Stanford    | John Smith | Jane Smith, Another Person  | Harvard  | 2 (count of the authors for this paper at this institution)
+Some Paper Title | 1234 | Chemistry  | Stanford    | John Smith | Jane Okoye, Patrick Hoch, XX, YY, etc.  | Ghent    | 10 
+Some Paper Title | 1234 | Chemistry  | Stanford    | John Smith | Peter Smith, YY, ZZ, etc.  | Brussels U | 10 
+Some Paper Title | 5678 | Medicine   | Stanford    | Lady Red   | Jane Okoye, YY, ZZ, etc.   | Ghent    | 10 
+Some Paper Title | 5678 | Medicine   | Stanford    | Lady Red   | Mary Cary   | Sorbonne   | 1 
 
 ***
 ## **Cross-Disciplinary Research Output by Topic Report** ([RIALTO-15](https://jirasul.stanford.edu/jira/browse/RIALTO-15))
