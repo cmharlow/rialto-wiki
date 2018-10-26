@@ -23,9 +23,13 @@ https://drive.google.com/drive/u/1/folders/1d-UFRxmHDFsb8vDXQvkNGlR66Tb-KkWp
   - department or other organizational unit (e.g. school)
   - agent (researcher / faculty member)
 
-# Reports
+# Reports for 2018 Workcycle
 
-<a name="RIALTO8"></a>**Institution Collaboration Report** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
+## <a name="RIALTO8"></a>**Collaboration Reports** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
+
+This use case consists of three reports, all related to how Stanford authors collaborate with our institutions (and thus also other countries).  These three reports are all accessible via a single button navigational element from the home screen called "Collaboration Reports".  They all have the same filtering/faceting mechanisms.  Each of the reports shows tabular output on screen and has a link to download the same tabuluar data as CSV.  To navigate between the three different tables of the collaboration report, you use a drop-down menu and a submit button (we can make usability changes to the UI later as needed).
+
+### Report 1 of Collaboration Report - by institution ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8)):
 
 Authors joined with Co-Authors aggregate count of publications by institution
 ```
@@ -38,8 +42,7 @@ Harvard University 200
 etc.
 ```
 
-***
-**Country Collaboration Report** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
+### Report 2 of Collaboration Report - by country ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8)):
 
 Authors joined with Co-Authors aggregate count of publications by country
 ```
@@ -53,10 +56,10 @@ Italy 345
 etc.
 ```
 
-***
-**Institution/Country Collaboration Raw Data Export** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
+### Report 3 of Collaboration Report - by co-author ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8)):
 
-Both of the above reports display a table on the screen.  In each case, the data is displayed on the screen (and used to create the choropleth in the case of the countries).  However, we will also provide the option to download the raw data used to create those aggregated reports in CSV export, so that the user can perform other analysis in a program like Excel.  The CSV export would include rows with the following:
+Output is one row per co-author with the information below.  Example tabular output is below the description.
+
 ```
 1) Stanford faculty member name
 2) Stanford faculty member Org
@@ -64,7 +67,7 @@ Both of the above reports display a table on the screen.  In each case, the data
 4) Stanford faculty member's co-author institution name
 ```
 
-Note that the csv output below may have multiple rows per paper, if the paper has co-authors across multiple institutions.  In this case, there would be one row per unique institution of co-authorship.  In the case of only one co-authorship institution (i.e. one co-author, or many co-authors but all at the same institution), there will be one row for that publication.  The number of collaborations column counts the name of co-authors at the institution (will be at least one for each row).
+Note that this tabular output may have multiple rows per paper, if the paper has co-authors across multiple institutions.  In this case, there would be one row per unique institution of co-authorship.  In the case of only one co-authorship institution (i.e. one co-author, or many co-authors but all at the same institution), there will be one row for that publication.  The number of collaborations column counts the name of co-authors at the institution (will be at least one for each row).
 
 Department | Institution | Author | Author's Co-Author | Co-Author Institution  | Number of Collaborations 
 --- | --- | --- | --- | --- | --- 
@@ -75,9 +78,13 @@ Medicine   | Stanford    | Lady Red   | Jane Okoye, YY, ZZ, etc.   | Ghent    | 
 Medicine   | Stanford    | John Doe   | Mary Cary   | Sorbonne   | 1 
 
 ***
-**Research Trends Report** ([RIALTO-13](https://jirasul.stanford.edu/jira/browse/RIALTO-13))
+## **Research Trends Report** ([RIALTO-13](https://jirasul.stanford.edu/jira/browse/RIALTO-13))
 
-Publication Topic Area(s): chemistry, art
+Administrator selects a range of years and an administrative unit (school, institute or department).  The report shows one column per year, with a row for each subject heading which shows the number of publications in that subject heading.  The report is sorted by number of publications, you can quickly see which subject areas had the most publications in any given year.
+
+Since we do not know which academic units are institutes and which are departments from the Profiles organization API, we will need to manually curate this list and add it to configuration in order to run this report.
+
+e.g. Publication Topic Area(s): chemistry, art
 
 academic institute | 2001 | 2002 | 2003
 ------------------ | ---- | ---- | ----
@@ -86,7 +93,7 @@ school of art      | 30   |    0 | 103
 hoover institution | 210  |   56 |  3
 
 ***
-**Grant Publication Report** ([RIALTO-12](https://jirasul.stanford.edu/jira/browse/RIALTO-12))
+## **Grant Publication Report** ([RIALTO-12](https://jirasul.stanford.edu/jira/browse/RIALTO-12))
 
 Publication   | Grant
 ------------- | ------
@@ -97,7 +104,7 @@ Publication 2 | Grant 2
 Publication 4 | Grant 2 
 
 ***
-**Researcher Publication Report** ([RIALTO-7](https://jirasul.stanford.edu/jira/browse/RIALTO-7))
+## **Researcher Publication Report** ([RIALTO-7](https://jirasul.stanford.edu/jira/browse/RIALTO-7))
 
 Important note: this use case requires us to have the sul-pub database as another data source (for the "profiles-sourced publication count" which implies the manually accepted publications). 
 
@@ -107,7 +114,7 @@ Jane Smith | 120 | 80 | 200
 Clifford the Dog | 2 | 1 | 10
 
 ***
-**Journal Publication and Publisher Reports** ([RIALTO-10](https://jirasul.stanford.edu/jira/browse/RIALTO-10))
+## **Journal Publication and Publisher Reports** ([RIALTO-10](https://jirasul.stanford.edu/jira/browse/RIALTO-10))
 
 Department | Year | Journals | Count of Publications by Authors in Department
 ---------- | ---- | -------- | ----------------------------------------------
@@ -122,7 +129,7 @@ Chemistry  | 2014 | Springer   | 5
 English    | 2015 | MLA        | 30
 
 ***
-**Monthly Productivity Reports** ([RIALTO-16](https://jirasul.stanford.edu/jira/browse/RIALTO-16))
+## **Monthly Productivity Reports** ([RIALTO-16](https://jirasul.stanford.edu/jira/browse/RIALTO-16))
 
 Department | # of Faculty Publications in Jan | ... Feb | ... March | ... April | ... May | ... June | ... July | ... Aug | ... Sept | ... Oct | ... Nov | ... Dev
 ---------- | --- | --- | ----- | ----- | --- | ---- | ---- | --- | ---- | --- | --- | ---
@@ -135,7 +142,7 @@ Chemistry  | Polymers, Astrochemistry  | Biochem   | Topic 2, Topic 3, Topic 4  
 
 # Visualizations
 
-**Country Collaboration Visualization** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
+## **Country Collaboration Visualization** ([RIALTO-8](https://jirasul.stanford.edu/jira/browse/RIALTO-8))
 
 See also the related [CSV and tabular output](#RIALTO8) associated with this visualization above.
 
@@ -145,6 +152,6 @@ Questions:
 1. Can we filter the publications used to create the heatmap by date range? YES
 
 ***
-**Institution Collaboration Visualization** ([RIALTO-17](https://jirasul.stanford.edu/jira/browse/RIALTO-17))
+## **Institution Collaboration Visualization** ([RIALTO-17](https://jirasul.stanford.edu/jira/browse/RIALTO-17))
 
 Network visualization, showing institutions as nodes, with lines connecting the institutions represented by all co-authors of projects or works. The size of the nodes is determined by the number of authors at that institution. 
