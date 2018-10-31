@@ -1,7 +1,7 @@
 Table of Contents
 =================
 
-* [Data Models](#data-models)
+* [Data Models & Profiles](#data-models)
   * [Publications (aka Documents or Citations)](#publications-aka-documents-or-citations)
   * [Topics (Concepts)](#topics-concepts)
   * [Agents](#agents)
