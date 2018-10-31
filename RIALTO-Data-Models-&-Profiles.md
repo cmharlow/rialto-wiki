@@ -1,3 +1,19 @@
+Table of Contents
+=================
+
+* [Data Models](#data-models)
+  * [Publications (aka Documents or Citations)](#publications-aka-documents-or-citations)
+  * [Topics (Concepts)](#topics-concepts)
+  * [Agents](#agents)
+    * [Persons](#persons)
+    * [Organizations](#organizations)
+    * [Groups](#groups)
+  * [Grants](#grants)
+  * [Projects](#projects)
+* Source Mappings(#source-mappings)
+
+# Data Models
+
 RIALTO is primarily interested in **Publications** (articles, research output, publications, etc.), **Agents** (people, departments, agencies, organizations, etc.), **Grants**, and **Projects**. Each of these is represented by a data model that defines the scope of the entity and a metadata application profile that shows what information we capture about these entities for RIALTO's usage.
 
 ## Publications (aka Documents or Citations)
@@ -196,3 +212,216 @@ Title           | dcterms:title | string-literal     | [1,1] | Title for the pro
 Alternate title | dcterms:alternative | string-literal | [0,n] | Alternative title(s) for the project. 
 Start Date   | frapo:hasStartDate | datetime literal | [0,1] | Date the Project starts.
 End Date     | frapo:hasEndDate   | datetime literal | [0,1] | Date the Project ends.
+
+# Source Mappings
+
+## Named Graphs
+
+Create one named graph per data source.
+
+## Namespaces & Schemas
+
+* RIALTO namespace base (not resolvable): http://sul.stanford.edu/rialto/
+* Organizations NS: `agents/orgs/`
+* People NS: `agents/people/`
+* Publications NS: `publications/`
+* Concepts NS: `concepts/`
+* Grants NS: `grants/`
+* Context nodes:
+  * `context/addresses/`
+  * `context/names/`
+  * `context/positions/`
+  * `context/relationships/`
+  * `context/roles/`
+* External:
+  * VIVO = Namespace("http://vivoweb.org/ontology/core#")
+  * OBO = Namespace("http://purl.obolibrary.org/obo/")
+  * VCARD = Namespace("http://www.w3.org/2006/vcard/ns#")
+  * RDF, FOAF, SKOS, RDFS, DCTERMS
+
+## Organizations (Profiles) mapping
+
+* Organization Identifier == $.alias (string)
+* RDF.type == FOAF.Agent, FOAF.Organization
+* Organization URI == RIALTO organizations namespace + organization identifier
+* Organization Alias == $.alias (string)
+* Children == $.children (array of strings, identifiers for each child), mapped to OBO.BFO_0000051 for each child identifier as a child organization URI
+* Organization Name == $.name (string), mapped to SKOS.prefLabel & RDFS.label as a Literal
+* Organization Codes == $.orgCodes (array of strings), mapped to DCTERMS.identifier as a Literal
+* Parent == $.parent (string, identifier for parent), mapped to OBO.BFO_0000050 for parent identifier as a parent organization URI
+* Organization Types == $.type
+* Based on $.type
+   * "DEPARTMENT": RDF.type, VIVO.Department
+   * "DIVISION": RDF.type, VIVO.Division
+   * "ROOT": RDF.type, VIVO.University (Always Stanford University)
+   * "SCHOOL": VIVO.School
+   * "SUB_DIVISION": VIVO.Division
+
+## People (Profiles) Mapping
+
+* Person Identifier == $.profileId (string)
+* RDF.type == FOAF.Agent, FOAF.Person
+* Person URI == RIALTO people namespace + person identifier
+* Person Label == $.names.preferred.firstName (string) + " " + $.names.preferred.middleName (string) + " " +  $.names.preferred.lastName (string), mapped to SKOS.prefLabel & VCARD.fn as a Literal
+* Person Name URI == RIALTO names namespace (in contexts) + person identifier
+* Person Name
+  * Person URI VCARD.hasName Person Name URI . 
+  * Person URI RDF.type, VCARD.Name .
+  * Person Name URI VCARD.given-name $.names.preferred.firstName (string) .
+  * Person Name URI VCARD.middle-name $.names.preferred.middleName (string) .
+  * Person Name URI VCARD.family-name $.names.preferred.lastName (string). 
+* Person Affiliation:
+  * if $.affiliations.capPhdStudent (Boolean) == True or $.affiliations.capMsStudent (Boolean) == True or $.affiliations.capMdStudent (Boolean) == True: Person URI RDF.type VIVO.Student
+  * if $.affiliations.capFaculty (Boolean) == True: Person URI RDF.type VIVO.FacultyMember
+  * if $.affiliations.capFellow (Boolean) == True or $.affiliations.capResident (Boolean) == True or $.affiliations.capPostdoc (Boolean) == True: Person URI RDF.type VIVO.NonFacultyAcademic
+  * if $.affiliations.physician (Boolean) == True or $.affiliations.capStaff (Boolean) == True: Person URI RDF.type VIVO.NonAcademic
+  * Ignoring $.affiliations.capRegistry & $.affiliations.capOther at present
+* Person Biograph: Person URI VIVO.overview $.bio.text (Literal)
+* Person address: if $.contacts.type == "academic":
+  * Person Address URI: RIALTO Address NS (contexts) + person identifier
+    * Person VCARD.hasAddress Person Address URI . 
+    * Person Address URI RDF.type, VCARD.Address .
+    * Person Address URI VCARD.street-address $.contacts.address (Literal) 
+    * Person Address URI VCARD.locality $.contacts.city (Literal)
+    * Person Address URI VCARD.region $.contacts.state (Literal)
+    * Person Address URI VCARD.postal-code $.contacts.zip (Literal)
+    * Address URI DCTERMS.spatial country_uri (Geonames lookup based on $.contacts.zip)
+    * Address URI VCARD.country-name Name (Literal, from Geonames lookup based on $.contacts.zip)
+* Department (Organization) URI: use Department label for Organization lookup in CAP data (above) using $.contacts.department (Literal for lookup, URI for end value)
+* Person Position URI: Positions context URI + Person ID + Position Label (+ Date...?)
+  * Person Position URI RDF.type VIVO.Position .
+  * Person URI VIVO.relatedBy Person Position URI .
+  * Person Position URI RDFS.label $.contacts.position (Literal, above) .
+  * Person Position URI VIVO.relates Department (Organization) URI .
+* for each advisee in $.advisees : 
+  * Advisee URI: RIALTO People NS + $advisees.advisee.profileId
+    * Advisee URI RDF.type FOAF.Agent, FOAF.Person
+    * Advisee Name URI: RIALTO Names NS (contexts) + advisee ID
+    * Advisee Name URI VCARD.fn $.advisees.advisee.label.text
+    * Advisee URI VCARD.hasName Advisee Name URI .
+    * Advisee Name URI RDF.type VCARD.Name .
+    * Advisee Name URI VCARD.given-name $.advisees.advisee.firstName .
+    * Advisee Name URI VCARD.family-name $.advisees.advisee.lastName .
+    * Relationship URI: Relationship NS (contexts) + Advisee ID + "_" + Person URI
+    * Relationship URI RDF.type VIVO.AdvisingRelationship .
+    * Advisor Role URI: Roles NS (contexts) + "AdvisorRole"
+    * Advisor Role URI RDF.type VIVO.AdvisorRole
+    * Advisee Role URI: Roles NS (contexts) + "AdviseeRole"
+    * Advisee Role URI RDF.type VIVO.AdviseeRole
+    * Person URI VIVO.relatedBy Relationship URI
+    * Advisee URI VIVO.relatedBy Relationship URI
+    * Relationship URI VIVO.relates Person URI
+    * Relationship URI VIVO.relates Advisee URI
+    * Person URI OBO.RO_0000053 Advisor Role URI
+    * Advisor Role URI OBO.RO_0000052 Person URI
+    * Advisee URI OBO.RO_0000053 Advisee Role URI
+    * Advisee Role URI OBO.RO_0000052 Advisee URI
+* For keyword in $.keywords:
+  * Keyword URI: lookup in ?? (wikidata? lc subjects?) based on $.keywords.keyword (with whitespace stripped):
+  * Keyword URI RDF.type SKOS.Concept
+  * Keyword Label RDFS.label Literal ($.keywords.keyword)
+  * Person URI VIVO.hasResearchArea Keyword URI
+* For organization in $.organizations:
+  * Organization Label $.organizations.organization.label.text
+  * Organization URI: lookup for current organizations (from CAP) based on Label (or ID?)
+  * Organization ID: Retrieved from lookup for Organization URI
+  * Position URI: Positions namespace (context) + Affiliation + _ + Organization ID + "_" + Person ID
+  * Position URI RDF.type VIVO.Position
+  * Person URI VIVO.relatedBy Position URI
+  * Organization URI VIVO.relatedBy Position URI
+  * Position URI VIVO.relates Organization URI
+  * Position URI VIVO.relates Person URI
+  * Position URI RDFS.label $.organizations.organization.affiliation (Literal)
+  * Position URI DCTERMS.date "unknown/2018-08" (Literal) (presuming this is current position)
+  * Position URI VIVO.hrJobTitle $.primaryContact.title
+* Person URI VCARD.hasEmail $.primaryContact.email
+
+## Grants (SeRA) Mapping
+
+TBD
+
+## Publications (WoS/Web of Science) Mapping
+
+* Identifier == `$.UID` (string)
+* URI == RIALTO publication namespace + (md5-hashed) publication identifier
+* RDF type == map value of `$.static_data.fullrecord_metadata.normalized_doctypes.doctype` to document type mapping (see below)
+* Abstract == if value of `$.static_data.fullrecord_metadata.abstracts.abstract.abstract_text.count` is 1, grab `$.static_data.fullrecord_metadata.abstracts.abstract.abstract_text.p` (because string), else loop over `$.static_data.fullrecord_metadata.abstracts.abstract.abstract_text.p` (because array) and build up a string using concatenation (in array order)
+* DOI == `$.dynamic_data.cluster_related.identifiers.identifier[?(@.type=='doi')].value`. failing that, `$.dynamic_data.cluster_related.identifiers.identifier[?(@.type=='xref_doi')].value`
+* Title == `$.static_data.summary.titles.title[?(@.type=='item')].content`
+* Date of Creation == `$.static_data.summary.pub_info.sortdate`
+* Identifier == `$.dynamic_data.cluster_related.identifiers.identifier[*].value`
+* Journal issue == `$.static_data.summary.titles.title[?(@.type=='source')].content`
+* Publisher == `$.static_data.summary.publishers.publisher.names.name.display_name`
+* Subject == Send strings from `$.static_data.fullrecord_metadata.category_info.subjects.subject[?(@.ascatype=='extended')].content` along with a string representing the source (Web of Science) to the RIALTO entity resolver, and use the returned URIs
+* Sponsor == Send grant ID strings from `$.static_data.fullrecord_metadata.fund_ack.grant.grant_ids.grant_id` to the RIALTO entity resolver. **Note** that the `.grant` node may be either an object or an array, and the `.grant_id` node may be either a string or an array. (There are four different possibilities that your JSON Path will need to accommodate.) Use the returned URIs, or create new ones
+* Author == Pull back contributor name strings from `$.static_data.summary.names.name`. For each named contributor, extract
+their address if it exists, and pull out their `orcid_id`, `first_name`, `last_name`, and `full_name`. Send these five bits of data to the RIALTO entity resolver, and use the URI if it comes back. Else, create a new URI for this person based on an MD5 hash of their first name, a space, and their last name (all in lowercase).
+  * Profiles-confirmed == TBD
+
+* Editor == TBD, requires integration with Profiles source data
+  * Profiles-confirmed == TBD
+* Funded by == TBD, requires integration with SeRA source data
+
+* Same as == ???
+* Alternative title == ???
+* Cites == ???
+* Description == ???
+* Has instrument == ???
+* Link == ???
+
+### Document Type Mapping
+
+WoS document types are from https://images.webofknowledge.com/images/help/WOK/hs_document_types.html
+
+| WoS type | RIALTO type |
+|----------|-------------|
+| Abstract | http://vivoweb.org/ontology/core#Abstract |
+| Article | http://purl.org/ontology/bibo/Article |
+| Book | http://purl.org/ontology/bibo/Book |
+| Data Set | http://vivoweb.org/ontology/core#Dataset |
+| Patent | http://purl.org/ontology/bibo/Patent |
+| Report | http://purl.org/ontology/bibo/Report |
+| Standard | http://purl.org/ontology/bibo/Standard |
+| Thesis/Dissertation | http://purl.org/ontology/bibo/Thesis |
+| Other | http://purl.org/ontology/bibo/Document |
+
+#### Unmapped WoS Types
+
+Map to http://purl.org/ontology/bibo/Document if nothing better?
+
+* Art and Literature
+* Bibliography
+* Biography
+* Case Report
+* Clinical Trial
+* Correction
+* Data Paper
+* Data Study
+* Editorial
+* Government Publication
+* Legislation
+* Letter
+* Meeting
+* News
+* Reference Material
+* Repository
+* Retracted Publication
+* Retraction
+* Review
+
+#### Unrepresented RIALTO Publication Types
+
+* Case Study
+* Catalog
+* Clinical Guideline
+* Conference Poster
+* Manual
+* Manuscript
+* Research Proposal
+* Score
+* Screenplay
+* Slideshow
+* Speech
+* Translation
+* Webpage
+* Working paper
