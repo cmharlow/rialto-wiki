@@ -368,14 +368,12 @@ Create one named graph per data source.
 * Journal issue == `$.static_data.summary.titles.title[?(@.type=='source')].content`
 * Publisher == `$.static_data.summary.publishers.publisher.names.name.display_name`
 * Subject == Send strings from `$.static_data.fullrecord_metadata.category_info.subjects.subject[?(@.ascatype=='extended')].content` along with a string representing the source (Web of Science) to the RIALTO entity resolver, and use the returned URIs
-* Sponsor == Send grant ID strings from `$.static_data.fullrecord_metadata.fund_ack.grant.grant_ids.grant_id` to the RIALTO entity resolver. **Note** that the `.grant` node may be either an object or an array, and the `.grant_id` node may be either a string or an array. (There are four different possibilities that your JSON Path will need to accommodate.) Use the returned URIs, or create new ones
+* Sponsor (VIVO.informationResourceSupportedBy) == Send grant ID strings from `$.static_data.fullrecord_metadata.fund_ack.grants.grant.grant_agency` to the RIALTO entity resolver. (**Note** that the `.grant` node may be either an object or an array.) Use the returned URIs, or create new ones for grant-funding agencies that don't already have entities in RIALTO.
 * Author == Pull back contributor name strings from `$.static_data.summary.names.name`. For each named contributor, extract
 their address if it exists, and pull out their `orcid_id`, `first_name`, `last_name`, and `full_name`. Send these five bits of data to the RIALTO entity resolver, and use the URI if it comes back. Else, create a new URI for this person based on an MD5 hash of their first name, a space, and their last name (all in lowercase).
-  * Profiles-confirmed == TBD
+* Funded by (`VIVO.hasFundingVehicle`) == Send grant ID strings from `$.static_data.fullrecord_metadata.fund_ack.grants.grant.grant_ids.grant_id` to the RIALTO entity resolver. Use the returned URIs, or create new ones for grants that don't already have entities in RIALTO.
 
 * Editor == TBD, requires integration with Profiles source data
-  * Profiles-confirmed == TBD
-* Funded by == TBD, requires integration with SeRA source data
 
 * Same as == ???
 * Alternative title == ???
