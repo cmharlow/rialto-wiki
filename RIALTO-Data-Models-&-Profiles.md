@@ -11,6 +11,15 @@ Table of Contents
   * [Grants](#grants)
   * [Projects](#projects)
 * [Source Mappings](#source-mappings)
+  * [Named Graphs](#named-graphs)
+  * [Namespaces & Schemas](#namespaces--schemas)
+  * [Organizations (Profiles) mapping](#organizations-profiles-mapping)
+  * [People (Profiles) Mapping](#people-profiles-mapping)
+  * [Grants (SeRA) Mapping](#grants-sera-mapping)
+  * [Publications (WoS/Web of Science) Mapping](#publications-wosweb-of-science-mapping)
+    * [Document Type Mapping](#document-type-mapping)
+      * [Unmapped WoS Types](#unmapped-wos-types)
+      * [Unrepresented RIALTO Publication Types](#unrepresented-rialto-publication-types)
 
 # Data Models
 
