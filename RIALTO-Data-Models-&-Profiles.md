@@ -347,7 +347,13 @@ Create one named graph per data source.
 
 ## Grants (SeRA) Mapping
 
-TBD
+* URI == RIALTO grant namespace + `$.spoNumber`
+* RDF.type == `VIVO.Grant`
+* RDFS.label, SKOS.prefLabel == `$.projectTitle`
+* FRAPO.hasStartDate == `$.projectStartDate` (parse out first 10 characters to get date string)
+* FRAPO.hasEndDate == `$.projectEndDate` (parse out first 10 characters to get date string)
+* VIVO.assignedBy == run value of `$.directSponsorName` through entity resolution, create entity if no matches
+* VIVO.relates == get person URI using entity resolution on `$.piSunetId` or create person if no entity. construct PI role URI using rialto context roles namespace + `$.spoNumber` + `_` + `$.piSunetId`. create node relating PI role (@type of VIVO.PrincipalInvestigatorRole) to grant URI using `VIVO.relatedBy`. relate role to PI using `OBO.RO_0000052`, and relate person back to role using `OBO.RO_0000053`. relate PI to grant using URI of person as `@id` and `VIVO.relatedBy` to the grant URI.
 
 ## Publications (WoS/Web of Science) Mapping
 
