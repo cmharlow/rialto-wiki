@@ -350,6 +350,7 @@ Create one named graph per data source.
 * URI == RIALTO grant namespace + `$.spoNumber`
 * RDF.type == `VIVO.Grant`
 * RDFS.label, SKOS.prefLabel == `$.projectTitle`
+* DC.identifier = `$.spoNumber` + normalized form of `$.spoNumber` to aid entity resolution. normalization includes stripping out non-alphanumeric characters and downcasing alpha characters.
 * FRAPO.hasStartDate == `$.projectStartDate` (parse out first 10 characters to get date string)
 * FRAPO.hasEndDate == `$.projectEndDate` (parse out first 10 characters to get date string)
 * VIVO.assignedBy == run value of `$.directSponsorName` through entity resolution, create entity if no matches
