@@ -3,6 +3,7 @@
 - [RIALTO Architecture](/sul-dlss/rialto/wiki/RIALTO-Architecture)
 - [RIALTO Data Models](/sul-dlss/rialto/wiki/RIALTO-Data-Models-&amp;-Profiles)
 - [RIALTO Acceptance Criteria](/sul-dlss/rialto/wiki/RIALTO-Core-Acceptance-Criteria-&amp;-Tests)
+- [RIALTO Data Sources](/sul-dlss/rialto/wiki/Data-Sources-and-Issues-with-Data)
 - Demo Videos
   - [Intro (2018/06)](https://youtu.be/hNdJFbDfAmk)
   - [UI Comps (2018/08)](https://youtu.be/ZEfgRXGxsGc)
