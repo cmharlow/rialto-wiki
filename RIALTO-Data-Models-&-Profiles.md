@@ -10,7 +10,7 @@ Table of Contents
     * [Groups](#groups)
   * [Grants](#grants)
   * [Projects](#projects)
-* Source Mappings(#source-mappings)
+* [Source Mappings](#source-mappings)
 
 # Data Models
 
