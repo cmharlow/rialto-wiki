@@ -11,4 +11,10 @@ Thus the people and Stanford organizational units and the connections between th
 
 ## Grants
 
-Grants data comes from the SeRA API: https://asconfluence.stanford.edu/confluence/display/MaIS/SeRA+API+-+User+Documentation
+Grants data comes from the SeRA API: https://asconfluence.stanford.edu/confluence/display/MaIS/SeRA+API+-+User+Documentation  
+
+We harvest funded projects for Stanford researchers that are recorded in SeRA, including such as data as the name of the grant, the funder, and the PI.  We then attempt to link grants to publications via data pulled from our publications sources (noted below).
+
+## Publications
+
+Publication data comes from the [Web of Science API](https://developer.clarivate.com/apis/wos), a third party subscription product from [Clarivate](https://clarivate.com/).  In order to harvest publications, we iterate over all of the people in the RIALTO (pulled via the Profiles API as noted above), and search the Web of Science using their first and last name, and "Stanford".  
