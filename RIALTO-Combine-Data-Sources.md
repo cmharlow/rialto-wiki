@@ -1,5 +1,6 @@
 Possible data sources for RIALTO Combine. ⭐️means in scope for RIALTO Phase 1 development work.
 
+[Read more about issues we have encountered with data sources](https://github.com/sul-dlss/rialto/wiki/Data-Sources-and-Issues-with-Data) during the first RIALTO work cycle.
 
 Source | URL | Data Example (link) | Notes
 ------ | --- | ------------------- | -----
