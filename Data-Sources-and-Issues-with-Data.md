@@ -2,9 +2,13 @@ RIALTO is built upon data aggregated from other systems, and as such, will large
 
 ## People and Stanford Organizations (Departments, Institutes, Schools, etc.)
 
-People data and their Stanford affiliations comes from the Profiles system.  In order to harvest this data into RIALTO, we 
+People data and their Stanford affiliations comes from the Profiles system (https://profiles.stanford.edu and https://cap.stanford.edu/cap-api/console).  In order to harvest this data into RIALTO, we 
 
 * iterate over all Stanford Organizations represented in Profiles (including the hierarchy and unique codes) 
 * iterate over all people represented in Profiles (by definition, Stanford only) and use the organization codes represented in their profiles to connect them to Stanford organizations
 
 Thus the people and Stanford organizational units and the connections between these two entities rely on the data coming from the Profiles API.  We have found a handful of cases that appear to be "test users" in Profiles (e.g. people with names like "R25Test 25Live" and "Seriessupport 25Live") and we also have a large number of people which we were unable to connect to academic units due to invalid organization codes.  For now, these groups of people (likely undergraduates, affiliates and other non-Staff or Faculty positions) are associated with an "Unknown or unmapped" department.  
+
+## Grants
+
+Grants data comes from the SeRA API: https://asconfluence.stanford.edu/confluence/display/MaIS/SeRA+API+-+User+Documentation
