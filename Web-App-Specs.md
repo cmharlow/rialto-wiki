@@ -1,8 +1,11 @@
 Drawn from use cases written up in [our (private) Jira RIALTO repository](https://jirasul.stanford.edu/jira/secure/RapidBoard.jspa?rapidView=921&projectKey=RIALTO&view=planning).
 
-# Generic Design Feel
+# Design Comps
 
-https://drive.google.com/drive/u/1/folders/1d-UFRxmHDFsb8vDXQvkNGlR66Tb-KkWp
+The following design comps will guide development, but are not necessarily prescriptive when it comes to UI elements.
+They are also useful for specing the home page and navigation:
+
+https://projects.invisionapp.com/d/main#/console/15093987/313887466/preview
 
 # Search interface
 
