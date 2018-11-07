@@ -56,7 +56,8 @@
 
 # Development
 - [Getting Started](/sul-dlss/rialto/wiki/Getting-Started-(Dev-Env))
-- [Working with Localstack](/sul-dlss/rialto/wiki/Working-with-localstack)
+- [Spinning up rialto-dev](https://github.com/sul-dlss-labs/rialto-dev)
+  - [Working with Localstack](/sul-dlss/rialto/wiki/Working-with-localstack)
 - [Setting up AWS CLI](/sul-dlss/terraform-aws/wiki/AWS-DLSS-Dev-Env-Setup)
 
 # VIVO Assessment
