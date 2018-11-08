@@ -8,6 +8,8 @@
   - [Intro (2018/06)](https://youtu.be/hNdJFbDfAmk)
   - [UI Comps (2018/08)](https://youtu.be/ZEfgRXGxsGc)
   - [Terraform (2018/09)](https://youtu.be/tk9vsPpdcw0)
+  - [ETL (2018/09)](https://youtu.be/FjBTPQKllbE)
+  - [Web App (2018/10)](https://youtu.be/dGI191csHeg)
 
 ### RIALTO Core
 - [Terraform and RIALTO](/sul-dlss/rialto/wiki/Terraform-and-RIALTO)
