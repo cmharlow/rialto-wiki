@@ -58,23 +58,16 @@ title               | dcterms:title | string-literal | [1,1] | Title for the res
 alternate title     | dcterms:alternative | string-literal | [0,n] | Alternative title(s) for the resource. 
 
 ## Topics (Concepts)
-Topics are subject areas or concepts. Works, grants, or departments may be associated with a Topic. Agents may have a research area that is a Topic.
+Topics are subject areas or concepts. Works may be associated with a Topic.
 
-* **Sources**: Web of Science, Profiles
+* **Sources**: Web of Science
 * **Types**: 
   * Top level / generic: Topic: http://www.w3.org/2008/05/skos#Concept
 
 Field | Predicate | Expected Data Type | Cardinality | Definition
 ----- | --------- | ------------------ | ----------- | ----------
-@type | rdf:type  | URI from list above | [1,n]      |  Type of the resource.
-label | skos:prefLabel, rdfs:label | string-literal | [1,1] | Primary label for the Concept. 
-alternate labels | skos:altLabel | string-literal | [0,n] | Alternative labels for the Concept.
-broader than | skos:broader | Concept URI | [0,n] | Broader concepts (within a scheme).
-narrower than | skos:narrower | Concept URI | [0,n] | Narrower concepts (within a scheme).
-vocabulary source | skos:inScheme | skos:ConceptScheme URI | [0,n] | Vocabulary or scheme the concept is in (e.g. MESH Headings, LCCN, AAT, etc.)
-identifier | dcterms:identifier | IRI | [1,n] | Identifier for the resource. May be from multiple sources.
-sameAs     | owl:sameAs | URI | [0,n] | Other Concepts (identified via URIs) that are the same as this resource.
-scope note | skos:scopeNote | string-literal | [0,1] | Note describing the scope and definition of the Concept.
+@type | rdf:type  | URI from list above | [1,1]      |  Type of the resource.
+subject | dcterms:subject | string-literal | [1,1]   | Primary label for the Concept.
 
 ## Agents
 
