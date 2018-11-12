@@ -7,7 +7,6 @@ Table of Contents
   * [Agents](#agents)
     * [Persons](#persons)
     * [Organizations](#organizations)
-    * [Groups](#groups)
   * [Grants](#grants)
 * [Source Mappings](#source-mappings)
   * [Named Graphs](#named-graphs)
@@ -123,20 +122,6 @@ parent organizations | obo:BFO_0000050 foaf:Organization | URI for foaf:Organiza
 employees | vivo:relatedBy vivo:Position* vivo:relates foaf:Agent | URIs for Agents | [0,n] | Agents that hold a position in the Organization.
 name | skos:prefLabel, rdfs:label | string literal | [1,1] | Primary name for the Organization.
 organization code | dcterms:identifier | string-literal | [0,n] | Stanford org code
-
-### Groups
-  * Top level / generic: Agent: http://xmlns.com/foaf/0.1/Agent
-  * Top level / generic: Group: http://xmlns.com/foaf/0.1/Group
-  * Committee: http://vivoweb.org/ontology/core#Committee
-  * Team: http://vivoweb.org/ontology/core#Team
-
-Field   | Predicate        | Expected Data Type    | Cardinality | Definition
-------- | ---------------- | --------------------- | ----------- | ----------
-@type   | rdf:type  | URI from list above | [1,n]      |  Type of the resource.
-institution | obo:BFO_0000050 foaf:Organization | URI for foaf:Organization | [0,n] | Organization this organization is a part of.
-name | skos:prefLabel, rdfs:label | string literal | [1,1] | Primary name for the Organization.
-alternate name | skos:altLabel | string literal | [0,n] | Alternate names for the Organization.
-abbreviation | vivo:abbrevation | string literal | [0,n] | Abbreviated names for the Organization.
 
 ## Grants
 
