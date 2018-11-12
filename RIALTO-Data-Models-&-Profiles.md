@@ -127,23 +127,19 @@ organization code | dcterms:identifier | string-literal | [0,n] | Stanford org c
 
 Grants are awards for some work(s), usually attached to one or more lead agents (PIs) whether people or departments, and awarded or funded by an organization or agency.
 
-* **Sources**: Web of Science (funding agency string / grant number in metadata), SERA (not done yet)
+* **Sources**: Web of Science (funding agency string / grant number in metadata), SERA
 * **Types**: 
   * Top level / generic: http://vivoweb.org/ontology/core#Grant
 
 Field        | Predicate     | Expected Data Type | Cardinality | Definition
 ------------ | ------------- | ------------------ | ----------- | ----------
 @type        | rdf:type  | URI from list above | [1,n]      |  Type of the resource.
-Grant Name   | skos:prefLabel, rdfs:label | string-literal     | [1,1]       | Name or title of the grant. 
-Abstract     | vivo:abstract | string-literal     | [1,1]       | Description or abstract of the grant. 
-Funds        | vivo:fundingVehicleFor | URI for vivo:Position, foaf:Agent, or bibo:Document | [0,n] | What has been funded by the Grant.
-Grant Amount | vivo:totalAwardAmount | decimal-literal? | [0,1] | Amount awarded by the Grant.
-Principal Investigator | vivo:relates vivo:PrincipalInvestigatorRole obo:RO_0000052 foaf:Person | URI for foaf:Person | [1,n] | Principal Investigator for the grant.
-Administered By | vivo:relates vivo:AdminRole obo:RO_0000052 foaf:Organization | URI for foaf:Organization | [1,n] | Administrating Organization for the grant's funds.
-Funded By    | vivo:assignedBy | URI for foaf:Organization | [1,n] | Funding Organization for the grant.
-Start Date   | frapo:hasStartDate | datetime literal | [0,1] | Date the Grant support / funding starts.
-End Date     | frapo:hasEndDate   | datetime literal | [0,1] | Date the Grant support / funding ends.
-Award Date   | frapo:hasAwardDate | date literal     | [1,1] | Date the Grant was awarded.
+grant name   | skos:prefLabel, rdfs:label | string-literal     | [1,1]       | Name or title of the grant. 
+identifier   | dcterms:identifier | string literal | [0,n] | Identifier for the grant, including normalized forms of the identifier for matching.
+principal investigator | vivo:relates vivo:PrincipalInvestigatorRole obo:RO_0000052 foaf:Person | URI for foaf:Person | [1,n] | Principal Investigator for the grant.
+funded by    | vivo:assignedBy | URI for foaf:Organization | [1,n] | Funding Organization for the grant.
+start date   | frapo:hasStartDate | datetime literal | [0,1] | Date the Grant support / funding starts.
+end date     | frapo:hasEndDate   | datetime literal | [0,1] | Date the Grant support / funding ends.
 
 # Source Mappings
 
