@@ -9,7 +9,6 @@ Table of Contents
     * [Organizations](#organizations)
     * [Groups](#groups)
   * [Grants](#grants)
-  * [Projects](#projects)
 * [Source Mappings](#source-mappings)
   * [Named Graphs](#named-graphs)
   * [Namespaces & Schemas](#namespaces--schemas)
@@ -23,7 +22,7 @@ Table of Contents
 
 # Data Models
 
-RIALTO is primarily interested in **Publications** (articles, research output, publications, etc.), **Agents** (people, departments, agencies, organizations, etc.), **Grants**, and **Projects**. Each of these is represented by a data model that defines the scope of the entity and a metadata application profile that shows what information we capture about these entities for RIALTO's usage.
+RIALTO is primarily interested in **Publications** (articles, research output, publications, etc.), **Agents** (people, departments, agencies, organizations, etc.), and **Grants**. Each of these is represented by a data model that defines the scope of the entity and a metadata application profile that shows what information we capture about these entities for RIALTO's usage.
 
 ## Publications (aka Documents or Citations)
 
@@ -99,7 +98,7 @@ scope note | skos:scopeNote | string-literal | [0,1] | Note describing the scope
 
 ## Agents
 
-Agents are some sort of actor involved in creating works or projects, or in supporting works or projects via grants or institutional support. 
+Agents are some sort of actor involved in creating works, or in supporting works via grants or institutional support. 
 
 ### Persons
 
@@ -187,7 +186,7 @@ abbreviation | vivo:abbrevation | string literal | [0,n] | Abbreviated names for
 
 ## Grants
 
-Grants are awards for some project(s) or work(s), usually attached to one or more lead agents (PIs) whether people or departments, and awarded or funded by an organization or agency.
+Grants are awards for some work(s), usually attached to one or more lead agents (PIs) whether people or departments, and awarded or funded by an organization or agency.
 
 * **Sources**: Web of Science (funding agency string / grant number in metadata), SERA (not done yet)
 * **Types**: 
@@ -206,21 +205,6 @@ Funded By    | vivo:assignedBy | URI for foaf:Organization | [1,n] | Funding Org
 Start Date   | frapo:hasStartDate | datetime literal | [0,1] | Date the Grant support / funding starts.
 End Date     | frapo:hasEndDate   | datetime literal | [0,1] | Date the Grant support / funding ends.
 Award Date   | frapo:hasAwardDate | date literal     | [1,1] | Date the Grant was awarded.
-
-## Projects
-
-Projects here are research projects that are funded by grants or institutions, worked on by agents, and may produce multiple works. 
-
-* **Sources**: SERA (not done yet)
-* **Types**: 
-  * Top level / generic: Project: http://xmlns.com/foaf/0.1/Project
-
-Field           | Predicate     | Expected Data Type | Cardinality | Definition
---------------- | ------------- | ------------------ | ----------- | ----------
-Title           | dcterms:title | string-literal     | [1,1] | Title for the project. 
-Alternate title | dcterms:alternative | string-literal | [0,n] | Alternative title(s) for the project. 
-Start Date   | frapo:hasStartDate | datetime literal | [0,1] | Date the Project starts.
-End Date     | frapo:hasEndDate   | datetime literal | [0,1] | Date the Project ends.
 
 # Source Mappings
 
