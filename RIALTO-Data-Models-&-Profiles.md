@@ -75,73 +75,54 @@ Agents are some sort of actor involved in creating works, or in supporting works
 
 ### Persons
 
-* **Sources**: CAP Profiles API (Stanford Affiliates scholarly record type info), Stanford LDAP, ORCID, ISNI
+* **Sources**: CAP Profiles API (Stanford Affiliates scholarly record type info)
 * **Types**: 
   * Top level / generic: Agent: http://xmlns.com/foaf/0.1/Agent
   * Top level / generic: Person: http://xmlns.com/foaf/0.1/Person 
-  * Student: http://vivoweb.org/ontology/core#Student
-  * Faculty: http://vivoweb.org/ontology/core#FacultyMember
-  * Faculty Emeritus: http://vivoweb.org/ontology/core#EmeritusFaculty
-  * Non-Academic: http://vivoweb.org/ontology/core#NonAcademic
-  * Non-Faculty Academic: http://vivoweb.org/ontology/core#NonFacultyAcademic
+  * Phd student: http://sul.stanford.edu/rialto/ontology#PhdStudent
+  * Ms student:  http://sul.stanford.edu/rialto/ontology#MsStudent
+  * Md student:  http://sul.stanford.edu/rialto/ontology#MdStudent
+  * Faculty: http://sul.stanford.edu/rialto/ontology#Faculty
+  * Fellow: http://sul.stanford.edu/rialto/ontology#Fellow
+  * Resident: http://sul.stanford.edu/rialto/ontology#Resident
+  * Postdoc: http://sul.stanford.edu/rialto/ontology#Postdoc
+  * Physician: http://sul.stanford.edu/rialto/ontology#Physician
+  * Staff: http://sul.stanford.edu/rialto/ontology#Staff
 
 Field   | Predicate        | Expected Data Type    | Cardinality | Definition
 ------- | ---------------- | --------------------- | ----------- | ----------
 @type   | rdf:type  | URI from list above | [1,n]      |  Type of the resource.
-orcid   | vivo:orcidId | String | [0,1] | The researchers ORCID
-about   | vivo:overview    | string-literal        | [0,n]       | About the Agent.
-address | vcard:hasAddress | URI for vcard:Address | [0,1]       | Address for the Agent.
+about   | vivo:overview    | string-literal        | [0,1]       | About the Agent.
 advisor | vivo:relatedBy vivo:AdvisingRelationship vivo:relates; obo:RO_000053 vivo:AdvisorRole | URI for foaf:Agent | [0,n] | Advisor of the person.
 country | dcterms:spatial  | URI for country in address | [0,n]  | Normalized country the Agent resides or is based in.
 department | vivo:relatedBy vivo:Position vivo:relates foaf:Organization | URI for foaf:Organization | [0,n] | Organization, at department level, that the person works (or has worked) for.
 email address | vcard:hasEmail | string literal | [0,n] | Email address for the individual.
 PI of | vivo:relatedBy vivo:Grant | URI for vivo:Grant | [0,n] | Grant the person is currently PI or has been PI for.
-funded by (grant) | vivo:hasFundingVehicle | Grant URI | [0,n] | Grant (or contract) providing funding for the Agent (or their Position).
 institutional affiliation | vivo:relatedBy vivo:Position vivo:relates foaf:Organization obo:BFO_0000050 foaf:Organization | URI for foaf:Organization | [0,n] | Organization, at institution level, that the person works (or has worked) for.
-full name | vcard:fn | String Literal | [1,1] | Full name of the person (some sort of preferred label for the entity).
+full name | skos:prefLabel, rdfs:label | String Literal | [1,1] | Full name of the person (some sort of preferred label for the entity).
+full name variations | skos:altLabel | String Literal | [0,n] | Variations on the name of the person for the purposes of name matching.
 name | vcard:hasName | URI for vcard:Name | [1,1] | Name (broken into data property components) for the person.
-hasResearchArea | vivo:hasResearchArea | URI for skos:Concept | [0,n] | Topical area the person does research on or in.
 role(s) / job(s) | vivo:relatedBy vivo:Position | URI for vivo:Position | [0,n] | Position or job the person currently holds or previously held.
+sunetid | dcterms:identifier | string-literal | [0,1] | Stanford Network Id
+
 
 ### Organizations
   * Top level / generic: Agent: http://xmlns.com/foaf/0.1/Agent
   * Top level / generic: Organization: http://xmlns.com/foaf/0.1/Organization
-  * Association: http://vivoweb.org/ontology/core#Association
-  * Center: http://vivoweb.org/ontology/core#Center
-  * College: http://vivoweb.org/ontology/core#College
-  * Consortium: http://vivoweb.org/ontology/core#Consortium
   * Department: http://vivoweb.org/ontology/core#Department
   * Division: http://vivoweb.org/ontology/core#Division
-  * Foundation: http://vivoweb.org/ontology/core#Foundation
-  * Funding Organization: http://vivoweb.org/ontology/core#FundingOrganization
-  * Government Agency: http://vivoweb.org/ontology/core#GovernmentAgency
-  * Hospital: http://vivoweb.org/ontology/core#Hospital
   * Institute (Academic): http://vivoweb.org/ontology/core#Institute
-  * Laboratory: http://vivoweb.org/ontology/core#Laboratory
-  * Library: http://vivoweb.org/ontology/core#Library
-  * Museum: http://vivoweb.org/ontology/core#Museum
-  * Program: http://vivoweb.org/ontology/core#Program
-  * Publisher: http://vivoweb.org/ontology/core#Publisher
-  * Research Organization: http://vivoweb.org/ontology/core#ResearchOrganization
   * School: http://vivoweb.org/ontology/core#School
-  * Student Organization: http://vivoweb.org/ontology/core#StudentOrganization
   * University: http://vivoweb.org/ontology/core#University
 
 Field   | Predicate        | Expected Data Type    | Cardinality | Definition
 ------- | ---------------- | --------------------- | ----------- | ----------
 @type   | rdf:type  | URI from list above | [1,n]      |  Type of the resource.
-address | vcard:hasAddress | URI for vcard:Address | [0,1]       | Address for the Organization.
-country | dcterms:spatial  | URI for country in address | [0,n]  | Normalized country the Organization is based in.
-email address | vcard:hasEmail | string literal | [0,n] | Email address for the Organization.
 administering (grant) | vivo:relatedBy vivo:Grant | URI for vivo:Grant | [0,n] | Grant administered by the Organization.
-funded by (grant) | vivo:hasFundingVehicle | Grant URI | [0,n] | Grant (or contract) providing funding for the Agent (or their Position).
-children organizations | obo:BFO_0000051 foaf:Organization | URI for foaf:Organization | [0,n] | Organization this organization is contains.
 parent organizations | obo:BFO_0000050 foaf:Organization | URI for foaf:Organization | [0,n] | Organization this organization is a part of.
 employees | vivo:relatedBy vivo:Position* vivo:relates foaf:Agent | URIs for Agents | [0,n] | Agents that hold a position in the Organization.
 name | skos:prefLabel, rdfs:label | string literal | [1,1] | Primary name for the Organization.
-alternate name | skos:altLabel | string literal | [0,n] | Alternate names for the Organization.
-abbreviation | vivo:abbrevation | string literal | [0,n] | Abbreviated names for the Organization.
-related topic areas | vivo:hasResearchArea | URI for skos:Concept | [0,n] | Topical area the Organization does research on or in.
+organization code | dcterms:identifier | string-literal | [0,n] | Stanford org code
 
 ### Groups
   * Top level / generic: Agent: http://xmlns.com/foaf/0.1/Agent
