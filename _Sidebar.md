@@ -1,8 +1,8 @@
 # About RIALTO
 - [RIALTO Wiki Homepage](/sul-dlss/rialto/wiki)
-- [RIALTO Architecture](/sul-dlss/rialto/wiki/RIALTO-Architecture)
+- [RIALTO Architecture](https://sul-dlss.github.io/rialto/architecture)
 - [RIALTO Data Models](/sul-dlss/rialto/wiki/RIALTO-Data-Models-&amp;-Profiles)
-- [RIALTO Acceptance Criteria](/sul-dlss/rialto/wiki/RIALTO-Core-Acceptance-Criteria-&amp;-Tests)
+- [RIALTO Acceptance Criteria](https://sul-dlss.github.io/rialto/acceptance-tests)
 - [RIALTO Data Sources](/sul-dlss/rialto/wiki/Data-Sources-and-Issues-with-Data)
 - Demo Videos
   - [Intro (2018/06)](https://youtu.be/hNdJFbDfAmk)
