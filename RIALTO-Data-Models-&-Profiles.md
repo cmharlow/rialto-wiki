@@ -28,50 +28,30 @@ RIALTO is primarily interested in **Publications** (articles, research output, p
 
 Publications are representations of articles, research outputs, datasets, etc. If feasible, there should link to manifestations of that Work (i.e. DOI).
 
-* **Sources**: Web of Science, Profiles, Dimensions
+* **Sources**: Web of Science
 * **Types**: 
   * Top level / generic: Publication or Document: http://purl.org/ontology/bibo/Document
   * Abstract: http://vivoweb.org/ontology/core#Abstract
   * Article: http://purl.org/ontology/bibo/Article
   * Book: http://purl.org/ontology/bibo/Book
-  * Case study: http://vivoweb.org/ontology/core#CaseStudy
-  * Catalog: http://vivoweb.org/ontology/core#Catalog
-  * Clinical Guideline: http://purl.org/spar/fabio/ClinicalGuideline
-  * Conference Poster: http://vivoweb.org/ontology/core#ConferencePoster
   * Dataset: http://vivoweb.org/ontology/core#Dataset
-  * Manual: http://purl.org/ontology/bibo/Manual
-  * Manuscript: http://purl.org/ontology/bibo/Manuscript
   * Patent: http://purl.org/ontology/bibo/Patent
   * Report: http://purl.org/ontology/bibo/Report
-  * Research Proposal: http://vivoweb.org/ontology/core#ResearchProposal
-  * Score: http://vivoweb.org/ontology/core#Score
-  * Screenplay: http://vivoweb.org/ontology/core#Screenplay
-  * Slideshow: http://purl.org/ontology/bibo/Slideshow
-  * Speech: http://vivoweb.org/ontology/core#Speech
   * Standard: http://purl.org/ontology/bibo/Standard
   * Thesis: http://purl.org/ontology/bibo/Thesis
-  * Translation: http://vivoweb.org/ontology/core#Translation
-  * Webpage: http://purl.org/ontology/bibo/Webpage
-  * Working Paper: http://vivoweb.org/ontology/core#WorkingPaper
 
 Field               | Predicate | Expected Data Type | Cardinality | Definition
 ------------------- | --------- | ------------------ | ----------- | ----------------------
-@type               | rdf:type  | URI from list above | [1,n]      |  Type of the resource.
+@type               | rdf:type  | URI from list above | [1,2]      |  Type of the resource.
 abstract            | bibo:abstract | string-literal | [0,n]       |  A summary of the resource. 
 author              | vivo:relatedBy vivo:Authorship vivo:relates | URI for foaf:Agent | [0,n] | Author of the publication.
-Profiles confirmed  | vivo:relatedBy vivo:Authorship dcterms:source | "Profiles" string-literal | [0,1] | If the authorship relationship has been confirmed by the Author in Profiles. Can be reused for any relationship needed (i.e. Editorship, Advising Relationship, etc.)
-cites               | bibo:cites | document URI | [0,n] | Relates a document to another document that is cited by the first document as reference, comment, review, quotation or for another purpose. 
 date of creation    | dct:created | DateTime string, EDTF | [1,1] | Used to describe the creation date of a resource.
-description         | vivo:description | string-literal | [0,n] | Description of the resource.
 DOI                 | bibo:doi | DOI IRI | [0,1] | Digital Object Identifier for the publication.
 editor              | vivo:relatedBy vivo:Editorship vivo:relates | URI for foaf:Agent | [0,n] | Editor of the publication.
-identifier          | bibo:identifier | IRI | [1,n] | Identifier for the resource. May be from multiple sources.
+identifier          | bibo:identifier | IRI | [0,n] | Identifier for the resource. May be from multiple sources.
 funded by           | vivo:hasFundingVehicle | Grant URI | [0,n] | Grant (or contract) providing funding for the publication.
-has instrument      | gcis:hasInstrument | gcis:Instrument URI | [0,n] | A type of tool or device used for a particular task, especially for scientific work, as presented in the publication (specifically for Datasets).
-journal issue       | dcterms:hasPart  | Document URI (Article) | [0,n] | Journal is another entity with issue number, label / title, possibly isPartOf URI for the Journal title overall.
-link                | bibo:uri | URI / IRI | [0,n] | (Preferably, permanent) URL for accessing the resource on the internet. 
+journal title       | dcterms:isPartOf  | string-literal | [0,1] | Journal that the publication is part of.
 publisher           | vivo:publisher | URI for foaf:Organization | [0,n] |  Publisher of the resource.
-sameAs              | owl:sameAs | URI | [0,n] | Other resources (identified via URIs) that are the same as this resource.
 sponsor             | vivo:informationResourceSupportedBy | Agent URI | [0,n] | Institution supporting the publication. 
 subject             | dcterms:subject | Topic / Concept URI | [0,n] | Topic or concept the resource is about. 
 title               | dcterms:title | string-literal | [1,1] | Title for the resource. 
