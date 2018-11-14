@@ -64,13 +64,13 @@ etc.
 
 Output is one row per institution per paper with the information below. Note that this tabular output may have multiple rows per paper, if the paper has co-authors across multiple institutions.  In this case, there would be one row per unique institution of co-authorship.  In the case of only one co-authorship institution (i.e. one co-author, or many co-authors but all at the same institution), there will be one row for that publication.  The number of collaborations column counts the number of co-authors at the institution (will be at least one for each row).
 
-In this example, there are two papers, but five rows, because there are five unique institutions for co-authors of those two papers represented.
+In this example, there are two papers, but five rows, because there are five unique institutions for co-authors of those two papers represented.  Note also that the Stanford author John Smith has also authored papers with a Harvard affiliation, which is why that institution is also listed 
 
-Title | WoSUID (unique ID for pub) | Department | Institution | Author | Author's Co-Author | Co-Author Institution  | Number of Collaborations Per Publication 
+Title | WoSUID (unique ID for pub) | Department | Author Institution | Stanford Author | Co-Author | Co-Author Institution  | Number of Collaborations Per Publication 
 --- | --- | --- | --- | --- | --- | --- | --- 
-Some Paper Title | 1234 | Chemistry  | Stanford    | John Smith | Jane Smith, Another Person  | Harvard  | 2 (count of the authors for this paper at this institution)
-Some Paper Title | 1234 | Chemistry  | Stanford    | John Smith | Jane Okoye, Patrick Hoch, XX, YY, etc.  | Ghent    | 10 
-Some Paper Title | 1234 | Chemistry  | Stanford    | John Smith | Peter Smith, YY, ZZ, etc.  | Brussels U | 10 
+Some Paper Title | 1234 | Chemistry  | Stanford, Harvard    | John Smith | Jane Smith, Another Person  | Harvard  | 2 (count of the authors for this paper at this institution)
+Some Paper Title | 1234 | Chemistry  | Stanford, Harvard    | John Smith | Jane Okoye, Patrick Hoch, XX, YY, etc.  | Ghent    | 10 
+Some Paper Title | 1234 | Chemistry  | Stanford, Harvard    | John Smith | Peter Smith, YY, ZZ, etc.  | Brussels U | 10 
 Some Paper Title | 5678 | Medicine   | Stanford    | Lady Red   | Jane Okoye, YY, ZZ, etc.   | Ghent    | 10 
 Some Paper Title | 5678 | Medicine   | Stanford    | Lady Red   | Mary Cary   | Sorbonne   | 1 
 
