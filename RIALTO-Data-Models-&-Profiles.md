@@ -173,17 +173,15 @@ Create one named graph per data source.
 * RDF.type == FOAF.Agent, FOAF.Organization
 * Organization URI == RIALTO organizations namespace + organization identifier
 * Organization Alias == $.alias (string)
-* Children == $.children (array of strings, identifiers for each child), mapped to OBO.BFO_0000051 for each child identifier as a child organization URI
 * Organization Name == $.name (string), mapped to SKOS.prefLabel & RDFS.label as a Literal
 * Organization Codes == $.orgCodes (array of strings), mapped to DCTERMS.identifier as a Literal
 * Parent == $.parent (string, identifier for parent), mapped to OBO.BFO_0000050 for parent identifier as a parent organization URI
 * Organization Types == $.type
-* Based on $.type
-   * "DEPARTMENT": RDF.type, VIVO.Department
-   * "DIVISION": RDF.type, VIVO.Division
-   * "ROOT": RDF.type, VIVO.University (Always Stanford University)
+* Additional RDF.type based on $.type
+   * "DEPARTMENT": VIVO.Department unless a mapped institute, in which case VIVO.Institute
+   * "DIVISION" or "SUBDIVISION": VIVO.Division unless a mapped institute, in which case VIVO.Institute
+   * "ROOT": VIVO.University (Always Stanford University)
    * "SCHOOL": VIVO.School
-   * "SUB_DIVISION": VIVO.Division
 
 ## People (Profiles) Mapping
 
