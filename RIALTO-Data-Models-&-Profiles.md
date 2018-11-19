@@ -249,27 +249,19 @@ Create one named graph per data source.
 * Identifier == `$.UID` (string)
 * URI == RIALTO publication namespace + (md5-hashed) publication identifier
 * RDF type == map value of `$.static_data.fullrecord_metadata.normalized_doctypes.doctype` to document type mapping (see below)
-* Abstract == if value of `$.static_data.fullrecord_metadata.abstracts.abstract.abstract_text.count` is 1, grab `$.static_data.fullrecord_metadata.abstracts.abstract.abstract_text.p` (because string), else loop over `$.static_data.fullrecord_metadata.abstracts.abstract.abstract_text.p` (because array) and build up a string using concatenation (in array order)
+* Abstract == `$.static_data.fullrecord_metadata.abstracts.abstract.abstract_text.p` (because string), else loop over `$.static_data.fullrecord_metadata.abstracts.abstract.abstract_text.p` (because array) and build up a string using concatenation (in array order)
 * DOI == `$.dynamic_data.cluster_related.identifiers.identifier[?(@.type=='doi')].value`. failing that, `$.dynamic_data.cluster_related.identifiers.identifier[?(@.type=='xref_doi')].value`
 * Title == `$.static_data.summary.titles.title[?(@.type=='item')].content`
 * Date of Creation == `$.static_data.summary.pub_info.sortdate`
 * Identifier == `$.dynamic_data.cluster_related.identifiers.identifier[*].value`
 * Journal issue == `$.static_data.summary.titles.title[?(@.type=='source')].content`
 * Publisher == `$.static_data.summary.publishers.publisher.names.name.display_name`
-* Subject == Send strings from `$.static_data.fullrecord_metadata.category_info.subjects.subject[?(@.ascatype=='extended')].content` along with a string representing the source (Web of Science) to the RIALTO entity resolver, and use the returned URIs
-* Sponsor (VIVO.informationResourceSupportedBy) == Send grant ID strings from `$.static_data.fullrecord_metadata.fund_ack.grants.grant.grant_agency` to the RIALTO entity resolver. (**Note** that the `.grant` node may be either an object or an array.) Use the returned URIs, or create new ones for grant-funding agencies that don't already have entities in RIALTO.
-* Author == Pull back contributor name strings from `$.static_data.summary.names.name`. For each named contributor, extract
-their address if it exists, and pull out their `orcid_id`, `first_name`, `last_name`, and `full_name`. Send these five bits of data to the RIALTO entity resolver, and use the URI if it comes back. Else, create a new URI for this person based on an MD5 hash of their first name, a space, and their last name (all in lowercase).
-* Funded by (`VIVO.hasFundingVehicle`) == Send grant ID strings from `$.static_data.fullrecord_metadata.fund_ack.grants.grant.grant_ids.grant_id` to the RIALTO entity resolver. Use the returned URIs, or create new ones for grants that don't already have entities in RIALTO.
-
-* Editor == TBD, requires integration with Profiles source data
-
-* Same as == ???
-* Alternative title == ???
-* Cites == ???
-* Description == ???
-* Has instrument == ???
-* Link == ???
+* Subject == Resolve `$.static_data.fullrecord_metadata.category_info.subjects.subject[?(@.ascatype=='extended')].content` with entity resolver or create a new DC.subject
+* Sponsor (VIVO.informationResourceSupportedBy) == Resolve `$.static_data.fullrecord_metadata.fund_ack.grants.grant.grant_agency` with entity resolver or create new organization.
+* Author / editor == Extract name strings from `$.static_data.summary.names.name`. For each named contributor, extract
+their address if it exists, and pull out their `orcid_id`, `first_name`, `last_name`, and `full_name`. Resolved with entity resolver or create a person, where the URI for this person is based on an MD5 hash of their first name, a space, and their last name (all in lowercase).
+If `role` is book_editor, then an editor, otherwise an author.
+* Funded by (`VIVO.hasFundingVehicle`) == Resolve `$.static_data.fullrecord_metadata.fund_ack.grants.grant.grant_ids.grant_id` with entity resolver or create a new grant.
 
 ### Document Type Mapping
 
@@ -285,45 +277,5 @@ WoS document types are from https://images.webofknowledge.com/images/help/WOK/hs
 | Report | http://purl.org/ontology/bibo/Report |
 | Standard | http://purl.org/ontology/bibo/Standard |
 | Thesis/Dissertation | http://purl.org/ontology/bibo/Thesis |
-| Other | http://purl.org/ontology/bibo/Document |
 
-#### Unmapped WoS Types
-
-Map to http://purl.org/ontology/bibo/Document if nothing better?
-
-* Art and Literature
-* Bibliography
-* Biography
-* Case Report
-* Clinical Trial
-* Correction
-* Data Paper
-* Data Study
-* Editorial
-* Government Publication
-* Legislation
-* Letter
-* Meeting
-* News
-* Reference Material
-* Repository
-* Retracted Publication
-* Retraction
-* Review
-
-#### Unrepresented RIALTO Publication Types
-
-* Case Study
-* Catalog
-* Clinical Guideline
-* Conference Poster
-* Manual
-* Manuscript
-* Research Proposal
-* Score
-* Screenplay
-* Slideshow
-* Speech
-* Translation
-* Webpage
-* Working paper
+Default if none of the above is http://purl.org/ontology/bibo/Document.
