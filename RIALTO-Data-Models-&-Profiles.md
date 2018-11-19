@@ -196,29 +196,17 @@ Create one named graph per data source.
   * Person Name URI VCARD.given-name $.names.preferred.firstName (string) .
   * Person Name URI VCARD.middle-name $.names.preferred.middleName (string) .
   * Person Name URI VCARD.family-name $.names.preferred.lastName (string). 
-* Person Affiliation:
-  * if $.affiliations.capPhdStudent (Boolean) == True or $.affiliations.capMsStudent (Boolean) == True or $.affiliations.capMdStudent (Boolean) == True: Person URI RDF.type VIVO.Student
-  * if $.affiliations.capFaculty (Boolean) == True: Person URI RDF.type VIVO.FacultyMember
-  * if $.affiliations.capFellow (Boolean) == True or $.affiliations.capResident (Boolean) == True or $.affiliations.capPostdoc (Boolean) == True: Person URI RDF.type VIVO.NonFacultyAcademic
-  * if $.affiliations.physician (Boolean) == True or $.affiliations.capStaff (Boolean) == True: Person URI RDF.type VIVO.NonAcademic
-  * Ignoring $.affiliations.capRegistry & $.affiliations.capOther at present
+* Person Affiliation is directly mapped from $.affiliations to http://sul.stanford.edu/rialto/ontology#
 * Person Biograph: Person URI VIVO.overview $.bio.text (Literal)
-* Person address: if $.contacts.type == "academic":
-  * Person Address URI: RIALTO Address NS (contexts) + person identifier
-    * Person VCARD.hasAddress Person Address URI . 
-    * Person Address URI RDF.type, VCARD.Address .
-    * Person Address URI VCARD.street-address $.contacts.address (Literal) 
-    * Person Address URI VCARD.locality $.contacts.city (Literal)
-    * Person Address URI VCARD.region $.contacts.state (Literal)
-    * Person Address URI VCARD.postal-code $.contacts.zip (Literal)
-    * Address URI DCTERMS.spatial country_uri (Geonames lookup based on $.contacts.zip)
-    * Address URI VCARD.country-name Name (Literal, from Geonames lookup based on $.contacts.zip)
-* Department (Organization) URI: use Department label for Organization lookup in CAP data (above) using $.contacts.department (Literal for lookup, URI for end value)
-* Person Position URI: Positions context URI + Person ID + Position Label (+ Date...?)
-  * Person Position URI RDF.type VIVO.Position .
-  * Person URI VIVO.relatedBy Person Position URI .
-  * Person Position URI RDFS.label $.contacts.position (Literal, above) .
-  * Person Position URI VIVO.relates Department (Organization) URI .
+* Country: dcterms:spatial http://sws.geonames.org/6252001/ (United States)
+* Department (Organization) URI: $.titles.organization.orgCode through entity resolution otherwise skipped. 
+* For each title in $.titles:
+  * Person Position URI: Positions context URI + Person ID + "_" + Position Org Code
+    * Person Position URI RDF.type VIVO.Position .
+    * Person URI VIVO.relatedBy Person Position URI .
+    * Person Position URI RDFS.label $.titles.label.text (Literal) .
+    * Person Position URI VIVO.hrTitle $.titles.title (Literal) .
+    * Person Position URI VIVO.relates Department (Organization) URI .
 * for each advisee in $.advisees : 
   * Advisee URI: RIALTO People NS + $advisees.advisee.profileId
     * Advisee URI RDF.type FOAF.Agent, FOAF.Person
@@ -242,25 +230,8 @@ Create one named graph per data source.
     * Advisor Role URI OBO.RO_0000052 Person URI
     * Advisee URI OBO.RO_0000053 Advisee Role URI
     * Advisee Role URI OBO.RO_0000052 Advisee URI
-* For keyword in $.keywords:
-  * Keyword URI: lookup in ?? (wikidata? lc subjects?) based on $.keywords.keyword (with whitespace stripped):
-  * Keyword URI RDF.type SKOS.Concept
-  * Keyword Label RDFS.label Literal ($.keywords.keyword)
-  * Person URI VIVO.hasResearchArea Keyword URI
-* For organization in $.organizations:
-  * Organization Label $.organizations.organization.label.text
-  * Organization URI: lookup for current organizations (from CAP) based on Label (or ID?)
-  * Organization ID: Retrieved from lookup for Organization URI
-  * Position URI: Positions namespace (context) + Affiliation + _ + Organization ID + "_" + Person ID
-  * Position URI RDF.type VIVO.Position
-  * Person URI VIVO.relatedBy Position URI
-  * Organization URI VIVO.relatedBy Position URI
-  * Position URI VIVO.relates Organization URI
-  * Position URI VIVO.relates Person URI
-  * Position URI RDFS.label $.organizations.organization.affiliation (Literal)
-  * Position URI DCTERMS.date "unknown/2018-08" (Literal) (presuming this is current position)
-  * Position URI VIVO.hrJobTitle $.primaryContact.title
 * Person URI VCARD.hasEmail $.primaryContact.email
+* Sunetid: dcterms:identifier $.uid
 
 ## Grants (SeRA) Mapping
 
