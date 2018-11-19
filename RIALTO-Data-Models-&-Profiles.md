@@ -15,9 +15,6 @@ Table of Contents
   * [People (Profiles) Mapping](#people-profiles-mapping)
   * [Grants (SeRA) Mapping](#grants-sera-mapping)
   * [Publications (WoS/Web of Science) Mapping](#publications-wosweb-of-science-mapping)
-    * [Document Type Mapping](#document-type-mapping)
-      * [Unmapped WoS Types](#unmapped-wos-types)
-      * [Unrepresented RIALTO Publication Types](#unrepresented-rialto-publication-types)
 
 # Data Models
 
@@ -262,20 +259,3 @@ Create one named graph per data source.
 their address if it exists, and pull out their `orcid_id`, `first_name`, `last_name`, and `full_name`. Resolved with entity resolver or create a person, where the URI for this person is based on an MD5 hash of their first name, a space, and their last name (all in lowercase).
 If `role` is book_editor, then an editor, otherwise an author.
 * Funded by (`VIVO.hasFundingVehicle`) == Resolve `$.static_data.fullrecord_metadata.fund_ack.grants.grant.grant_ids.grant_id` with entity resolver or create a new grant.
-
-### Document Type Mapping
-
-WoS document types are from https://images.webofknowledge.com/images/help/WOK/hs_document_types.html
-
-| WoS type | RIALTO type |
-|----------|-------------|
-| Abstract | http://vivoweb.org/ontology/core#Abstract |
-| Article | http://purl.org/ontology/bibo/Article |
-| Book | http://purl.org/ontology/bibo/Book |
-| Data Set | http://vivoweb.org/ontology/core#Dataset |
-| Patent | http://purl.org/ontology/bibo/Patent |
-| Report | http://purl.org/ontology/bibo/Report |
-| Standard | http://purl.org/ontology/bibo/Standard |
-| Thesis/Dissertation | http://purl.org/ontology/bibo/Thesis |
-
-Default if none of the above is http://purl.org/ontology/bibo/Document.
