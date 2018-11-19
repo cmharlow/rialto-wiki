@@ -16,3 +16,9 @@ This ECS task is triggered on a schedule by CloudWatch Events to make sure deriv
 1. Click "Select existing security group"
 1. Select "rialto-rebuild-sg" and click "SAVE"
 1. Then Click "Run Task"
+
+You can also run by the AWS CLI tool.  This is simpler, but requires you to use AWS's resource names for the subnet and security group rather than the user-friendly names, and so would need to be updated after a new rollout:
+
+> aws ecs run-task --profile users-prod --region us-west-2 \
+>     --cluster rialto-production --task-definition rialto-rebuild --launch-type FARGATE \
+>     --network-configuration 'awsvpcConfiguration={subnets=[subnet-0df3357e7b2e02583],securityGroups=[sg-0189e8fb837c95d7e],assignPublicIp=DISABLED}'
